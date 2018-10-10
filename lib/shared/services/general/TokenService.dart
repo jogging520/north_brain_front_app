@@ -12,4 +12,9 @@ class TokenService {
 
     return token;
   }
+
+  //方法：设置token
+  static setToken(Map<String, dynamic> token) async {
+    await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, token);
+  }
 }
