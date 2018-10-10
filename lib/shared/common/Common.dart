@@ -1,7 +1,7 @@
 import 'dart:collection';
 
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:north_brain_front_app/shared/constants/Constants.dart';
+import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 
 /// 类名：通用工具类
 /// 用途：常用的工具、静态方法的集合
@@ -12,7 +12,7 @@ class Common {
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
-        timeInSecForIos: Constants.CONSTANT_COMMON_HINT_TIME
+        timeInSecForIos: GeneralConstants.CONSTANT_COMMON_HINT_TIME
     );
   }
 
@@ -20,8 +20,8 @@ class Common {
   static setHeaders() async {
     Map<String, String> headers = new HashMap();
 
-    headers[Constants.CONSTANT_COMMON_HTTP_REQUEST_HEADER_CONTENT_TYPE_NAME] =
-        Constants.CONSTANT_COMMON_HTTP_REQUEST_HEADER_CONTENT_TYPE_VALUE;
+    headers[GeneralConstants.CONSTANT_COMMON_HTTP_REQUEST_HEADER_CONTENT_TYPE_NAME] =
+        GeneralConstants.CONSTANT_COMMON_HTTP_REQUEST_HEADER_CONTENT_TYPE_VALUE;
 
     return headers;
   }

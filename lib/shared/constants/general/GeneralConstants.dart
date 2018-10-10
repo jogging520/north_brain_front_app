@@ -1,4 +1,4 @@
-class Constants {
+class GeneralConstants {
   /// 提示的时长（单位：秒）
   static const int    CONSTANT_COMMON_HINT_TIME  = 1;
 
