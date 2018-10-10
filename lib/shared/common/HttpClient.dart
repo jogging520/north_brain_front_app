@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:connectivity/connectivity.dart';
-import 'package:north_brain_front_app/shared/common/Common.dart';
+import 'package:north_brain_front_app/shared/services/general/CommonService.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 
 /// 类名：http连接类
@@ -14,12 +14,12 @@ class HttpClient {
     var connectivityResult = await (new Connectivity().checkConnectivity());
 
     if (connectivityResult == ConnectivityResult.none) {
-      Common.hint(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
+      CommonService.hint(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
       throw new FormatException(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
     }
 
     //设置header
-    var headers = await Common.setHeaders();
+    var headers = await CommonService.setHeaders();
 
     Dio dio = new Dio();
     dio.interceptor.request.onSend = (Options options) {

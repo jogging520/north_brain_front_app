@@ -64,6 +64,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.0.6"
+  crypt:
+    dependency: "direct main"
+    description:
+      name: crypt
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.7"
   crypto:
     dependency: transitive
     description:
@@ -380,6 +387,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.9.0+5"
+  uuid:
+    dependency: "direct main"
+    description:
+      name: uuid
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.3"
   vector_math:
     dependency: transitive
     description:

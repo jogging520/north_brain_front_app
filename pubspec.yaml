@@ -23,6 +23,8 @@ dependencies:
   connectivity: ^0.3.2
   shared_preferences: ^0.4.3
   fluttertoast: ^2.0.8
+  uuid: ^1.0.3
+  cipher: ^0.7.1
 
 
 dev_dependencies:
