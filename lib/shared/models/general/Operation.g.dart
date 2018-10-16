@@ -14,34 +14,29 @@ Operation _$OperationFromJson(Map<String, dynamic> json) {
       user: json['user'] as String,
       session: json['session'] as String,
       businessType: json['businessType'] as String,
-      createTime: json['createTime'] as String,
-      timestamp: json['timestamp'] as String,
+      createTime: json['createTime'] == null
+          ? null
+          : DateTime.parse(json['createTime'] as String),
+      timestamp: json['timestamp'] == null
+          ? null
+          : DateTime.parse(json['timestamp'] as String),
       children: (json['children'] as List)
           ?.map((e) =>
               e == null ? null : Operation.fromJson(e as Map<String, dynamic>))
           ?.toList());
 }
 
-Map<String, dynamic> _$OperationToJson(Operation instance) {
-  var val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('type', instance.type);
-  writeNotNull('appType', instance.appType);
-  writeNotNull('category', instance.category);
-  writeNotNull('user', instance.user);
-  writeNotNull('session', instance.session);
-  writeNotNull('businessType', instance.businessType);
-  writeNotNull('createTime', instance.createTime);
-  writeNotNull('timestamp', instance.timestamp);
-  writeNotNull('status', instance.status);
-  writeNotNull('description', instance.description);
-  writeNotNull('children', instance.children);
-  return val;
-}
+Map<String, dynamic> _$OperationToJson(Operation instance) => <String, dynamic>{
+      'id': instance.id,
+      'type': instance.type,
+      'appType': instance.appType,
+      'category': instance.category,
+      'user': instance.user,
+      'session': instance.session,
+      'businessType': instance.businessType,
+      'createTime': instance.createTime?.toIso8601String(),
+      'timestamp': instance.timestamp?.toIso8601String(),
+      'status': instance.status,
+      'description': instance.description,
+      'children': instance.children
+    };

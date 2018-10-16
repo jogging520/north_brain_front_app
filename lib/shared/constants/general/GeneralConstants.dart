@@ -48,4 +48,12 @@ class GeneralConstants {
 
   //流水号缓存数据定义常量
   static const String CONSTANT_COMMON_CACHE_SERIAL_NO                           = 'serialNo';
+
+
+
+
+  static const String CONSTANT_COMMON_DEFAULT_ERROR                             = '系统发生未可知错误，请联系管理员检查。';
+
+
+  static const String CONSTANT_COMMON_TEMPERORY_PUBLIC_KEY                      = '';
 }

@@ -2,9 +2,9 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'Operation.g.dart';
 
-//flutter packages pub run build_runner build
-@JsonSerializable(includeIfNull: false)
-class Operation extends Object with _$OperationSerializerMixin {
+//
+@JsonSerializable()
+class Operation {
   String id;
   String type;
   @JsonKey(nullable: true)
@@ -18,9 +18,9 @@ class Operation extends Object with _$OperationSerializerMixin {
   @JsonKey(nullable: true)
   String businessType;
   @JsonKey(nullable: true)
-  String createTime;
+  DateTime createTime;
   @JsonKey(nullable: true)
-  String timestamp;
+  DateTime timestamp;
   String status;
   String description;
   @JsonKey(nullable: true)

@@ -6,6 +6,8 @@ import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
 import 'package:uuid/uuid.dart';
+import "package:pointycastle/pointycastle.dart";
+
 
 /// 类名：通用工具类
 /// 用途：常用的工具、静态方法的集合
@@ -22,10 +24,10 @@ class CommonService {
   }
 
   /// 方法：设置HTTP头
-  static setHeaders(String path) async {
+  static setHeaders(String url) async {
     Map<String, String> headers = new HashMap();
 
-    if (path.indexOf(GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_STORAGE) == -1) {
+    if (url.indexOf(GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_STORAGE) == -1) {
       headers[GeneralConstants.CONSTANT_COMMON_HTTP_HEADER_CONTENT_TYPE] =
           GeneralConstants.CONSTANT_COMMON_HTTP_HEADER_CONTENT_TYPE_VALUE;
     }
@@ -47,7 +49,7 @@ class CommonService {
   }
 
   //方法：根据token中保存的公共信息，形成params对象
-  static setParams(Map<String, String> params) async {
+  static setParams(Map<String, dynamic> params) async {
     Map<String, String> parameters = new HashMap();
 
     parameters.addAll(params);
@@ -100,7 +102,40 @@ class CommonService {
 
   static dynamic encrypt(String content, bool isTemporary) {
 
+
+    RSAPublicKey publicKey = new RSAPublicKey(BigInt.parse(source), 323);
+
   }
 
+  static handleError(error) {
+    switch (error.status) {
+      case 200:
+        break;
+      case 401:
+        hint(GeneralConstants.CONSTANT_COMMON_DEFAULT_ERROR);
+        break;
+      case 505:
+        hint(GeneralConstants.CONSTANT_COMMON_DEFAULT_ERROR);
+        break;
+      default:
+        hint(GeneralConstants.CONSTANT_COMMON_DEFAULT_ERROR);
+        break;
+    }
+  }
+
+  //方法：获取当前时间的值
+  static DateTime currentDate() {
+    DateTime now = new DateTime.now();
+
+    return now;
+  }
+
+  //方法：获取前一天时间的值
+  static DateTime beforeDate() {
+    DateTime now = new DateTime.now();
+
+    return new DateTime(now.year, now.month, now.day - 1, now.hour, now.minute,
+      now.second, now.millisecond, now.microsecond);
+  }
 
 }
