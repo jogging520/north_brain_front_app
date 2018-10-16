@@ -29,7 +29,7 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_HTTP_PARAM_PUBLIC_APP_TYPE_VALUE          = 'app';
   //HTTP请求参数中公共类别（企业）定义常量
   static const String CONSTANT_COMMON_HTTP_PARAM_PUBLIC_CATEGORY                = 'category';
-  //HTTP请求参数中公共类别（企业）定义常量
+  //HTTP请求参数中公共类别（企业）定义取值
   static const String CONSTANT_COMMON_HTTP_PARAM_PUBLIC_CATEGORY_VALUE          = 'GansuProvincialEducationDepartment';
   //HTTP请求参数中公共会话编号定义常量
   static const String CONSTANT_COMMON_HTTP_PARAM_PUBLIC_SESSION                 = 'session';

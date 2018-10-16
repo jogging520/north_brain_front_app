@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'Operation.g.dart';
 
-//
+//类名：操作记录类
+//用途：用于业务工单的记录
 @JsonSerializable()
 class Operation {
   String id;
