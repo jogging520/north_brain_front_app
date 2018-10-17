@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Token.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Token.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Token.g.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Token.g.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" afterPath="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -20,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommonService.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommonService.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="150" column="14" lean-forward="true" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="14" />
+            <state relative-caret-position="456">
+              <caret line="162" column="50" lean-forward="true" selection-start-line="162" selection-start-column="50" selection-end-line="162" selection-end-column="50" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -32,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Token.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Token.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Token.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="65">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -118,8 +117,8 @@
         <option value="$PROJECT_DIR$/lib/shared/models/general/User.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Token.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
       </list>
     </option>
   </component>
@@ -388,7 +387,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539763070789" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539779603749" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -436,7 +435,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539763070789" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539779603749" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -650,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539748992996</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改了token的属性。">
+      <created>1539763080994</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539763080994</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,7 +678,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -697,7 +703,8 @@
     <MESSAGE value="commonService" />
     <MESSAGE value="增加了models" />
     <MESSAGE value="修改了加密。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了加密。" />
+    <MESSAGE value="修改了token的属性。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了token的属性。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1089,21 +1096,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
+    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Token.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="150" column="14" lean-forward="true" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="65">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Token.dart">
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="456">
+          <caret line="162" column="50" lean-forward="true" selection-start-line="162" selection-start-column="50" selection-end-line="162" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

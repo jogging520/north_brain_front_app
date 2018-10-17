@@ -123,7 +123,6 @@ class CommonService {
           BigInt.parse(GeneralConstants.CONSTANT_COMMON_PUBLIC_KEY_EXPONENT));
     }
 
-
     PublicKeyParameter<RSAPublicKey> publicKeyParameter =
     new PublicKeyParameter<RSAPublicKey>(rsaPublicKey);
 
@@ -141,7 +140,27 @@ class CommonService {
 
   //方法：解密
   static Future<String> decrypt(String content) async {
-    RSAPrivateKey rsaPrivateKey = new RSAPrivateKey()
+    Token token = await TokenService.getToken();
+
+    RSAPrivateKey rsaPrivateKey = new RSAPrivateKey(
+        BigInt.parse(token.upPrivateKeyModulus),
+        BigInt.parse(token.upPrivateKeyExponent),
+        BigInt.parse(token.upPrivateKeyPrimeP),
+        BigInt.parse(token.upPrivateKeyPrimeQ));
+
+    PrivateKeyParameter<RSAPrivateKey> privateKeyParameter =
+    new PrivateKeyParameter<RSAPrivateKey>(rsaPrivateKey);
+
+    AsymmetricBlockCipher cipher
+    = new AsymmetricBlockCipher(GeneralConstants.CONSTANT_COMMON_SECURITY_ASYMMETRIC_ALGORITHM);
+
+    cipher.reset();
+    cipher.init(true, privateKeyParameter);
+
+    Uint8List decryptedContent =
+    cipher.process(transformStringToUint8List(content));
+
+    return String.fromCharCodes(decryptedContent);
   }
 
   //方法：错误处理
