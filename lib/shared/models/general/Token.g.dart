@@ -12,9 +12,15 @@ Token _$TokenFromJson(Map<String, dynamic> json) {
       json['user'] as String,
       json['lifeTime'] as int,
       json['jwt'] as String,
-      json['downPublicKey'] as String,
-      json['upPrivateKey'] as String,
-      json['status'] as String);
+      json['downPublicKeyExponent'] as String,
+      json['downPublicKeyModulus'] as String,
+      json['upPrivateKeyExponent'] as String,
+      json['upPrivateKeyModulus'] as String,
+      json['upPrivateKeyPrimeP'] as String,
+      json['upPrivateKeyPrimeQ'] as String,
+      json['status'] as String,
+      downPublicKey: json['downPublicKey'] as String,
+      upPrivateKey: json['upPrivateKey'] as String);
 }
 
 Map<String, dynamic> _$TokenToJson(Token instance) => <String, dynamic>{
@@ -23,6 +29,12 @@ Map<String, dynamic> _$TokenToJson(Token instance) => <String, dynamic>{
       'lifeTime': instance.lifeTime,
       'jwt': instance.jwt,
       'downPublicKey': instance.downPublicKey,
+      'downPublicKeyExponent': instance.downPublicKeyExponent,
+      'downPublicKeyModulus': instance.downPublicKeyModulus,
       'upPrivateKey': instance.upPrivateKey,
+      'upPrivateKeyExponent': instance.upPrivateKeyExponent,
+      'upPrivateKeyModulus': instance.upPrivateKeyModulus,
+      'upPrivateKeyPrimeP': instance.upPrivateKeyPrimeP,
+      'upPrivateKeyPrimeQ': instance.upPrivateKeyPrimeQ,
       'status': instance.status
     };
