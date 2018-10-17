@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/Organization.g.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/Region.g.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/Role.g.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/Storage.g.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/Strategy.g.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/Token.g.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/shared/models/general/User.g.dart" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Operation.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Operation.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Operation.g.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Operation.g.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Organization.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Organization.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Region.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Region.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Role.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Role.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Storage.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Storage.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/Strategy.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/Strategy.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/models/general/User.dart" afterPath="$PROJECT_DIR$/lib/shared/models/general/User.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/north_brain_front_app.iml" afterPath="$PROJECT_DIR$/north_brain_front_app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" afterPath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" afterPath="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" afterPath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -38,11 +24,43 @@
       <file leaf-file-name="CommonService.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="105" column="17" lean-forward="false" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+            <state relative-caret-position="162">
+              <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokenService.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/shared/services/general/TokenService.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <marker date="1539606302527" expanded="true" signature="517:791" ph="dependencies: &lt;8 keys&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneralConstants.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="62" column="57" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,13 +96,10 @@
         <option value="$PROJECT_DIR$/lib/shared/constants/Constants.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/CacheService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/common/Common.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/common/HttpClient.dart" />
         <option value="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/CacheService.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Operation.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Organization.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Role.dart" />
@@ -92,6 +107,9 @@
         <option value="$PROJECT_DIR$/lib/shared/models/general/Strategy.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Region.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/User.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
       </list>
     </option>
   </component>
@@ -360,7 +378,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539741153977" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539748979883" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -408,7 +426,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539741153977" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1539748979883" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -608,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539686258478</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加了models">
+      <created>1539741176402</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539741176402</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -630,7 +655,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -653,7 +678,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="细化了文件目录" />
     <MESSAGE value="commonService" />
-    <option name="LAST_COMMIT_MESSAGE" value="commonService" />
+    <MESSAGE value="增加了models" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -671,6 +697,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -695,6 +722,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <marker date="1539606302527" expanded="true" signature="517:791" ph="dependencies: &lt;8 keys&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -733,6 +763,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -750,6 +781,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <marker date="1539606302527" expanded="true" signature="517:791" ph="dependencies: &lt;8 keys&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -789,6 +823,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -796,6 +831,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <marker date="1539606302527" expanded="true" signature="517:791" ph="dependencies: &lt;8 keys&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -805,13 +843,6 @@
         <state relative-caret-position="255">
           <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/TokenService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -843,17 +874,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/pointycastle-1.0.0-rc4/lib/src/api/asymmetric_key.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -868,6 +893,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -875,6 +901,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="81" lean-forward="false" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -882,6 +909,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -889,13 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,10 +1053,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <marker date="1539606302527" expanded="true" signature="517:791" ph="dependencies: &lt;8 keys&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/TokenService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="62" column="57" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="105" column="17" lean-forward="false" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+        <state relative-caret-position="162">
+          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

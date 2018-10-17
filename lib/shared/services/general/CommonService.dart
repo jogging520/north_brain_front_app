@@ -1,8 +1,11 @@
 import 'dart:async';
 import 'dart:collection';
+import 'dart:typed_data';
+import 'dart:convert';
 
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
+import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
 import 'package:uuid/uuid.dart';
@@ -95,18 +98,53 @@ class CommonService {
 
     String serialNo = uuid.v4();
 
-    await CacheService.save(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO, serialNo);
+    await CacheService.save(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO,
+        serialNo);
 
     return serialNo;
   }
 
-  static dynamic encrypt(String content, bool isTemporary) {
+  static Uint8List transformStringToUint8List(String value) =>
+      new Uint8List.fromList(utf8.encode(value));
+
+  //方法：加密
+  static Future<String> encrypt (String content, bool isTemporary) async {
+    RSAPublicKey rsaPublicKey;
+
+    if (isTemporary) {
+      rsaPublicKey = new RSAPublicKey(
+          BigInt.parse(GeneralConstants.CONSTANT_COMMON_TEMPORARY_PUBLIC_KEY_MODULUS),
+          BigInt.parse(GeneralConstants.CONSTANT_COMMON_PUBLIC_KEY_EXPONENT));
+    } else {
+      Token token = await TokenService.getToken();
+
+      rsaPublicKey = new RSAPublicKey(
+          BigInt.parse(token.downPublicKey),
+          BigInt.parse(GeneralConstants.CONSTANT_COMMON_PUBLIC_KEY_EXPONENT));
+    }
 
 
-    RSAPublicKey publicKey = new RSAPublicKey(BigInt.parse(source), 323);
+    PublicKeyParameter<RSAPublicKey> publicKeyParameter =
+    new PublicKeyParameter<RSAPublicKey>(rsaPublicKey);
 
+    AsymmetricBlockCipher asymmetricBlockCipher =
+    new AsymmetricBlockCipher(GeneralConstants.CONSTANT_COMMON_SECURITY_ASYMMETRIC_ALGORITHM);
+
+    asymmetricBlockCipher.reset();
+    asymmetricBlockCipher.init(true, publicKeyParameter);
+
+    Uint8List encryptedContent =
+    asymmetricBlockCipher.process(transformStringToUint8List(content));
+
+    return String.fromCharCodes(encryptedContent);
   }
 
+  //方法：解密
+  static Future<String> decrypt(String content) async {
+    RSAPrivateKey rsaPrivateKey = new RSAPrivateKey()
+  }
+
+  //方法：错误处理
   static handleError(error) {
     switch (error.status) {
       case 200:
