@@ -1,20 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'Operation.dart';
+part of 'Organization.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Operation _$OperationFromJson(Map<String, dynamic> json) {
-  return Operation(
+Organization _$OrganizationFromJson(Map<String, dynamic> json) {
+  return Organization(
       json['id'] as String,
+      json['code'] as String,
+      json['name'] as String,
       json['type'] as String,
-      json['appType'] as String,
       json['category'] as String,
-      json['user'] as String,
-      json['session'] as String,
-      json['businessType'] as String,
+      json['region'] as String,
       json['createTime'] == null
           ? null
           : DateTime.parse(json['createTime'] as String),
@@ -22,24 +21,29 @@ Operation _$OperationFromJson(Map<String, dynamic> json) {
           ? null
           : DateTime.parse(json['timestamp'] as String),
       json['status'] as String,
+      json['serialNo'] as String,
+      parent: json['parent'] as String,
       description: json['description'] as String,
       children: (json['children'] as List)
-          ?.map((e) =>
-              e == null ? null : Operation.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => e == null
+              ? null
+              : Organization.fromJson(e as Map<String, dynamic>))
           ?.toList());
 }
 
-Map<String, dynamic> _$OperationToJson(Operation instance) => <String, dynamic>{
+Map<String, dynamic> _$OrganizationToJson(Organization instance) =>
+    <String, dynamic>{
       'id': instance.id,
+      'code': instance.code,
+      'name': instance.name,
       'type': instance.type,
-      'appType': instance.appType,
       'category': instance.category,
-      'user': instance.user,
-      'session': instance.session,
-      'businessType': instance.businessType,
+      'region': instance.region,
+      'parent': instance.parent,
       'createTime': instance.createTime?.toIso8601String(),
       'timestamp': instance.timestamp?.toIso8601String(),
       'status': instance.status,
+      'serialNo': instance.serialNo,
       'description': instance.description,
       'children': instance.children
     };

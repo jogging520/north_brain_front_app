@@ -1,45 +1,49 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'Operation.dart';
+part of 'Region.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Operation _$OperationFromJson(Map<String, dynamic> json) {
-  return Operation(
+Region _$RegionFromJson(Map<String, dynamic> json) {
+  return Region(
       json['id'] as String,
+      json['code'] as String,
+      json['name'] as String,
       json['type'] as String,
-      json['appType'] as String,
       json['category'] as String,
-      json['user'] as String,
-      json['session'] as String,
-      json['businessType'] as String,
+      json['level'] as String,
+      (json['longitude'] as num)?.toDouble(),
+      (json['latitude'] as num)?.toDouble(),
+      json['status'] as String,
+      json['serialNo'] as String,
       json['createTime'] == null
           ? null
           : DateTime.parse(json['createTime'] as String),
       json['timestamp'] == null
           ? null
           : DateTime.parse(json['timestamp'] as String),
-      json['status'] as String,
       description: json['description'] as String,
       children: (json['children'] as List)
           ?.map((e) =>
-              e == null ? null : Operation.fromJson(e as Map<String, dynamic>))
+              e == null ? null : Region.fromJson(e as Map<String, dynamic>))
           ?.toList());
 }
 
-Map<String, dynamic> _$OperationToJson(Operation instance) => <String, dynamic>{
+Map<String, dynamic> _$RegionToJson(Region instance) => <String, dynamic>{
       'id': instance.id,
+      'code': instance.code,
+      'name': instance.name,
       'type': instance.type,
-      'appType': instance.appType,
       'category': instance.category,
-      'user': instance.user,
-      'session': instance.session,
-      'businessType': instance.businessType,
+      'level': instance.level,
+      'longitude': instance.longitude,
+      'latitude': instance.latitude,
       'createTime': instance.createTime?.toIso8601String(),
       'timestamp': instance.timestamp?.toIso8601String(),
       'status': instance.status,
+      'serialNo': instance.serialNo,
       'description': instance.description,
       'children': instance.children
     };
