@@ -2,22 +2,18 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:connectivity/connectivity.dart';
-import 'package:north_brain_front_app/shared/services/general/CommonService.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
+import 'package:north_brain_front_app/shared/services/general/CommonService.dart';
+import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 
-enum _HttpMethod {
-  get,
-  post,
-  delete,
-  put,
-  options
-}
+
 
 /// 类名：http连接类
 /// 用途：用于通用的http请求，包括GET、POST、DELETE、PUT等操作，用统一的拦截器加载通用的option
 class HttpClient {
 
-  static get(String url, Map<String, dynamic> params, Options options) async {
+  //方法：通用的内部请求方法
+  static Future<dynamic> _request(HttpMethod httpMethod, String url, Map<String, dynamic> params, {data: dynamic}) async {
     //检查网络是否连通
     var connectivityResult = await (new Connectivity().checkConnectivity());
 
@@ -26,9 +22,12 @@ class HttpClient {
       throw new FormatException(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
     }
 
-    //设置header
+    //设置header、params、请求方法、超时时间和data
     var headers = await CommonService.setHeaders(url);
     var parameters = await CommonService.setParams(params);
+    LogService.debug(parameters);
+    FormData formData = FormData.from(data);
+    LogService.debug(formData);
 
     Dio dio = new Dio();
 
@@ -36,10 +35,56 @@ class HttpClient {
     dio.interceptor.request.onSend = (Options options) {
       options.headers = headers;
       options.connectTimeout = GeneralConstants.CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT;
+      options.method = httpMethod.toString();
+      options.data = formData;
 
       return options;
     };
 
-    
+    //设置请求url
+    String requestUrl = url + (url.contains("?") ? "&" : "?") +
+        Transformer.urlEncodeMap(parameters);
+
+    LogService.debug(requestUrl);
+
+    //开始请求，并处理通用异常
+    Response response;
+    try {
+      response = await dio.request(requestUrl);
+      LogService.debug(response);
+      CommonService.handleError(response);
+    } on DioError catch(e) {
+      LogService.error(e);
+    }
+
+    return response.data;
+  }
+
+  //方法：get方法
+  static Future<dynamic> get(String url, Map<String, dynamic> params) async {
+    dynamic response = await _request(HttpMethod.get, url, params);
+
+    return response;
+  }
+
+  //方法：post方法
+  static Future<dynamic> post(String url, Map<String, dynamic> params, data) async {
+    dynamic response = await _request(HttpMethod.post, url, params);
+
+    return response;
+  }
+
+  //方法：put方法
+  static Future<dynamic> put(String url, Map<String, dynamic> params, data) async {
+    dynamic response = await _request(HttpMethod.put, url, params);
+
+    return response;
+  }
+
+  //方法：delete方法
+  static Future<dynamic> delete(String url, Map<String, dynamic> params, data) async {
+    dynamic response = await _request(HttpMethod.delete, url, params);
+
+    return response;
   }
 }

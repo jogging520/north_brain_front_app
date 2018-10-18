@@ -1,4 +1,25 @@
+
+//日志级别枚举值
+enum LogLevel {
+  ERROR,
+  INFO,
+  DEBUG
+}
+
+//http的请求方法枚举值
+enum HttpMethod {
+  get,
+  post,
+  delete,
+  put,
+  options
+}
+
 class GeneralConstants {
+
+  //日志级别定义
+  static const LogLevel CONSTANT_COMMON_LOG_LEVEL                               = LogLevel.DEBUG;
+
   /// 提示的时长（单位：秒）
   static const int    CONSTANT_COMMON_HINT_TIME  = 1;
 

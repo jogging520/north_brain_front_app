@@ -41,11 +41,11 @@ class CommonService {
     headers[GeneralConstants.CONSTANT_COMMON_HTTP_HEADER_API_KEY] =
         GeneralConstants.CONSTANT_COMMON_HTTP_HEADER_API_KEY_VALUE;
 
-    var token = await TokenService.getToken();
+    Token token = await TokenService.getToken();
 
-    if (token != null && token[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN] != null) {
+    if (token != null && token.jwt != null) {
       headers[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN] =
-          token[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN];
+          token.jwt;
     }
 
     return headers;
@@ -71,14 +71,14 @@ class CommonService {
 
     var token = await TokenService.getToken();
 
-    if (token != null && token[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_SESSION] != null) {
+    if (token != null && token.session != null) {
       parameters[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_SESSION] =
-          token[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_SESSION];
+          token.session;
     }
 
-    if (token != null && token[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_USER] != null) {
+    if (token != null && token.user != null) {
       parameters[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_USER] =
-          token[GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_USER];
+          token.user;
     }
 
     return parameters;
@@ -165,7 +165,11 @@ class CommonService {
 
   //方法：错误处理
   static handleError(error) {
-    switch (error.status) {
+    if (error == null && error.statusCode == null) {
+      return;
+    }
+
+    switch (error.statusCode) {
       case 200:
         break;
       case 401:

@@ -9,7 +9,7 @@ class TokenService {
 
   //方法：获取token值
   static Future<Token> getToken() async {
-    var token = await CacheService.get(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
+    Token token = await CacheService.get(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
 
     return token;
   }
