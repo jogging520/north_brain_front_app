@@ -7,6 +7,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
+import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
 import 'package:uuid/uuid.dart';
 import "package:pointycastle/pointycastle.dart";
@@ -88,6 +89,8 @@ class CommonService {
   static Future<String> getSerialNo() async {
     var serialNo = await CacheService.get(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO);
 
+    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
+
     return serialNo;
   }
 
@@ -100,6 +103,8 @@ class CommonService {
 
     await CacheService.save(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO,
         serialNo);
+
+    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
 
     return serialNo;
   }
@@ -135,7 +140,11 @@ class CommonService {
     Uint8List encryptedContent =
     asymmetricBlockCipher.process(transformStringToUint8List(content));
 
-    return String.fromCharCodes(encryptedContent);
+    String encryptedContentString = String.fromCharCodes(encryptedContent);
+
+    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT$encryptedContentString');
+
+    return encryptedContentString;
   }
 
   //方法：解密
@@ -160,7 +169,11 @@ class CommonService {
     Uint8List decryptedContent =
     cipher.process(transformStringToUint8List(content));
 
-    return String.fromCharCodes(decryptedContent);
+    String decryptedContentString = String.fromCharCodes(decryptedContent);
+
+    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT$decryptedContentString');
+
+    return decryptedContentString;
   }
 
   //方法：错误处理

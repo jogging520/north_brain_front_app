@@ -82,4 +82,23 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_TEMPORARY_PUBLIC_KEY_MODULUS              = '112411768397953558368099559416676030914730344493788911620203254033332216263719921326652783220698061739413913906996177751494520094420870490805976437808623520347506464732737199298035082922779813832967370628022978580256036535635808984826375045595416873396604698521152236352808571546582940760901027403317182456299';
   //公钥指数
   static const String CONSTANT_COMMON_PUBLIC_KEY_EXPONENT                       = '65537';
+
+
+  //token日志获取提示
+  static const String CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT                      = '获取到token：';
+  //token日志设置提示
+  static const String CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT                      = '存储token：';
+  //cache日志保存提示
+  static const String CONSTANT_COMMON_LOG_CACHE_SAVE_PROMPT                     = '保存到本地缓存：';
+  //cache日志保存提示
+  static const String CONSTANT_COMMON_LOG_CACHE_GET_PROMPT                      = '获取本地缓存：';
+  //cache日志保存提示
+  static const String CONSTANT_COMMON_LOG_CACHE_DELETE_PROMPT                   = '删除本地缓存：';
+  //cache日志保存提示
+  static const String CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT                      = '当前流水号：';
+  //cache日志保存提示
+  static const String CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT                 = '加密后的内容：';
+  //cache日志保存提示
+  static const String CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT                 = '解密后的内容：';
+
 }
