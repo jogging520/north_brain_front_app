@@ -15,6 +15,7 @@ enum HttpMethod {
   options
 }
 
+//类名：通用的常量定义类
 class GeneralConstants {
 
   //日志级别定义
