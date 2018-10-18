@@ -22,12 +22,17 @@ class GeneralConstants {
   static const LogLevel CONSTANT_COMMON_LOG_LEVEL                               = LogLevel.DEBUG;
 
   /// 提示的时长（单位：秒）
-  static const int    CONSTANT_COMMON_HINT_TIME  = 1;
+  static const int    CONSTANT_COMMON_HINT_TIME                                 = 1;
 
+  //APP文档存储路径
+  static const String CONSTANT_COMMON_APPLICATION_DIRECTORY_DOCUMENT            = '/doc';
+  //APP文档存储分隔符
+  static const String CONSTANT_COMMON_APPLICATION_DIRECTORY_SEPARATOR           = '/';
 
   /// 没有网络连接提示
   static const String CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT            = '网络连接错误，请检查移动网络或者WIFI。';
-
+  //拷贝成功提示
+  static const String CONSTANT_COMMON_COPY_SUCCESS_HINT                         = '拷贝成功。';
 
   //HTTP请求头请求数据类型定义常量
   static const String CONSTANT_COMMON_HTTP_HEADER_CONTENT_TYPE                  = 'content-type';
@@ -101,5 +106,9 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT                 = '加密后的内容：';
   //cache日志保存提示
   static const String CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT                 = '解密后的内容：';
+
+
+
+
 
 }

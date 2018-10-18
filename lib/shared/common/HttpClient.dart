@@ -52,9 +52,12 @@ class HttpClient {
     try {
       response = await dio.request(requestUrl);
       LogService.debug(response);
-      CommonService.handleError(response);
     } on DioError catch(e) {
       LogService.error(e);
+
+      if (e.response != null) {
+        CommonService.handleError(e.response);
+      }
     }
 
     return response.data;

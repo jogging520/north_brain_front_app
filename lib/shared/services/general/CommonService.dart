@@ -1,8 +1,11 @@
 import 'dart:async';
 import 'dart:collection';
+import 'dart:io';
 import 'dart:typed_data';
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
@@ -11,6 +14,9 @@ import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
 import 'package:uuid/uuid.dart';
 import "package:pointycastle/pointycastle.dart";
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 
 /// 类名：通用工具类
@@ -212,4 +218,70 @@ class CommonService {
       now.second, now.millisecond, now.microsecond);
   }
 
+  //方法：获取本地存储的路径
+  static getLocalPath() async {
+    Directory applicationDirectory;
+    if (Platform.isIOS) {
+      applicationDirectory = await getApplicationDocumentsDirectory();
+    } else {
+      applicationDirectory = await getExternalStorageDirectory();
+    }
+
+    PermissionStatus permissionStatus = await PermissionHandler()
+        .checkPermissionStatus(PermissionGroup.storage);
+
+    if (permissionStatus != PermissionStatus.granted) {
+      Map<PermissionGroup, PermissionStatus> permissions =
+          await PermissionHandler().requestPermissions([PermissionGroup.storage]);
+
+      if (permissions[PermissionGroup.storage] != PermissionStatus.granted) {
+        return null;
+      }
+    }
+
+    Directory applicationDocumentPath
+    = Directory(applicationDirectory.path + GeneralConstants.CONSTANT_COMMON_APPLICATION_DIRECTORY_DOCUMENT);
+
+    await applicationDocumentPath.create(recursive: true);
+
+    return applicationDirectory;
+  }
+
+  //方法：通过路径获取文件名
+  static getFileNameByPath(String path) {
+    return path.substring(path.lastIndexOf(GeneralConstants.CONSTANT_COMMON_APPLICATION_DIRECTORY_SEPARATOR));
+  }
+
+  //方法：保存图像
+  static saveImage(String url) async {
+
+    Future<String> _findPath(String imageUrl) async {
+      final CacheManager cacheManager = await CacheManager.getInstance();
+      final file = await cacheManager.getFile(imageUrl);
+
+      if (file == null) {
+        return null;
+      }
+
+      Directory localPath = await CommonService.getLocalPath();
+
+      if (localPath == null) {
+        return null;
+      }
+
+      final String name = getFileNameByPath(file.path);
+      final resultFile = await file.copy(localPath.path + name);
+
+      return resultFile.path;
+    }
+
+    return _findPath(url);
+  }
+
+  //方法：拷贝
+  static copy(String data, BuildContext context) {
+    Clipboard.setData(new ClipboardData(text: data));
+
+    CommonService.hint(GeneralConstants.CONSTANT_COMMON_COPY_SUCCESS_HINT);
+  }
 }
