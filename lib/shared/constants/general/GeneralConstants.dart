@@ -18,6 +18,9 @@ enum HttpMethod {
 //类名：通用的常量定义类
 class GeneralConstants {
 
+  //主标题
+  static const String CONSTANT_COMMON_APPLICATION_TITLE                         = '测试系统';
+
   //日志级别定义
   static const LogLevel CONSTANT_COMMON_LOG_LEVEL                               = LogLevel.DEBUG;
 
@@ -67,6 +70,8 @@ class GeneralConstants {
   static const int    CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT                      = 15000;
 
 
+  //app路由未找到错误
+  static const String CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_ERROR                = '未找到页面路由信息。';
 
   //存储路由的path路径
   static const String CONSTANT_COMMON_ROUTE_PATH_STORAGE                        = 'storage';
@@ -110,6 +115,8 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT                 = '加密后的内容：';
   //解密日志提示
   static const String CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT                 = '解密后的内容：';
+  //系统启动提示
+  static const String CONSTANT_COMMON_LOG_APPLICATION_LAUNCH_PROMPT             = '系统开始启动...';
 
 
 
