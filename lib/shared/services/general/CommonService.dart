@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:convert';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -25,6 +26,10 @@ class CommonService {
 
   //方法：提示信息，通过android、ios的toast实现。
   static hint(String msg) {
+    if (msg == null || msg == '') {
+      return;
+    }
+
     Fluttertoast.showToast(
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
@@ -34,7 +39,11 @@ class CommonService {
   }
 
   /// 方法：设置HTTP头
-  static setHeaders(String url) async {
+  static Future<Map<String, String>> setHeaders(String url) async {
+    if (url == null || url == '') {
+      return null;
+    }
+
     Map<String, String> headers = new HashMap();
 
     if (url.indexOf(GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_STORAGE) == -1) {
@@ -59,10 +68,12 @@ class CommonService {
   }
 
   //方法：根据token中保存的公共信息，形成params对象
-  static setParams(Map<String, dynamic> params) async {
+  static Future<Map<String, String>> setParams(Map<String, dynamic> params) async {
     Map<String, String> parameters = new HashMap();
 
-    parameters.addAll(params);
+    if (params != null) {
+      parameters.addAll(params);
+    }
 
     String serialNo = await getSerialNo();
 
@@ -93,7 +104,7 @@ class CommonService {
 
   //方法：获取当前业务流水号
   static Future<String> getSerialNo() async {
-    var serialNo = await CacheService.get(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO);
+    String serialNo = await CacheService.get(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO);
 
     LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
 
@@ -103,23 +114,32 @@ class CommonService {
 
   //方法：新生成一条业务流水号，并存储在cache中
   static Future<String> setSerialNo() async {
-    var uuid = new Uuid();
+    Uuid uuid = new Uuid();
 
     String serialNo = uuid.v4();
 
-    await CacheService.save(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO,
+    bool isSaved = await CacheService.save(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO,
         serialNo);
 
-    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
+    if (isSaved) {
+      LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
 
-    return serialNo;
+      return serialNo;
+    }
+
+    return null;
   }
 
+  //方法：将字符串转换成Uint8List格式
   static Uint8List transformStringToUint8List(String value) =>
       new Uint8List.fromList(utf8.encode(value));
 
   //方法：加密
   static Future<String> encrypt (String content, bool isTemporary) async {
+    if (content == null || content == '') {
+      return null;
+    }
+
     RSAPublicKey rsaPublicKey;
 
     if (isTemporary) {
@@ -155,6 +175,10 @@ class CommonService {
 
   //方法：解密
   static Future<String> decrypt(String content) async {
+    if (content == null || content == '') {
+      return null;
+    }
+
     Token token = await TokenService.getToken();
 
     RSAPrivateKey rsaPrivateKey = new RSAPrivateKey(
@@ -182,23 +206,34 @@ class CommonService {
     return decryptedContentString;
   }
 
-  //方法：错误处理
+  //方法：http错误处理
   static handleError(error) {
-    if (error == null && error.statusCode == null) {
+    if (error == null || error.statusCode == null || error.type == null) {
       return;
+    }
+
+    switch (error.type) {
+      case DioErrorType.CONNECT_TIMEOUT:
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR);
+        break;
+      case DioErrorType.RECEIVE_TIMEOUT:
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR);
+        break;
+      default:
+        break;
     }
 
     switch (error.statusCode) {
       case 200:
         break;
       case 401:
-        hint(GeneralConstants.CONSTANT_COMMON_DEFAULT_ERROR);
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         break;
       case 505:
-        hint(GeneralConstants.CONSTANT_COMMON_DEFAULT_ERROR);
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         break;
       default:
-        hint(GeneralConstants.CONSTANT_COMMON_DEFAULT_ERROR);
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         break;
     }
   }
@@ -221,6 +256,7 @@ class CommonService {
   //方法：获取本地存储的路径
   static getLocalPath() async {
     Directory applicationDirectory;
+
     if (Platform.isIOS) {
       applicationDirectory = await getApplicationDocumentsDirectory();
     } else {

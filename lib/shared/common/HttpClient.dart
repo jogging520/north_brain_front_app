@@ -14,6 +14,11 @@ class HttpClient {
 
   //方法：通用的内部请求方法
   static Future<dynamic> _request(HttpMethod httpMethod, String url, Map<String, dynamic> params, {data: dynamic}) async {
+
+    if (url == null || url == '') {
+      return null;
+    }
+
     //检查网络是否连通
     var connectivityResult = await (new Connectivity().checkConnectivity());
 
@@ -25,9 +30,12 @@ class HttpClient {
     //设置header、params、请求方法、超时时间和data
     var headers = await CommonService.setHeaders(url);
     var parameters = await CommonService.setParams(params);
+
+    if (headers == null || parameters == null) {
+      return null;
+    }
+
     LogService.debug(parameters);
-    FormData formData = FormData.from(data);
-    LogService.debug(formData);
 
     Dio dio = new Dio();
 
@@ -36,7 +44,6 @@ class HttpClient {
       options.headers = headers;
       options.connectTimeout = GeneralConstants.CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT;
       options.method = httpMethod.toString();
-      options.data = formData;
 
       return options;
     };
@@ -50,7 +57,15 @@ class HttpClient {
     //开始请求，并处理通用异常
     Response response;
     try {
-      response = await dio.request(requestUrl);
+      if (data != null) {
+        FormData formData = FormData.from(data);
+        LogService.debug(formData);
+
+        response = await dio.request(requestUrl, data: formData);
+      } else {
+        response = await dio.request(requestUrl);
+      }
+
       LogService.debug(response);
     } on DioError catch(e) {
       LogService.error(e);

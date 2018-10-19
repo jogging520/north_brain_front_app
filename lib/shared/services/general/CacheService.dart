@@ -11,7 +11,11 @@ class CacheService {
   /// 方法：存储
   /// @param key 键
   /// @param value 值
-  static save(String key, value) async {
+  static Future<bool> save(String key, value) async {
+    if (key == null || key == '' || value == null) {
+      return false;
+    }
+
     final storage = new FlutterSecureStorage();
 
     LogService.debug(GeneralConstants.CONSTANT_COMMON_LOG_CACHE_SAVE_PROMPT);
@@ -19,12 +23,18 @@ class CacheService {
     LogService.debug(value);
 
     await storage.write(key: key, value: value);
+
+    return true;
   }
 
   /// 方法：取值
   /// @param key 键
   /// @return 值
   static Future<dynamic> get(String key) async {
+    if (key == null || key == '') {
+      return null;
+    }
+
     final storage = new FlutterSecureStorage();
 
     dynamic value = await storage.read(key: key);
@@ -38,12 +48,18 @@ class CacheService {
 
   /// 方法：移除
   /// @param key 键
-  static remove(String key) async {
+  static Future<bool> remove(String key) async {
+    if (key == null || key == '') {
+      return false;
+    }
+
     final storage = new FlutterSecureStorage();
 
     LogService.debug(GeneralConstants.CONSTANT_COMMON_LOG_CACHE_DELETE_PROMPT);
     LogService.debug(key);
 
     await storage.delete(key: key);
+
+    return true;
   }
 }

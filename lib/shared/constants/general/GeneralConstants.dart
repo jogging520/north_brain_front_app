@@ -79,7 +79,11 @@ class GeneralConstants {
 
 
   //默认错误描述
-  static const String CONSTANT_COMMON_DEFAULT_ERROR                             = '系统发生未可知错误，请联系管理员检查。';
+  static const String CONSTANT_COMMON_HTTP_DEFAULT_ERROR                        = '系统发生未可知错误。';
+  //网络连接超时错误描述
+  static const String CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR                = '网络连接超时，请检查网络。';
+  //网络连接超时错误描述
+  static const String CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR                = '网络接收超时，请检查网络。';
 
 
   //加解密算法
@@ -102,9 +106,9 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_CACHE_DELETE_PROMPT                   = '删除本地缓存：';
   //cache日志保存提示
   static const String CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT                      = '当前流水号：';
-  //cache日志保存提示
+  //加密日志提示
   static const String CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT                 = '加密后的内容：';
-  //cache日志保存提示
+  //解密日志提示
   static const String CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT                 = '解密后的内容：';
 
 

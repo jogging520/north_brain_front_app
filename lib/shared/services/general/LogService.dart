@@ -7,6 +7,9 @@ import 'package:north_brain_front_app/shared/services/general/CommonService.dart
 class LogService {
   //方法：error级别
   static error(dynamic content) {
+    if (content == null) {
+      return;
+    }
 
     DateTime current = CommonService.currentDate();
 
@@ -17,6 +20,9 @@ class LogService {
 
   //info级别
   static info(dynamic content) {
+    if (content == null) {
+      return;
+    }
 
     DateTime current = CommonService.currentDate();
 
@@ -29,6 +35,9 @@ class LogService {
 
   //debug级别
   static debug(dynamic content) {
+    if (content == null) {
+      return;
+    }
 
     DateTime current = CommonService.currentDate();
 
