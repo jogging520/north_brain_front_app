@@ -7,6 +7,7 @@ import 'package:north_brain_front_app/shared/route/Routes.dart';
 import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
+//类名：应用启动页面
 class ApplicationPage extends StatefulWidget{
 
   @override
