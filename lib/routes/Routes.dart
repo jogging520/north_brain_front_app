@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:north_brain_front_app/shared/route/RouteHandlers.dart';
+import 'package:north_brain_front_app/routes/RouteHandlers.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/services/general/CommonService.dart';
 
@@ -15,7 +15,8 @@ class Routes{
         CommonService.hint(GeneralConstants.CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_ERROR);
       }
     );
-    
+
+    //在这个地方增加权限的限制（只通过角色来判断？）
     router.define(ROUTE_ROOT, handler: rootHandler);
   }
 }

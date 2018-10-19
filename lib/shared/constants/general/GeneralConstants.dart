@@ -21,6 +21,9 @@ class GeneralConstants {
   //主标题
   static const String CONSTANT_COMMON_APPLICATION_TITLE                         = '测试系统';
 
+  //是否打开测试画布
+  static const bool CONSTANT_COMMON_APPLICATION_DEBUG_PAINT_SIZE_ENABLED        = true;
+
   //日志级别定义
   static const LogLevel CONSTANT_COMMON_LOG_LEVEL                               = LogLevel.DEBUG;
 

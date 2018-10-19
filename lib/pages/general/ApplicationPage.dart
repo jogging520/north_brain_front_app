@@ -2,8 +2,8 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
-import 'package:north_brain_front_app/shared/route/Application.dart';
-import 'package:north_brain_front_app/shared/route/Routes.dart';
+import 'package:north_brain_front_app/routes/Application.dart';
+import 'package:north_brain_front_app/routes/Routes.dart';
 import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
@@ -30,6 +30,7 @@ class ApplicationPageState extends State<ApplicationPage>{
   Widget build(BuildContext context) {
     final app = new MaterialApp(
       title: GeneralConstants.CONSTANT_COMMON_APPLICATION_TITLE,
+      debugShowCheckedModeBanner: false,
       theme: new ThemeData(
           primarySwatch: ColorStyle.COLOR_PRIMARY_SWATCH
       ),
