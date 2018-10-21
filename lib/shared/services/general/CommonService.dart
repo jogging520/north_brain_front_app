@@ -8,10 +8,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
-import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
 import 'package:uuid/uuid.dart';
 import "package:pointycastle/pointycastle.dart";
@@ -106,7 +106,7 @@ class CommonService {
   static Future<String> getSerialNo() async {
     String serialNo = await CacheService.get(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO);
 
-    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
+    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
 
     return serialNo;
   }
@@ -122,7 +122,7 @@ class CommonService {
         serialNo);
 
     if (isSaved) {
-      LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
+      Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
 
       return serialNo;
     }
@@ -168,7 +168,7 @@ class CommonService {
 
     String encryptedContentString = String.fromCharCodes(encryptedContent);
 
-    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT$encryptedContentString');
+    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT$encryptedContentString');
 
     return encryptedContentString;
   }
@@ -201,7 +201,7 @@ class CommonService {
 
     String decryptedContentString = String.fromCharCodes(decryptedContent);
 
-    LogService.debug('$GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT$decryptedContentString');
+    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT$decryptedContentString');
 
     return decryptedContentString;
   }

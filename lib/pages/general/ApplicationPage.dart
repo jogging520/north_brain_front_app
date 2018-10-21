@@ -1,10 +1,10 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/routes/Routes.dart';
-import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 //类名：应用启动页面
@@ -36,8 +36,8 @@ class ApplicationPageState extends State<ApplicationPage>{
       ),
       onGenerateRoute: Application.router.generator,
     );
-    
-    LogService.debug(GeneralConstants.CONSTANT_COMMON_LOG_APPLICATION_LAUNCH_PROMPT);
+
+    Logger.root.fine(GeneralConstants.CONSTANT_COMMON_LOG_APPLICATION_LAUNCH_PROMPT);
 
     return app;
   }

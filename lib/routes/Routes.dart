@@ -7,7 +7,7 @@ import 'package:north_brain_front_app/shared/services/general/CommonService.dart
 //类名：路由类
 class Routes{
   static const String ROUTE_ROOT = '/';
-  static const String ROUTE_PRICE = '/price';
+  static const String ROUTE_PRICE = '/price/:id';
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = new Handler(

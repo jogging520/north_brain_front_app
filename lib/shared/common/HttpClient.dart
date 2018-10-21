@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:connectivity/connectivity.dart';
+import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/services/general/CommonService.dart';
-import 'package:north_brain_front_app/shared/services/general/LogService.dart';
 
 
 
@@ -35,7 +35,7 @@ class HttpClient {
       return null;
     }
 
-    LogService.debug(parameters);
+    Logger.root.fine(parameters);
 
     Dio dio = new Dio();
 
@@ -52,23 +52,23 @@ class HttpClient {
     String requestUrl = url + (url.contains("?") ? "&" : "?") +
         Transformer.urlEncodeMap(parameters);
 
-    LogService.debug(requestUrl);
+    Logger.root.fine(requestUrl);
 
     //开始请求，并处理通用异常
     Response response;
     try {
       if (data != null) {
         FormData formData = FormData.from(data);
-        LogService.debug(formData);
+        Logger.root.fine(formData);
 
         response = await dio.request(requestUrl, data: formData);
       } else {
         response = await dio.request(requestUrl);
       }
 
-      LogService.debug(response);
+      Logger.root.fine(response);
     } on DioError catch(e) {
-      LogService.error(e);
+      Logger.root.severe(e);
 
       if (e.response != null) {
         CommonService.handleError(e.response);
