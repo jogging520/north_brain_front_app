@@ -58,8 +58,8 @@ class FontStyle {
 
 //类名：图标样式
 class IconStyle {
-  static const String ICON_DEFAULT_USER = 'static/images/logo.png';
-  static const String ICON_DEFAULT_IMAGE = 'static/images/default_img.png';
+  static const String ICON_DEFAULT_USER = 'asset/images/logo.png';
+  static const String ICON_DEFAULT_IMAGE = 'asset/images/default_img.png';
 
   static const IconData ICON_HOME = const IconData(0xe624, fontFamily: FontStyle.FONT_FAMILY);
   static const IconData ICON_MORE = const IconData(0xe62C, fontFamily: FontStyle.FONT_FAMILY);

@@ -6,6 +6,8 @@ import 'package:north_brain_front_app/pages/business/home/HomePage.dart';
 
 var rootHandler = new Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    HomePage.role.contains('admin');
+
     return new HomePage();
   }
 );

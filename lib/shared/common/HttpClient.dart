@@ -86,22 +86,22 @@ class HttpClient {
   }
 
   //方法：post方法
-  static Future<dynamic> post(String url, Map<String, dynamic> params, data) async {
-    dynamic response = await _request(HttpMethod.post, url, params);
+  static Future<dynamic> post(String url, Map<String, dynamic> params, body) async {
+    dynamic response = await _request(HttpMethod.post, url, params, data: body);
 
     return response;
   }
 
   //方法：put方法
-  static Future<dynamic> put(String url, Map<String, dynamic> params, data) async {
-    dynamic response = await _request(HttpMethod.put, url, params);
+  static Future<dynamic> put(String url, Map<String, dynamic> params, body) async {
+    dynamic response = await _request(HttpMethod.put, url, params, data: body);
 
     return response;
   }
 
   //方法：delete方法
-  static Future<dynamic> delete(String url, Map<String, dynamic> params, data) async {
-    dynamic response = await _request(HttpMethod.delete, url, params);
+  static Future<dynamic> delete(String url, Map<String, dynamic> params, body) async {
+    dynamic response = await _request(HttpMethod.delete, url, params, data: body);
 
     return response;
   }
