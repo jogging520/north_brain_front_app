@@ -8,6 +8,12 @@ enum HttpMethod {
   options
 }
 
+//头像枚举值
+enum AvatarType {
+  icon,
+  text
+}
+
 //类名：通用的常量定义类
 class GeneralConstants {
 
