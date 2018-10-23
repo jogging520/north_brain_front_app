@@ -106,7 +106,7 @@ class CommonService {
   static Future<String> getSerialNo() async {
     String serialNo = await CacheService.get(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO);
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT}${serialNo}');
 
     return serialNo;
   }
@@ -122,7 +122,7 @@ class CommonService {
         serialNo);
 
     if (isSaved) {
-      Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT$serialNo');
+      Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT}${serialNo}');
 
       return serialNo;
     }
@@ -168,7 +168,7 @@ class CommonService {
 
     String encryptedContentString = String.fromCharCodes(encryptedContent);
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT$encryptedContentString');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT}${encryptedContentString}');
 
     return encryptedContentString;
   }
@@ -201,7 +201,7 @@ class CommonService {
 
     String decryptedContentString = String.fromCharCodes(decryptedContent);
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT$decryptedContentString');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT}${decryptedContentString}');
 
     return decryptedContentString;
   }
@@ -213,11 +213,21 @@ class CommonService {
     }
 
     switch (error.type) {
+      case DioErrorType.DEFAULT:
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
+        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR}${error.message}');
+        break;
+      case DioErrorType.RESPONSE:
+        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RESPONSE_ERROR);
+        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_RESPONSE_ERROR}${error.message}');
+        break;
       case DioErrorType.CONNECT_TIMEOUT:
         CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR);
+        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR}${error.message}');
         break;
       case DioErrorType.RECEIVE_TIMEOUT:
         CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR);
+        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR}${error.message}');
         break;
       default:
         break;

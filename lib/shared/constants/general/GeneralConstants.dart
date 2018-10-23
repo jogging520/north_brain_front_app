@@ -83,7 +83,9 @@ class GeneralConstants {
 
 
   //默认错误描述
-  static const String CONSTANT_COMMON_HTTP_DEFAULT_ERROR                        = '系统发生未可知错误。';
+  static const String CONSTANT_COMMON_HTTP_DEFAULT_ERROR                        = '网络不可用。';
+  //默认错误描述
+  static const String CONSTANT_COMMON_HTTP_RESPONSE_ERROR                       = '服务器响应错误:';
   //网络连接超时错误描述
   static const String CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR                = '网络连接超时，请检查网络。';
   //网络连接超时错误描述
@@ -116,6 +118,14 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT                 = '解密后的内容：';
   //系统启动提示
   static const String CONSTANT_COMMON_LOG_APPLICATION_LAUNCH_PROMPT             = '系统开始启动...';
+  //HTTP请求参数提示
+  static const String CONSTANT_COMMON_LOG_HTTP_REQUEST_PARAMETERS_PROMPT        = 'http请求参数为：';
+  //HTTP请求url提示
+  static const String CONSTANT_COMMON_LOG_HTTP_REQUEST_URL_PROMPT               = 'http请求URL为：';
+  //HTTP请求body提示
+  static const String CONSTANT_COMMON_LOG_HTTP_REQUEST_BODY_PROMPT              = 'http请求BODY为：';
+  //HTTP请求body提示
+  static const String CONSTANT_COMMON_LOG_HTTP_RESPONSE_BODY_PROMPT             = 'http响应BODY为：';
 
 
 

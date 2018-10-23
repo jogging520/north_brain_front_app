@@ -35,7 +35,7 @@ class HttpClient {
       return null;
     }
 
-    Logger.root.fine(parameters);
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_PARAMETERS_PROMPT}${parameters}');
 
     Dio dio = new Dio();
 
@@ -52,21 +52,21 @@ class HttpClient {
     String requestUrl = url + (url.contains("?") ? "&" : "?") +
         Transformer.urlEncodeMap(parameters);
 
-    Logger.root.fine(requestUrl);
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_URL_PROMPT}${requestUrl}');
 
     //开始请求，并处理通用异常
     Response response;
     try {
       if (data != null) {
         FormData formData = FormData.from(data);
-        Logger.root.fine(formData);
+        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_BODY_PROMPT}${formData}');
 
         response = await dio.request(requestUrl, data: formData);
       } else {
         response = await dio.request(requestUrl);
       }
 
-      Logger.root.fine(response);
+      Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_RESPONSE_BODY_PROMPT}${response}');
     } on DioError catch(e) {
       Logger.root.severe(e);
 
