@@ -250,9 +250,7 @@ class CommonService {
 
   //方法：获取当前时间的值
   static DateTime currentDate() {
-    DateTime now = new DateTime.now();
-
-    return now;
+    return DateTime.now();
   }
 
   //方法：获取前一天时间的值
