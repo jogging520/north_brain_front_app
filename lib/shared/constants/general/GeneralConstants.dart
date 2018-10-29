@@ -1,13 +1,4 @@
 
-//http的请求方法枚举值
-enum HttpMethod {
-  get,
-  post,
-  delete,
-  put,
-  options
-}
-
 //头像枚举值
 enum AvatarType {
   icon,
@@ -37,6 +28,17 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_COPY_SUCCESS_HINT                         = '拷贝成功。';
   //HTTP基础URL
   static const String CONSTANT_COMMON_HTTP_BASE_URL                             = 'http://223.105.5.116:9090/';
+  //HTTP的get方法
+  static const String CONSTANT_COMMON_HTTP_METHOD_GET                           = 'get';
+  //HTTP的post方法
+  static const String CONSTANT_COMMON_HTTP_METHOD_POST                          = 'post';
+  //HTTP的put方法
+  static const String CONSTANT_COMMON_HTTP_METHOD_PUT                           = 'put';
+  //HTTP的delete方法
+  static const String CONSTANT_COMMON_HTTP_METHOD_DELETE                        = 'delete';
+  //HTTP的options方法
+  static const String CONSTANT_COMMON_HTTP_METHOD_OPTIONS                       = 'options';
+
   //HTTP请求头请求数据类型定义常量
   static const String CONSTANT_COMMON_HTTP_HEADER_CONTENT_TYPE                  = 'content-type';
   //HTTP请求头请求数据类型取值常量

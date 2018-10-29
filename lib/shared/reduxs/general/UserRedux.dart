@@ -3,7 +3,7 @@ import 'package:redux/redux.dart';
 import 'package:north_brain_front_app/shared/models/general/User.dart';
 
 /// redux 的 combineReducers, 通过 TypedReducer 将 UserUpdateAction 与 reducers 关联起来
-final UserReducer = combineReducers<User>([
+final userReducer = combineReducers<User>([
   TypedReducer<User, UserUpdateAction>(_updateLoaded),
 ]);
 

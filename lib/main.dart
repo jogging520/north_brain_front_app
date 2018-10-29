@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;//调试模式，正式关闭
+import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 import 'package:north_brain_front_app/pages/general/ApplicationPage.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:logging/logging.dart';

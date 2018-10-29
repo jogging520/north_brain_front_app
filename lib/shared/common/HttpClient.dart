@@ -13,7 +13,7 @@ import 'package:north_brain_front_app/shared/services/general/CommonService.dart
 class HttpClient {
 
   //方法：通用的内部请求方法
-  static Future<dynamic> _request(HttpMethod httpMethod, String url, Map<String, dynamic> params, {data: dynamic}) async {
+  static Future<dynamic> _request(String httpMethod, String url, Map<String, String> params, {dynamic body}) async {
 
     if (url == null || url == '') {
       return null;
@@ -35,73 +35,72 @@ class HttpClient {
       return null;
     }
 
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_PARAMETERS_PROMPT}${parameters}');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_PARAMETERS_PROMPT}$parameters');
 
     Dio dio = new Dio();
+    Options options = new Options();
+    options.headers = headers;
+    options.connectTimeout = GeneralConstants.CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT;
+    options.method = httpMethod;
 
-    //设置拦截器
-    dio.interceptor.request.onSend = (Options options) {
-      options.headers = headers;
-      options.connectTimeout = GeneralConstants.CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT;
-      options.method = httpMethod.toString();
-
-      return options;
-    };
 
     //设置请求url
     String requestUrl = url + (url.contains("?") ? "&" : "?") +
         Transformer.urlEncodeMap(parameters);
 
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_URL_PROMPT}${requestUrl}');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_URL_PROMPT}$requestUrl');
 
     //开始请求，并处理通用异常
     Response response;
     try {
-      if (data != null) {
-        FormData formData = FormData.from(data);
-        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_BODY_PROMPT}${formData}');
+      if (body != null) {
+        Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_REQUEST_BODY_PROMPT}$body');
 
-        response = await dio.request(requestUrl, data: formData);
+        response = await dio.request(requestUrl, data: body, options: options);
       } else {
-        response = await dio.request(requestUrl);
+        response = await dio.request(requestUrl, options: options);
       }
 
-      Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_RESPONSE_BODY_PROMPT}${response}');
+      Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_HTTP_RESPONSE_BODY_PROMPT}$response');
     } on DioError catch(e) {
       Logger.root.severe(e);
 
       if (e.response != null) {
-        CommonService.handleError(e.response);
+        CommonService.handleError(e);
       }
     }
 
-    return response.data;
+    if (response != null && response.data != null) {
+      return response.data;
+    }
+
+    return null;
   }
 
   //方法：get方法
-  static Future<dynamic> get(String url, Map<String, dynamic> params) async {
-    dynamic response = await _request(HttpMethod.get, url, params);
+  static Future<dynamic> get(String url, Map<String, String> params) async {
+    dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_GET, url, params);
 
     return response;
   }
 
   //方法：post方法
-  static Future<dynamic> post(String url, Map<String, dynamic> params, body) async {
-    dynamic response = await _request(HttpMethod.post, url, params, data: body);
+  static Future<dynamic> post(String url, Map<String, String> params, {dynamic body}) async {
+    dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_POST, url, params, body: body);
 
     return response;
   }
 
   //方法：put方法
-  static Future<dynamic> put(String url, Map<String, dynamic> params, body) async {
-    dynamic response = await _request(HttpMethod.put, url, params, data: body);
+  static Future<dynamic> put(String url, Map<String, String> params, {dynamic body}) async {
+    dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_PUT, url, params, body: body);
 
     return response;
   }
 
   //方法：delete方法
-  static Future<dynamic> delete(String url, Map<String, dynamic> params, body) async {
-    dynamic response = await _request(HttpMethod.delete, url, params, data: body);
+  static Future<dynamic> delete(String url, Map<String, String> params, {dynamic body}) async {
+    dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_DELETE, url, params, body: body);
 
     return response;
   }

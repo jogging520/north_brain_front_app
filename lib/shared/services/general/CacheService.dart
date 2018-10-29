@@ -18,7 +18,7 @@ class CacheService {
 
     final storage = new FlutterSecureStorage();
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_CACHE_SAVE_PROMPT$key, $value');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_CACHE_SAVE_PROMPT}$key, $value');
 
     await storage.write(key: key, value: value);
 
@@ -37,7 +37,7 @@ class CacheService {
 
     dynamic value = await storage.read(key: key);
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_CACHE_GET_PROMPT$key, $value');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_CACHE_GET_PROMPT}$key, $value');
 
     return value;
   }
@@ -51,7 +51,7 @@ class CacheService {
 
     final storage = new FlutterSecureStorage();
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_CACHE_DELETE_PROMPT$key');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_CACHE_DELETE_PROMPT}$key');
 
     await storage.delete(key: key);
 

@@ -68,7 +68,7 @@ class CommonService {
   }
 
   //方法：根据token中保存的公共信息，形成params对象
-  static Future<Map<String, String>> setParams(Map<String, dynamic> params) async {
+  static Future<Map<String, String>> setParams(Map<String, String> params) async {
     Map<String, String> parameters = new HashMap();
 
     if (params != null) {
@@ -106,7 +106,7 @@ class CommonService {
   static Future<String> getSerialNo() async {
     String serialNo = await CacheService.get(GeneralConstants.CONSTANT_COMMON_CACHE_SERIAL_NO);
 
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT}${serialNo}');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT}$serialNo');
 
     return serialNo;
   }
@@ -122,7 +122,7 @@ class CommonService {
         serialNo);
 
     if (isSaved) {
-      Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT}${serialNo}');
+      Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT}$serialNo');
 
       return serialNo;
     }
@@ -168,7 +168,7 @@ class CommonService {
 
     String encryptedContentString = String.fromCharCodes(encryptedContent);
 
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT}${encryptedContentString}');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT}$encryptedContentString');
 
     return encryptedContentString;
   }
@@ -201,14 +201,14 @@ class CommonService {
 
     String decryptedContentString = String.fromCharCodes(decryptedContent);
 
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT}${decryptedContentString}');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT}$decryptedContentString');
 
     return decryptedContentString;
   }
 
   //方法：http错误处理
   static handleError(error) {
-    if (error == null || error.statusCode == null || error.type == null) {
+    if (error == null || error.response.statusCode == null || error.type == null) {
       return;
     }
 
@@ -233,7 +233,7 @@ class CommonService {
         break;
     }
 
-    switch (error.statusCode) {
+    switch (error.response.statusCode) {
       case 200:
         break;
       case 401:

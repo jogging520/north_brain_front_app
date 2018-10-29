@@ -11,16 +11,20 @@ class TokenService {
 
   //方法：获取token值
   static Future<Token> getToken() async {
-    Token token = await CacheService.get(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
+    dynamic token = await CacheService.get(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
 
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT$token');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT}$token');
 
-    return token;
+    if (token != null) {
+      return Token.fromJson(token);
+    }
+
+    return null;
   }
 
   //方法：设置token
   static setToken(Token token) async {
-    Logger.root.fine('$GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT$token');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT}$token');
 
     await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, token);
   }
