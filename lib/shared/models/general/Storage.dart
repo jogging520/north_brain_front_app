@@ -21,4 +21,6 @@ class Storage {
       this.timestamp, this.status, this.serialNo, {this.description});
 
   factory Storage.fromJson(Map<String, dynamic> json) => _$StorageFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StorageToJson(this);
 }

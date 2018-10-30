@@ -29,4 +29,6 @@ class Region {
         this.children = children ?? <Region>[];
 
   factory Region.fromJson(Map<String, dynamic> json) => _$RegionFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RegionToJson(this);
 }

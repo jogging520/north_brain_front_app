@@ -25,4 +25,6 @@ class Role {
       this.appTypes = appTypes ?? <String>[];
 
   factory Role.fromJson(Map<String, dynamic> json) => _$RoleFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RoleToJson(this);
 }

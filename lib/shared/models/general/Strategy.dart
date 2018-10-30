@@ -27,4 +27,6 @@ class Strategy {
         this.parameters = parameters ?? new HashMap();
 
   factory Strategy.fromJson(Map<String, dynamic> json) => _$StrategyFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StrategyToJson(this);
 }

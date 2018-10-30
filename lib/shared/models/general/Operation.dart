@@ -27,4 +27,6 @@ class Operation {
         this.children = children ?? <Operation>[];
 
   factory Operation.fromJson(Map<String, dynamic> json) => _$OperationFromJson(json);
+
+  Map<String, dynamic> toJson() => _$OperationToJson(this);
 }
