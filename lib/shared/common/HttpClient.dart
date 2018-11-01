@@ -13,7 +13,7 @@ import 'package:north_brain_front_app/shared/services/general/CommonService.dart
 class HttpClient {
 
   //方法：通用的内部请求方法
-  static Future<dynamic> _request(String httpMethod, String url, Map<String, String> params, {dynamic body}) async {
+  static Future<dynamic> _request(String httpMethod, String url, Map<String, dynamic> params, {dynamic body}) async {
 
     if (url == null || url == '') {
       return null;
@@ -78,28 +78,28 @@ class HttpClient {
   }
 
   //方法：get方法
-  static Future<dynamic> get(String url, Map<String, String> params) async {
+  static Future<dynamic> get(String url, Map<String, dynamic> params) async {
     dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_GET, url, params);
 
     return response;
   }
 
   //方法：post方法
-  static Future<dynamic> post(String url, Map<String, String> params, {dynamic body}) async {
+  static Future<dynamic> post(String url, Map<String, dynamic> params, {dynamic body}) async {
     dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_POST, url, params, body: body);
 
     return response;
   }
 
   //方法：put方法
-  static Future<dynamic> put(String url, Map<String, String> params, {dynamic body}) async {
+  static Future<dynamic> put(String url, Map<String, dynamic> params, {dynamic body}) async {
     dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_PUT, url, params, body: body);
 
     return response;
   }
 
   //方法：delete方法
-  static Future<dynamic> delete(String url, Map<String, String> params, {dynamic body}) async {
+  static Future<dynamic> delete(String url, Map<String, dynamic> params, {dynamic body}) async {
     dynamic response = await _request(GeneralConstants.CONSTANT_COMMON_HTTP_METHOD_DELETE, url, params, body: body);
 
     return response;

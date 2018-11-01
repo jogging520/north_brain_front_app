@@ -5,12 +5,11 @@ import 'package:north_brain_front_app/shared/models/general/Operation.dart';
 import 'package:north_brain_front_app/shared/services/general/CommonService.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
-import 'package:rxdart/rxdart.dart';
 
 class OperationService {
 
   ///方法：创建一条业务操作记录
-  Future<Operation> _createOperation(String businessType, {String serialNo}) async {
+  Future<Operation> createOperation(String businessType, {String serialNo}) async {
     String id = serialNo ?? await CommonService.setSerialNo();
     Token token = await TokenService.getToken();
 
@@ -33,8 +32,11 @@ class OperationService {
         .then((json) => Operation.fromJson(json));
   }
 
-  Observable<Operation> createOperation(String businessType, {String serialNo}) {
-    return Observable
-        .fromFuture(_createOperation(businessType, serialNo: serialNo));
+  ///方法：按照条件查询操作记录
+  Future<dynamic> queryOperations(Map<String, dynamic> conditions) async {
+    await CommonService.setSerialNo();
+
+    return HttpClient
+        .get(GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL, conditions);
   }
 }

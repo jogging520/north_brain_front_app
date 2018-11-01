@@ -68,8 +68,8 @@ class CommonService {
   }
 
   //方法：根据token中保存的公共信息，形成params对象
-  static Future<Map<String, String>> setParams(Map<String, String> params) async {
-    Map<String, String> parameters = new HashMap();
+  static Future<Map<String, dynamic>> setParams(Map<String, dynamic> params) async {
+    Map<String, dynamic> parameters = new HashMap();
 
     if (params != null) {
       parameters.addAll(params);
