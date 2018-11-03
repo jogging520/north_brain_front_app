@@ -16,7 +16,6 @@ _initLogging() {
   Logger.root.level = Level.ALL;  //生产系统中要修改为：FINEST
 
   Logger.root.onRecord.listen((LogRecord logRecord) {
-    print('''${logRecord.level.name}: ${logRecord.time}: 
-    ${logRecord.loggerName}: ${logRecord.sequenceNumber}: ${logRecord.message}''');
+    print('''${logRecord.level.name}: ${logRecord.time}: ${logRecord.loggerName}: ${logRecord.sequenceNumber}: ${logRecord.message}''');
   });
 }

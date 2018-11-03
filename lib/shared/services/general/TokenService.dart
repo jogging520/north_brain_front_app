@@ -12,7 +12,7 @@ class TokenService {
 
   //方法：获取token值
   static Future<Token> getToken() async {
-    dynamic token = await CacheService.get(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
+    String token = await CacheService.get(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
 
     Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT}$token');
 

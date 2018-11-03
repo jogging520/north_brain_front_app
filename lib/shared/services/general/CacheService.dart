@@ -28,7 +28,7 @@ class CacheService {
   /// 方法：取值
   /// @param key 键
   /// @return 值
-  static Future<dynamic> get(String key) async {
+  static Future<String> get(String key) async {
     if (key == null || key == '') {
       return null;
     }

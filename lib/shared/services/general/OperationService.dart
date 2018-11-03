@@ -33,7 +33,7 @@ class OperationService {
   }
 
   ///方法：按照条件查询操作记录
-  Future<dynamic> queryOperations(Map<String, dynamic> conditions) async {
+  Future<dynamic> queryOperations({Map<String, dynamic> conditions}) async {
     await CommonService.setSerialNo();
 
     return HttpClient

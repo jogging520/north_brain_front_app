@@ -163,8 +163,6 @@ class CommonService {
       publicKey = token.downPublicKey;
     }
 
-
-
     return encryptString(encoder(content), publicKey);
   }
 
