@@ -95,13 +95,8 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR                = '网络接收超时，请检查网络。';
 
 
-  //加解密算法
-  static const String CONSTANT_COMMON_SECURITY_ASYMMETRIC_ALGORITHM             = 'RSA';
-  //临时公钥系数
-  static const String CONSTANT_COMMON_TEMPORARY_PUBLIC_KEY_MODULUS              = '112411768397953558368099559416676030914730344493788911620203254033332216263719921326652783220698061739413913906996177751494520094420870490805976437808623520347506464732737199298035082922779813832967370628022978580256036535635808984826375045595416873396604698521152236352808571546582940760901027403317182456299';
-  //公钥指数
-  static const String CONSTANT_COMMON_PUBLIC_KEY_EXPONENT                       = '65537';
-
+  //临时公钥
+  static const String CONSTANT_COMMON_TEMPORARY_PUBLIC_KEY                      = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCgFGVfrY4jQSoZQWWygZ83roKXWD4YeT2x2p41dGkPixe73rT2IW04glagN2vgoZoHuOPqa5and6kAmK2ujmCHu6D1auJhE2tXP+yLkpSiYMQucDKmCsWMnW9XlC5K7OSL77TXXcfvTvyZcjObEz6LIBRzs6+FqpFbUO9SJEfh6wIDAQAB';
 
   //token日志获取提示
   static const String CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT                      = '获取到token：';
@@ -115,10 +110,6 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_CACHE_DELETE_PROMPT                   = '删除本地缓存：';
   //cache日志保存提示
   static const String CONSTANT_COMMON_LOG_SERIAL_NO_PROMPT                      = '当前流水号：';
-  //加密日志提示
-  static const String CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT                 = '加密后的内容：';
-  //解密日志提示
-  static const String CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT                 = '解密后的内容：';
   //系统启动提示
   static const String CONSTANT_COMMON_LOG_APPLICATION_LAUNCH_PROMPT             = '系统开始启动...';
   //HTTP请求参数提示

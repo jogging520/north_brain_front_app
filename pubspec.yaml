@@ -25,7 +25,6 @@ dependencies:
   uuid: ^1.0.3
   json_annotation: ^1.2.0
   flutter_secure_storage: ^3.1.2
-  pointycastle: ^1.0.0-rc4
   path_provider: ^0.4.1
   permission_handler: ^2.1.0
   flutter_cache_manager: ^0.1.2
@@ -33,6 +32,7 @@ dependencies:
   logging: ^0.11.3+2
   flutter_redux: ^0.5.2
   event_bus: ^1.0.1
+  simple_rsa: ^0.0.1
 
 
 dev_dependencies:

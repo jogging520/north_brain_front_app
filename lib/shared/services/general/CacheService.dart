@@ -11,7 +11,7 @@ class CacheService {
   /// 方法：存储
   /// @param key 键
   /// @param value 值
-  static Future<bool> save(String key, value) async {
+  static Future<bool> save(String key, String value) async {
     if (key == null || key == '' || value == null) {
       return false;
     }

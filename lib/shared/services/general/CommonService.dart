@@ -14,10 +14,10 @@ import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
 import 'package:uuid/uuid.dart';
-import "package:pointycastle/pointycastle.dart";
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:simple_rsa/simple_rsa.dart';
 
 
 /// 类名：通用工具类
@@ -134,43 +134,38 @@ class CommonService {
   static Uint8List transformStringToUint8List(String value) =>
       new Uint8List.fromList(utf8.encode(value));
 
-  //方法：加密
-  static Future<String> encrypt (String content, bool isTemporary) async {
+  ///方法：base64编码
+  static String encoder(String content) {
     if (content == null || content == '') {
       return null;
     }
 
-    RSAPublicKey rsaPublicKey;
+    var bytes = utf8.encode(content);
+    return base64Encode(bytes);
+  }
 
+  //方法：加密
+  static Future<String> encrypt(String content, bool isTemporary) async {
+    if (content == null || content == '') {
+      return null;
+    }
+
+    String publicKey;
     if (isTemporary) {
-      rsaPublicKey = new RSAPublicKey(
-          BigInt.parse(GeneralConstants.CONSTANT_COMMON_TEMPORARY_PUBLIC_KEY_MODULUS),
-          BigInt.parse(GeneralConstants.CONSTANT_COMMON_PUBLIC_KEY_EXPONENT));
+      publicKey = GeneralConstants.CONSTANT_COMMON_TEMPORARY_PUBLIC_KEY;
     } else {
       Token token = await TokenService.getToken();
 
-      rsaPublicKey = new RSAPublicKey(
-          BigInt.parse(token.downPublicKey),
-          BigInt.parse(GeneralConstants.CONSTANT_COMMON_PUBLIC_KEY_EXPONENT));
+      if (token == null) {
+        return null;
+      }
+
+      publicKey = token.downPublicKey;
     }
 
-    PublicKeyParameter<RSAPublicKey> publicKeyParameter =
-    new PublicKeyParameter<RSAPublicKey>(rsaPublicKey);
 
-    AsymmetricBlockCipher asymmetricBlockCipher =
-    new AsymmetricBlockCipher(GeneralConstants.CONSTANT_COMMON_SECURITY_ASYMMETRIC_ALGORITHM);
 
-    asymmetricBlockCipher.reset();
-    asymmetricBlockCipher.init(true, publicKeyParameter);
-
-    Uint8List encryptedContent =
-    asymmetricBlockCipher.process(transformStringToUint8List(content));
-
-    String encryptedContentString = String.fromCharCodes(encryptedContent);
-
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_ENCRYPTED_DATA_PROMPT}$encryptedContentString');
-
-    return encryptedContentString;
+    return encryptString(encoder(content), publicKey);
   }
 
   //方法：解密
@@ -181,29 +176,13 @@ class CommonService {
 
     Token token = await TokenService.getToken();
 
-    RSAPrivateKey rsaPrivateKey = new RSAPrivateKey(
-        BigInt.parse(token.upPrivateKeyModulus),
-        BigInt.parse(token.upPrivateKeyExponent),
-        BigInt.parse(token.upPrivateKeyPrimeP),
-        BigInt.parse(token.upPrivateKeyPrimeQ));
+    if (token == null) {
+      return null;
+    }
 
-    PrivateKeyParameter<RSAPrivateKey> privateKeyParameter =
-    new PrivateKeyParameter<RSAPrivateKey>(rsaPrivateKey);
+    String privateKey = token.upPrivateKey;
 
-    AsymmetricBlockCipher cipher
-    = new AsymmetricBlockCipher(GeneralConstants.CONSTANT_COMMON_SECURITY_ASYMMETRIC_ALGORITHM);
-
-    cipher.reset();
-    cipher.init(true, privateKeyParameter);
-
-    Uint8List decryptedContent =
-    cipher.process(transformStringToUint8List(content));
-
-    String decryptedContentString = String.fromCharCodes(decryptedContent);
-
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_DECRYPTED_DATA_PROMPT}$decryptedContentString');
-
-    return decryptedContentString;
+    return decryptString(content, privateKey);
   }
 
   //方法：http错误处理

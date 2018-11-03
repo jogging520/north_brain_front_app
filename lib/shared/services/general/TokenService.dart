@@ -1,5 +1,6 @@
 
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
@@ -16,7 +17,7 @@ class TokenService {
     Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT}$token');
 
     if (token != null) {
-      return Token.fromJson(token);
+      return Token.fromJson(json.decode(token));
     }
 
     return null;
@@ -24,8 +25,8 @@ class TokenService {
 
   //方法：设置token
   static setToken(Token token) async {
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT}$token');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT}$token.toJson()');
 
-    await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, token);
+    await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, json.encode(token));
   }
 }

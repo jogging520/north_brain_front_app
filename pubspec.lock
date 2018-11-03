@@ -396,13 +396,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.0+3"
-  pointycastle:
-    dependency: "direct main"
-    description:
-      name: pointycastle
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.0.0-rc4"
   pool:
     dependency: transitive
     description:
@@ -473,6 +466,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.2+4"
+  simple_rsa:
+    dependency: "direct main"
+    description:
+      name: simple_rsa
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
