@@ -144,6 +144,16 @@ class CommonService {
     return base64Encode(bytes);
   }
 
+  //方法：base64解码
+  static String decoder(String content) {
+    return String.fromCharCodes(base64Decode(content));
+  }
+
+  //方法：替换回车换行符
+  static replaceCRLF(String content) {
+    return content.replaceAll(new RegExp(GeneralConstants.CONSTANT_COMMON_STRING_CRLF), '');
+  }
+
   //方法：加密
   static Future<String> encrypt(String content, bool isTemporary) async {
     if (content == null || content == '') {
@@ -180,7 +190,9 @@ class CommonService {
 
     String privateKey = token.upPrivateKey;
 
-    return decryptString(content, privateKey);
+    String decryptedContent = await decryptString(content, privateKey);
+
+    return decoder(decryptedContent);
   }
 
   //方法：http错误处理

@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/services/general/CacheService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/CacheService.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -26,11 +23,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HttpClient.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/shared/common/HttpClient.dart">
+      <file leaf-file-name="CommonService.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="43" />
+            <state relative-caret-position="170">
+              <caret line="153" column="85" selection-start-line="153" selection-start-column="85" selection-end-line="153" selection-end-column="85" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneralConstants.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -38,8 +47,8 @@
       <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="578">
+              <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -76,6 +85,7 @@
       <find>Logger.root</find>
       <find>minSdkVersion</find>
       <find>18</find>
+      <find>replace</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,13 +125,13 @@
         <option value="$PROJECT_DIR$/lib/shared/common/HttpClient.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Operation.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Token.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/SessionService.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/CacheService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
       </list>
     </option>
@@ -186,6 +196,28 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
@@ -605,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541231512148</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="修改了部分bug">
+      <created>1541233908002</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1541233908003</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -669,7 +708,8 @@
     <MESSAGE value="增加了model类的toJson方法。" />
     <MESSAGE value="修改了operationService的bug" />
     <MESSAGE value="完成了sessionService" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了sessionService" />
+    <MESSAGE value="修改了部分bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了部分bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/AclService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/route/RouteHandlers.dart" />
     <entry file="file://$PROJECT_DIR$/lib/shared/route/Application.dart" />
     <entry file="file://$PROJECT_DIR$/lib/shared/route/Routes.dart" />
@@ -774,20 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/reduxs/general/UserRedux.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/reduxs/general/ThemeRedux.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -946,13 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="58" column="76" lean-forward="true" selection-start-line="58" selection-start-column="76" selection-end-line="58" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Operation.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -977,23 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="270" column="16" lean-forward="true" selection-start-line="270" selection-start-column="16" selection-end-line="270" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/services/general/OperationService.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1006,8 +1001,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/common/HttpClient.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="43" />
+        <state relative-caret-position="170">
+          <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/AclService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/reduxs/general/ThemeRedux.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/reduxs/general/UserRedux.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="153" column="85" selection-start-line="153" selection-start-column="85" selection-end-line="153" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

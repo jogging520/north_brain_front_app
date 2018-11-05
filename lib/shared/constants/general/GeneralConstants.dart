@@ -17,6 +17,8 @@ class GeneralConstants {
   /// 提示的时长（单位：秒）
   static const int    CONSTANT_COMMON_HINT_TIME                                 = 1;
 
+  static const String CONSTANT_COMMON_STRING_CRLF                               = r'[\r\n]';
+
   //APP文档存储路径
   static const String CONSTANT_COMMON_APPLICATION_DIRECTORY_DOCUMENT            = '/doc';
   //APP文档存储分隔符
@@ -120,6 +122,8 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_HTTP_REQUEST_BODY_PROMPT              = 'http请求BODY为：';
   //HTTP请求body提示
   static const String CONSTANT_COMMON_LOG_HTTP_RESPONSE_BODY_PROMPT             = 'http响应BODY为：';
+
+
 
   //操作记录类型定义常量
   static const String CONSTANT_MODULE_SHARED_MODEL_OPERATION_TYPE               = 'COMMON';
