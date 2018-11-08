@@ -17,4 +17,9 @@ class SessionService {
         {'userName': userName, 'password': password, 'mobile': null})
         .then((json) => Token.fromJson(json));
   }
+
+  Future<bool> logout() async {
+    await Future.delayed(Duration(seconds: 1));
+    return false;
+  }
 }

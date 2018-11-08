@@ -25,7 +25,7 @@ class TokenService {
 
   //方法：设置token
   static setToken(Token token) async {
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT}$token.toJson()');
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT}${token.toJson()}');
 
     await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, json.encode(token));
   }
