@@ -24,9 +24,16 @@ class TokenService {
   }
 
   //方法：设置token
-  static setToken(Token token) async {
-    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT}${token.toJson()}');
+  static Future<bool> saveToken(Token token) async {
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_SAVE_PROMPT}${token.toJson()}');
 
-    await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, json.encode(token));
+    return await CacheService.save(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN, json.encode(token));
+  }
+
+  //方法：清除token
+  static Future<bool> deleteToken() async {
+    Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_LOG_TOKEN_DELETE_PROMPT}');
+
+    return await CacheService.remove(GeneralConstants.CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN);
   }
 }

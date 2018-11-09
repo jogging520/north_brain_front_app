@@ -103,7 +103,9 @@ class GeneralConstants {
   //token日志获取提示
   static const String CONSTANT_COMMON_LOG_TOKEN_GET_PROMPT                      = '获取到token：';
   //token日志设置提示
-  static const String CONSTANT_COMMON_LOG_TOKEN_SET_PROMPT                      = '存储token：';
+  static const String CONSTANT_COMMON_LOG_TOKEN_SAVE_PROMPT                     = '存储token：';
+  //token日志清除提示
+  static const String CONSTANT_COMMON_LOG_TOKEN_DELETE_PROMPT                   = '清除token：';
   //cache日志保存提示
   static const String CONSTANT_COMMON_LOG_CACHE_SAVE_PROMPT                     = '保存到本地缓存：';
   //cache日志保存提示

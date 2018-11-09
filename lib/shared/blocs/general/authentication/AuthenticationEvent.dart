@@ -1,5 +1,7 @@
 
 
+import 'package:north_brain_front_app/shared/models/general/Token.dart';
+
 abstract class AuthenticationEvent {}
 
 class ApplicationStarted extends AuthenticationEvent {
@@ -17,24 +19,20 @@ class ApplicationStarted extends AuthenticationEvent {
 }
 
 class LoggedIn extends ApplicationStarted {
-  final String userName;
-  final String password;
-  final String mobile;
+  final Token token;
 
-  LoggedIn(this.userName, this.password, {this.mobile});
-
+  LoggedIn(this.token);
 
   @override
   bool operator ==(other) {
     return identical(this, other) ||
     other is LoggedIn &&
     runtimeType == other.runtimeType &&
-    userName == other.userName &&
-    password == other.password;
+    token == other.token;
   }
 
   @override
-  int get hashCode => userName.hashCode ^ password.hashCode;
+  int get hashCode => token.hashCode;
 
   @override
   String toString() => 'LoggedIn';
