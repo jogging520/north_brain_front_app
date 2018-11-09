@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
-import 'package:north_brain_front_app/shared/models/general/Token.dart';
+import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
 
 //类名：token服务

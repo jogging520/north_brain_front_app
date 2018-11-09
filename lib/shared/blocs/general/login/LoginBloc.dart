@@ -1,8 +1,8 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/login/Login.dart';
-import 'package:north_brain_front_app/shared/models/general/Token.dart';
-import 'package:north_brain_front_app/shared/services/general/SessionService.dart';
+import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
+import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final SessionService sessionService = new SessionService();

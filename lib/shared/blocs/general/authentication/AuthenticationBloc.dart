@@ -2,8 +2,8 @@
 import 'package:bloc/bloc.dart';
 
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
-import 'package:north_brain_front_app/shared/models/general/Token.dart';
-import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
+import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
+import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
 
 class AuthenticationBloc extends
     Bloc<AuthenticationEvent, AuthenticationState> {

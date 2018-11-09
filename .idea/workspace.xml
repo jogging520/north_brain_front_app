@@ -7,15 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/shared/blocs/general/login/Login.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginEvent.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginState.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/models/general/GeneralModel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/services/business/BusinessService.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/services/general/GeneralService.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationEvent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationEvent.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/models/general/Token.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/models/general/Token.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/models/general/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/models/general/User.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
@@ -31,91 +32,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommonService.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
+      <file leaf-file-name="LoginWidget.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="323">
+              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TokenService.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/services/general/TokenService.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-              <folding>
-                <element signature="e#1#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralConstants.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="107" column="52" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationPage.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/pages/general/ApplicationPage.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="40" />
-              <folding>
-                <element signature="e#1#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticationState.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationState.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="122" selection-start-line="65" selection-start-column="122" selection-end-line="65" selection-end-column="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginBloc.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-              <folding>
-                <element signature="e#1#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Authentication.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/authentication/Authentication.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#1#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,9 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/shared/services/TokenService.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/constants/Constants.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/services/CacheService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/common/Common.dart" />
         <option value="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/LogService.dart" />
@@ -178,12 +98,10 @@
         <option value="$PROJECT_DIR$/lib/shared/models/general/Role.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Storage.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Strategy.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/models/general/User.dart" />
         <option value="$PROJECT_DIR$/lib/shared/common/HttpClient.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/general/Operation.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/CacheService.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" />
         <option value="$PROJECT_DIR$/lib/shared/services/general/CommonService.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/shared/blocs/general/session/session.dart" />
@@ -193,12 +111,20 @@
         <option value="$PROJECT_DIR$/lib/shared/models/general/Token.dart" />
         <option value="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationEvent.dart" />
         <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart" />
         <option value="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginState.dart" />
         <option value="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginEvent.dart" />
         <option value="$PROJECT_DIR$/lib/shared/blocs/general/login/Login.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/models/general/User.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/models/model.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/models/general/GeneralModel.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/business/BusinessService.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/services/general/GeneralService.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart" />
         <option value="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" />
       </list>
     </option>
   </component>
@@ -292,7 +218,22 @@
               <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
@@ -308,6 +249,14 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
@@ -323,6 +272,14 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
               <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -742,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541675341324</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="完成了login的bloc">
+      <created>1541756657379</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1541756657379</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -809,32 +773,15 @@
     <MESSAGE value="修改了部分bug" />
     <MESSAGE value="增加了base64解码" />
     <MESSAGE value="完成了authentication的bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了authentication的bloc" />
+    <MESSAGE value="完成了login的bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了login的bloc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Organization.g.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/User.g.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/route/RouteHandlers.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/shared/route/Application.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/shared/route/Routes.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/LogService.dart" />
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/logging-0.11.3+2/lib/logging.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
@@ -862,13 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/User.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -969,13 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CacheService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/common/HttpClient.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1008,16 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/OperationService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="e#1#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,47 +982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Token.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/login/LoginState.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
           <caret line="67" column="120" selection-start-line="67" selection-start-column="120" selection-end-line="67" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/general/ApplicationPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="e#1#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1127,12 +1013,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/Token.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/User.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="83" column="46" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/models/model.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/models/general/GeneralModel.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/services/general/TokenService.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#1#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/OperationService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#1#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CacheService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1144,12 +1093,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart">
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/GeneralService.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/business/BusinessService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#1#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#1#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/general/ApplicationPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="e#1#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

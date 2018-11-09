@@ -48,4 +48,38 @@ class User {
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
   Map<String, dynamic> toJson() => _$UserToJson(this);
+
+  @override
+  int get hashCode => id.hashCode ^ type.hashCode ^ name.hashCode
+  ^ realName.hashCode ^ appTypes.hashCode ^ category.hashCode ^ roles.hashCode
+  ^ affiliations.hashCode ^ createTime.hashCode ^ timestamp.hashCode ^ status.hashCode
+  ^ serialNo.hashCode ^ password.hashCode ^ salt.hashCode ^ avatar.hashCode
+  ^ permissions.hashCode ^ mobile.hashCode ^ email.hashCode ^ weChat.hashCode
+  ^ description.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+          other is User &&
+              runtimeType == other.runtimeType &&
+              id == other.id &&
+              type == other.type &&
+              name == other.name &&
+              realName == other.realName &&
+              appTypes == other.appTypes &&
+              category == other.category &&
+              roles == other.roles &&
+              affiliations == other.affiliations &&
+              createTime == other.createTime &&
+              timestamp == other.timestamp &&
+              status == other.status &&
+              serialNo == other.serialNo &&
+              password == other.password &&
+              salt == other.salt &&
+              avatar == other.avatar &&
+              permissions == other.permissions &&
+              mobile == other.mobile &&
+              email == other.email &&
+              weChat == other.weChat &&
+              description == other.description;
 }
