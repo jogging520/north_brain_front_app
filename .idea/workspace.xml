@@ -6,19 +6,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/models/general/GeneralModel.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/services/business/BusinessService.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/services/general/GeneralService.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/blocs/general/authentication/AuthenticationBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/models/general/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/models/general/User.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/OperationService.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/services/general/TokenService.dart" afterDir="false" />
-    </list>
+    <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -706,12 +694,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541756657379</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="新增了login的widget">
+      <created>1541758161765</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1541758161765</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -774,7 +768,8 @@
     <MESSAGE value="增加了base64解码" />
     <MESSAGE value="完成了authentication的bloc" />
     <MESSAGE value="完成了login的bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了login的bloc" />
+    <MESSAGE value="新增了login的widget" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增了login的widget" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
