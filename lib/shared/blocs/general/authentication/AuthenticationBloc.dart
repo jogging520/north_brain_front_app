@@ -1,5 +1,6 @@
 
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
@@ -12,7 +13,7 @@ class AuthenticationBloc extends
     dispatch(ApplicationStarted());
   }
 
-  void onLogin(Token token) {
+  void onLogin({@required Token token}) {
     dispatch(LoggedIn(token));
   }
 

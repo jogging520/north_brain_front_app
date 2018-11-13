@@ -9,7 +9,7 @@ void main(){
 
   _initLogging();
 
-  runApp(new ApplicationPage());
+  runApp(ApplicationPage());
 }
 
 _initLogging() {
