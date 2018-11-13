@@ -5,7 +5,7 @@ import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
 import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  final SessionService sessionService = new SessionService();
+  final SessionService sessionService = SessionService();
 
   @override
   LoginState get initialState => LoginState.initial();

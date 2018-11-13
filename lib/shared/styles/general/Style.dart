@@ -11,11 +11,17 @@ class ColorStyle {
   static const int    COLOR_PRIMARY_DARK_VALUE             = 0xFF121917;
 
   //登录的text输入框填出颜色
-  static const Color COLOR_LOGIN_FORM_TEXT_FILL   = Colors.black12;
-  static const Color COLOR_LOGIN_FORM_BUTTON_SHADOW   = Colors.green;
-  static const Color COLOR_LOGIN_FORM_BUTTON   = Colors.green;
+  static const Color COLOR_WIDGET_LOGIN_FORM_TEXT_FILL   = Colors.black12;
+  //登录组件按钮阴影的颜色
+  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_SHADOW   = Colors.green;
+  //登录组件按钮的颜色
+  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = Colors.green;
 
-      static const int COLOR_PRIMARY_WHITE = 0xFFFFFFFF;
+  //加载中组件的颜色
+  static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
+
+
+  static const int COLOR_PRIMARY_WHITE = 0xFFFFFFFF;
 
 
   static const int COLOR_CONTEXT_WHITE = COLOR_PRIMARY_WHITE;

@@ -25,8 +25,6 @@ class LoginWidget extends StatefulWidget {
         loginBloc: _loginBloc,
         authenticationBloc: _authenticationBloc);
   }
-
-
 }
 
 class LoginWidgetState extends State<LoginWidget> {
@@ -52,7 +50,7 @@ class LoginWidgetState extends State<LoginWidget> {
         }
         
         if (_loginFailed(loginState)) {
-          CommonService.hint('登录失败');
+          CommonService.hint(loginState.error);
         }
 
         return _form(loginState);
@@ -70,7 +68,7 @@ class LoginWidgetState extends State<LoginWidget> {
                 prefixIcon: Icon(IconStyle.ICON_LOGIN_USER),
                 labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_USERNAME_LABEL,
                 filled: true,
-                fillColor: ColorStyle.COLOR_LOGIN_FORM_TEXT_FILL,
+                fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
                 border: InputBorder.none
             ),
           ),
@@ -83,7 +81,7 @@ class LoginWidgetState extends State<LoginWidget> {
                 prefixIcon: Icon(IconStyle.ICON_LOGIN_PASSWORD),
                 labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_PASSWORD_LABEL,
                 filled: true,
-                fillColor: ColorStyle.COLOR_LOGIN_FORM_TEXT_FILL,
+                fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
                 border: InputBorder.none
             ),
           ),
@@ -92,16 +90,19 @@ class LoginWidgetState extends State<LoginWidget> {
           ),
           Material(
             borderRadius: BorderRadius.all(const Radius.circular(5.0)),
-            shadowColor: ColorStyle.COLOR_LOGIN_FORM_BUTTON_SHADOW,
+            shadowColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_SHADOW,
             child: MaterialButton(
               minWidth: 400.0,
               height: 55.0,
-              color: ColorStyle.COLOR_LOGIN_FORM_BUTTON,
-              onPressed: loginState.isLoginButtonEnabled ? _onLoginButtionPressed : null,
+              color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
+              onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
               child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTION_TEXT,
                 style: ContextStyle.CONTEXT_LOGIN,
               ),
             ),
+          ),
+          Container(
+            child: loginState.isLoading ? CircularProgressIndicator() : null,
           )
         ],
       ),
@@ -112,7 +113,7 @@ class LoginWidgetState extends State<LoginWidget> {
 
   bool _loginFailed(LoginState loginState) => loginState.error.isNotEmpty;
 
-  _onLoginButtionPressed() {
+  _onLoginButtonPressed() {
     _loginBloc.onLoginButtonPressed(
         userName: _userNameTextEditingController.text,
         password: _passwordTextEditingController.text

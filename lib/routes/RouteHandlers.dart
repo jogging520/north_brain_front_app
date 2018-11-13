@@ -1,7 +1,7 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:north_brain_front_app/pages/business/home/HomePage.dart';
+import 'package:north_brain_front_app/pages/business/HomePage.dart';
 
 
 var rootHandler = new Handler(
