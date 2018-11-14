@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/pages/business/HomePage.dart';
 
 
-var rootHandler = new Handler(
+var rootHandler = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
     HomePage.role.contains('admin');
 
-    return new HomePage();
+    return HomePage();
   }
 );

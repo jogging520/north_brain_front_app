@@ -63,8 +63,10 @@ class ApplicationPageState extends State<ApplicationPage>{
         List<Widget> widgets = [];
 
         if (authenticationState.isAuthenticated) {
+          print('----1:已经认证');
           widgets.add(HomePage());
         } else {
+          print('----2:未认证');
           widgets.add(LoginPage());
         }
 

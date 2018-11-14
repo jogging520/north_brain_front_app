@@ -12,7 +12,7 @@ void main(){
   runApp(ApplicationPage());
 }
 
-_initLogging() {
+void _initLogging() {
   Logger.root.level = Level.ALL;  //生产系统中要修改为：FINEST
 
   Logger.root.onRecord.listen((LogRecord logRecord) {

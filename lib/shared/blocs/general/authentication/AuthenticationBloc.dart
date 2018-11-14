@@ -45,6 +45,8 @@ class AuthenticationBloc extends
 
       if (isSaved) {
         yield AuthenticationState.authenticated();
+      } else {
+        yield AuthenticationState.unauthenticated();
       }
     }
 

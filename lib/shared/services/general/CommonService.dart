@@ -150,7 +150,7 @@ class CommonService {
   }
 
   //方法：替换回车换行符
-  static Future<String> replaceCRLF(String content) async {
+  static String replaceCRLF(String content) {
     if (content == null || content == '') {
       return null;
     }
@@ -178,7 +178,7 @@ class CommonService {
     }
 
     String encryptedString = await encryptString(encoder(content), publicKey);
-    String replacedEncryptedString = await replaceCRLF(encryptedString);
+    String replacedEncryptedString = replaceCRLF(encryptedString);
 
     return replacedEncryptedString;
   }

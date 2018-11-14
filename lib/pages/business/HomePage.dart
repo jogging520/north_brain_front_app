@@ -7,9 +7,7 @@ class HomePage extends StatefulWidget{
   static List<String> role = const <String>['admin', 'operator'];
 
   @override
-  State<StatefulWidget> createState() {
-    return new HomePageState();
-  }
+  State<StatefulWidget> createState() => HomePageState();
 }
 
 class HomePageState extends State<HomePage>{

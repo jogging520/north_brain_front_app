@@ -32,7 +32,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         Token token = await _login(
             userName: event.userName, password: event.password, mobile: event.mobile);
 
-        yield LoginState.success(token);
+        if (token != null) {
+          yield LoginState.success(token);
+        }
       } catch (error) {
         yield LoginState.failure(error.toString());
       }
