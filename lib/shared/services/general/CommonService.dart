@@ -150,7 +150,11 @@ class CommonService {
   }
 
   //方法：替换回车换行符
-  static replaceCRLF(String content) {
+  static Future<String> replaceCRLF(String content) async {
+    if (content == null || content == '') {
+      return null;
+    }
+
     return content.replaceAll(new RegExp(GeneralConstants.CONSTANT_COMMON_STRING_CRLF), '');
   }
 
@@ -173,7 +177,10 @@ class CommonService {
       publicKey = token.downPublicKey;
     }
 
-    return encryptString(encoder(content), publicKey);
+    String encryptedString = await encryptString(encoder(content), publicKey);
+    String replacedEncryptedString = await replaceCRLF(encryptedString);
+
+    return replacedEncryptedString;
   }
 
   //方法：解密

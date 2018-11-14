@@ -1,4 +1,5 @@
 
+import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/common/HttpClient.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
@@ -12,9 +13,14 @@ class SessionService {
       await CommonService.setSerialNo();
     }
 
+    String encryptedUserName = await CommonService.encrypt(userName, true);
+    String encryptedPassword = await CommonService.encrypt(password, true);
+
     return HttpClient
-        .post('${GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL}login',
-        {'userName': userName, 'password': password, 'mobile': null})
+        .post('${GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL}${GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_LOGIN}',
+        {'userName': Uri.encodeComponent(encryptedUserName),
+          'password': Uri.encodeComponent(encryptedPassword),
+          'mobile': null})
         .then((json) => Token.fromJson(json));
   }
 

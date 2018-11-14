@@ -12,7 +12,7 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_APPLICATION_TITLE                         = '测试系统';
 
   //是否打开测试画布
-  static const bool CONSTANT_COMMON_APPLICATION_DEBUG_PAINT_SIZE_ENABLED        = true;
+  static const bool CONSTANT_COMMON_APPLICATION_DEBUG_PAINT_SIZE_ENABLED        = false;
 
   /// 提示的时长（单位：秒）
   static const int    CONSTANT_COMMON_HINT_TIME                                 = 1;
@@ -29,7 +29,7 @@ class GeneralConstants {
   //拷贝成功提示
   static const String CONSTANT_COMMON_COPY_SUCCESS_HINT                         = '拷贝成功。';
   //HTTP基础URL
-  static const String CONSTANT_COMMON_HTTP_BASE_URL                             = 'http://223.105.5.116:9090/';
+  static const String CONSTANT_COMMON_HTTP_BASE_URL                             = 'http://117.157.24.67:9001/';
   //HTTP的get方法
   static const String CONSTANT_COMMON_HTTP_METHOD_GET                           = 'get';
   //HTTP的post方法
@@ -79,6 +79,8 @@ class GeneralConstants {
 
   //存储路由的path路径
   static const String CONSTANT_COMMON_ROUTE_PATH_STORAGE                        = 'storage';
+  //登录路由的login路径
+  static const String CONSTANT_COMMON_ROUTE_PATH_LOGIN                          = 'login';
 
 
 

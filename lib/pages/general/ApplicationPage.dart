@@ -16,10 +16,7 @@ import 'package:north_brain_front_app/shared/widgets/general/LoadingWidget.dart'
 class ApplicationPage extends StatefulWidget{
 
   @override
-  State<StatefulWidget> createState() {
-    return new ApplicationPageState();
-  }
-
+  State<StatefulWidget> createState() => ApplicationPageState();
 }
 
 class ApplicationPageState extends State<ApplicationPage>{
@@ -42,19 +39,21 @@ class ApplicationPageState extends State<ApplicationPage>{
 
   @override
   Widget build(BuildContext context) {
-    final app = MaterialApp(
-      title: GeneralConstants.CONSTANT_COMMON_APPLICATION_TITLE,
-      debugShowCheckedModeBanner: false,
-      theme: new ThemeData(
-          primarySwatch: ColorStyle.COLOR_PRIMARY_SWATCH
-      ),
-      onGenerateRoute: Application.router.generator,
-      home: _rootPage(),
-    );
-
     Logger.root.fine(GeneralConstants.CONSTANT_COMMON_LOG_APPLICATION_LAUNCH_PROMPT);
 
-    return app;
+    return BlocProvider<AuthenticationBloc>(
+      bloc: _authenticationBloc,
+      child: MaterialApp(
+        title: GeneralConstants.CONSTANT_COMMON_APPLICATION_TITLE,
+        debugShowCheckedModeBanner: false,
+        theme: new ThemeData(
+            primarySwatch: ColorStyle.COLOR_PRIMARY_SWATCH
+        ),
+        onGenerateRoute: Application.router.generator,
+        home: _rootPage(),
+      )
+
+    );
   }
 
   Widget _rootPage() {
