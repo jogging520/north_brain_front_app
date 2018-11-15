@@ -141,6 +141,7 @@ class CommonService {
     }
 
     var bytes = utf8.encode(content);
+
     return base64Encode(bytes);
   }
 
@@ -177,10 +178,14 @@ class CommonService {
       publicKey = token.downPublicKey;
     }
 
-    String encryptedString = await encryptString(encoder(content), publicKey);
-    String replacedEncryptedString = replaceCRLF(encryptedString);
+    try {
+      final String encryptedContent = await encryptString(encoder(content), publicKey);
+      return replaceCRLF(encryptedContent);
+    } catch (error) {
+      Logger.root.fine(error);
+    }
 
-    return replacedEncryptedString;
+    return null;
   }
 
   //方法：解密
@@ -197,7 +202,7 @@ class CommonService {
 
     String privateKey = token.upPrivateKey;
 
-    String decryptedContent = await decryptString(content, privateKey);
+    final String decryptedContent = await decryptString(content, privateKey);
 
     return decoder(decryptedContent);
   }

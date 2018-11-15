@@ -18,9 +18,9 @@ class SessionService {
 
     return HttpClient
         .post('${GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL}${GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_LOGIN}',
-        {'userName': Uri.encodeComponent(encryptedUserName),
-          'password': Uri.encodeComponent(encryptedPassword),
-          'mobile': null})
+        {GeneralConstants.CONSTANT_MODULE_SHARED_MODEL_SESSION_USERNAME: Uri.encodeComponent(encryptedUserName),
+          GeneralConstants.CONSTANT_MODULE_SHARED_MODEL_SESSION_PASSWORD: Uri.encodeComponent(encryptedPassword),
+          GeneralConstants.CONSTANT_MODULE_SHARED_MODEL_SESSION_MOBILE: null})
         .then((json) => Token.fromJson(json));
   }
 

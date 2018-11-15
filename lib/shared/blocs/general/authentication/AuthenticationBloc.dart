@@ -64,7 +64,8 @@ class AuthenticationBloc extends
   Future<bool> _hasToken() async {
     Token token = await TokenService.getToken();
 
-    return token == null;
+    //TODO 要把token的失效时间加上
+    return token != null && token.jwt != null;
   }
 
   Future<bool> _saveToken(Token token) async {
