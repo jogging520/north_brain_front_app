@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/login/Login.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
-import 'package:north_brain_front_app/shared/widgets/general/LoginWidget.dart';
+import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
 
 class LoginPage extends StatefulWidget {
   @override
