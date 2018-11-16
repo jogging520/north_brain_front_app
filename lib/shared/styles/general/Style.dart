@@ -10,6 +10,13 @@ class ColorStyle {
   static const String COLOR_PRIMARY_DARK_VALUE_STRING             = '#121917';
   static const int    COLOR_PRIMARY_DARK_VALUE             = 0xFF121917;
 
+  //提示框的颜色
+  static const Color COLOR_COMMON_PROMPT_FLUSH_BAR_BACKGROUND = Colors.lightGreen;
+  //提示框的阴影颜色
+  static const Color COLOR_COMMON_PROMPT_FLUSH_BAR_SHADOW = Colors.red;
+  //提示框的停留时长
+  static const Duration COLOR_COMMON_PROMPT_FLUSH_BAR_DURATION = Duration(seconds: 3);
+
   //登录的text输入框填出颜色
   static const Color COLOR_WIDGET_LOGIN_FORM_TEXT_FILL   = Colors.black12;
   //登录组件按钮阴影的颜色
@@ -19,6 +26,8 @@ class ColorStyle {
 
   //加载中组件的颜色
   static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
+
+
 
 
   static const int COLOR_PRIMARY_WHITE = 0xFFFFFFFF;

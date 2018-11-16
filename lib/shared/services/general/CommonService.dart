@@ -8,11 +8,13 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flushbar/flushbar.dart';
 import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
+import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 import 'package:uuid/uuid.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -25,17 +27,32 @@ import 'package:simple_rsa/simple_rsa.dart';
 class CommonService {
 
   //方法：提示信息，通过android、ios的toast实现。
-  static hint(String msg) {
-    if (msg == null || msg == '') {
+  static hint(String message) {
+    if (message == null || message == '') {
       return;
     }
 
     Fluttertoast.showToast(
-        msg: msg,
+        msg: message,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         timeInSecForIos: GeneralConstants.CONSTANT_COMMON_HINT_TIME
     );
+  }
+
+  //方法：提示信息。
+  static prompt(BuildContext context, String title, String message) {
+    if (title == null || title == '' || message == null || message == '') {
+      return;
+    }
+
+    Flushbar()
+      ..title = title
+      ..message = message
+      ..backgroundColor = ColorStyle.COLOR_COMMON_PROMPT_FLUSH_BAR_BACKGROUND
+      ..shadowColor = ColorStyle.COLOR_COMMON_PROMPT_FLUSH_BAR_SHADOW
+      ..duration = ColorStyle.COLOR_COMMON_PROMPT_FLUSH_BAR_DURATION
+      ..show(context);
   }
 
   /// 方法：设置HTTP头

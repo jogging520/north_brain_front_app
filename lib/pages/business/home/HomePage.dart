@@ -40,7 +40,7 @@ class HomePageState extends State<HomePage>{
                     Application.router.navigateTo(
                         context,
                         '/product',
-                      transition: TransitionType.native
+                      transition: TransitionType.inFromBottom
                     ).then((result) {
 
                     });
