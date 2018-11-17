@@ -5,7 +5,7 @@ import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
 import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  final SessionService sessionService = SessionService();
+  final SessionService _sessionService = SessionService();
 
   @override
   LoginState get initialState => LoginState.initial();
@@ -46,7 +46,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<Token> _login({String userName, String password, String mobile}) async {
-    return await this.sessionService.login(
+    return await this._sessionService.login(
         userName: userName, password: password, mobile: mobile);
   }
 

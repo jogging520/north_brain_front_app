@@ -1,9 +1,9 @@
 
-import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
+import 'package:north_brain_front_app/shared/common/Transition.dart';
 
 class HomePage extends StatefulWidget{
   static List<String> role = const <String>['admin', 'operator'];
@@ -40,7 +40,7 @@ class HomePageState extends State<HomePage>{
                     Application.router.navigateTo(
                         context,
                         '/product',
-                      transition: TransitionType.inFromBottom
+                      transition: Transition.transition()
                     ).then((result) {
 
                     });
