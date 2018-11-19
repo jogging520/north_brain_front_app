@@ -19,3 +19,4 @@ class SearchButtonPressed extends ProductEvent {
   type == other.type &&
   name == other.name;
 }
+

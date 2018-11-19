@@ -12,11 +12,11 @@ class ProductState {
     @required this.isLoading,
     @required this.products});
 
-  factory ProductState.initial() {
+  factory ProductState.initial(List<Product> products) {
     return ProductState(
       error: '',
       isLoading: false,
-      products: null
+      products: products
     );
   }
 
@@ -36,9 +36,9 @@ class ProductState {
     );
   }
 
-  factory ProductState.failure() {
+  factory ProductState.failure(String error) {
     return ProductState(
-        error: '',
+        error: error,
         isLoading: false,
         products: null
     );

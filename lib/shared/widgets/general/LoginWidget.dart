@@ -15,8 +15,8 @@ class LoginWidget extends StatefulWidget {
     Key key,
     @required LoginBloc loginBloc,
     @required AuthenticationBloc authenticationBloc}) :
-      _loginBloc = loginBloc,
-      _authenticationBloc = authenticationBloc,
+        _loginBloc = loginBloc,
+        _authenticationBloc = authenticationBloc,
         super(key: key);
 
   @override
@@ -50,7 +50,10 @@ class LoginWidgetState extends State<LoginWidget> {
         }
         
         if (_loginFailed(loginState)) {
-          CommonService.hint(loginState.error);
+          CommonService.prompt(
+              context,
+              GeneralConstants.CONSTANT_COMMON_PROMPT_ERROR_TITLE,
+              loginState.error);
         }
 
         return _form(loginState);

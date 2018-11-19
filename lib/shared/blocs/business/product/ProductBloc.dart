@@ -1,4 +1,6 @@
 
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/business/product/Product.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
@@ -8,7 +10,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   final ProductService _productService = ProductService();
 
   @override
-  ProductState get initialState => ProductState.initial();
+  ProductState get initialState => ProductState.initial(_initialProducts());
 
   void onSearchButtonPressed(String type, String name) {
     dispatch(
@@ -28,13 +30,27 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
 
         yield ProductState.success(products);
       } catch (error) {
-        yield ProductState.failure();
+        yield ProductState.failure(error.toString());
       }
     }
   }
 
-  Future<List<Product>> _queryProducts(String type, String name) {
-    return this._productService.queryProducts(type, name);
+  Future<List<Product>> _queryProducts(String type, String name) async {
+    return await this._productService.queryProducts(type, name);
+  }
+
+  List<Product> _initialProducts() {
+    Random random = Random();
+
+    return List.generate(100,
+            (i) => Product(
+            (random.nextInt(1000) + 200).toString(),
+            '谷物' + (random.nextInt(1000) + 200).toString(),
+            'COMMON',
+            (random.nextInt(500) + 200),
+            (random.nextInt(800) + 200)
+        )
+    );
   }
 
 }

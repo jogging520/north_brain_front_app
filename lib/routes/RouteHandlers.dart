@@ -6,6 +6,7 @@ import 'package:north_brain_front_app/pages/business/product/ProductPage.dart';
 
 
 var rootHandler = Handler(
+  //type: HandlerType.function,
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
     HomePage.role.contains('admin');
 
@@ -14,9 +15,10 @@ var rootHandler = Handler(
 );
 
 var productHandler = Handler(
-    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-      HomePage.role.contains('admin');
+  //type: HandlerType.function,
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    HomePage.role.contains('admin');
 
-      return ProductPage();
-    }
+    return ProductPage();
+  }
 );

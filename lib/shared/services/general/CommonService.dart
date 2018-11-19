@@ -41,7 +41,7 @@ class CommonService {
   }
 
   //方法：提示信息。
-  static prompt(BuildContext context, String title, String message) {
+  static prompt(BuildContext context, String title, String message) async {
     if (title == null || title == '' || message == null || message == '') {
       return;
     }

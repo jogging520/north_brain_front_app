@@ -40,9 +40,9 @@ class HomePageState extends State<HomePage>{
                     Application.router.navigateTo(
                         context,
                         '/product',
-                      transition: Transition.transition()
+                        transition: Transition.transition(),
+                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
                     ).then((result) {
-
                     });
                   }),
             )

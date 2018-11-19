@@ -16,7 +16,10 @@ class GeneralConstants {
 
   /// 提示的时长（单位：秒）
   static const int    CONSTANT_COMMON_HINT_TIME                                 = 1;
+  //提示标题
+  static const String CONSTANT_COMMON_PROMPT_ERROR_TITLE                        = '提示';
 
+  //回车换行符
   static const String CONSTANT_COMMON_STRING_CRLF                               = r'[\r\n]';
 
   //APP文档存储路径
