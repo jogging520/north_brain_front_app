@@ -120,20 +120,26 @@ class LoginWidgetState extends State<LoginWidget> {
                         SizedBox(
                           height: 20.0,
                         ),
-                        MaterialButton(
-                          height: 40.0,
-                          minWidth: 160.0,
-                          color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
-                          textColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
-                          child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTION_TEXT,
-                            style: ContextStyle.CONTEXT_WIDGET_LOGIN,
-                          ),
-                          onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
-                          splashColor: Colors.redAccent,
-                        )
+                        Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: MaterialButton(
+                                height: 50.0,
+                                color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
+                                textColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
+                                child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTION_TEXT,
+                                  style: ContextStyle.CONTEXT_WIDGET_LOGIN,
+                                ),
+                                onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
+                                splashColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_SPLASH,
+                              )
+                            ),
+                          ],
+                        ),
                       ],
                     ),
-                  )),
+                  )
+              ),
             )
           ],
         )

@@ -29,6 +29,8 @@ class ColorStyle {
   static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = COLOR_WIDGET_LOGIN_FORM;
   //登录组件按钮文字的颜色
   static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT   = Colors.white;
+  //登录组件按钮闪过的颜色
+  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_SPLASH = Colors.cyanAccent;
 
   //加载中组件的颜色
   static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;

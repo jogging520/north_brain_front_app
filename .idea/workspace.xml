@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/general/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/general/LoginPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/ProductWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/ProductWidget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -30,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginWidget.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginWidget.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="132" column="25" lean-forward="true" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+            <state relative-caret-position="2091">
+              <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -42,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Style.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Style.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="80" column="59" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
+            <state relative-caret-position="255">
+              <caret line="32" column="58" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -162,8 +155,8 @@
         <option value="$PROJECT_DIR$/lib/pages/general/ApplicationPage.dart" />
         <option value="$PROJECT_DIR$/lib/pages/general/LoginPage.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart" />
       </list>
     </option>
   </component>
@@ -886,7 +879,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542598284442</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="重构了登录页面。">
+      <created>1542682064739</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1542682064739</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -930,7 +930,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善了解密方法。" />
     <MESSAGE value="增加了log服务，晚上了httpclient" />
     <MESSAGE value="完善了日志的打印" />
     <MESSAGE value="增加了style" />
@@ -955,7 +954,8 @@
     <MESSAGE value="完成了产品列表" />
     <MESSAGE value="增加了产品bloc" />
     <MESSAGE value="完善了产品bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了产品bloc" />
+    <MESSAGE value="重构了登录页面。" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构了登录页面。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1336,16 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="132" column="25" lean-forward="true" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/ProductWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="922">
@@ -1358,8 +1348,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="80" column="59" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
+        <state relative-caret-position="255">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/LoginWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
