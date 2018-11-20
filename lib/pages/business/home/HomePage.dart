@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
-import 'package:north_brain_front_app/shared/common/Transition.dart';
+import 'package:north_brain_front_app/shared/common/Common.dart';
 
 class HomePage extends StatefulWidget{
   static List<String> role = const <String>['admin', 'operator'];
@@ -40,6 +40,19 @@ class HomePageState extends State<HomePage>{
                     Application.router.navigateTo(
                         context,
                         '/product',
+                        transition: Transition.transition(),
+                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+                    ).then((result) {
+                    });
+                  }),
+            ),
+            Center(
+              child: RaisedButton(
+                  child: Text('个人设置'),
+                  onPressed: () {
+                    Application.router.navigateTo(
+                        context,
+                        '/profile',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
                     ).then((result) {

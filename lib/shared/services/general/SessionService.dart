@@ -1,5 +1,5 @@
 
-import 'package:north_brain_front_app/shared/common/HttpClient.dart';
+import 'package:north_brain_front_app/shared/common/Common.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CommonService.dart';

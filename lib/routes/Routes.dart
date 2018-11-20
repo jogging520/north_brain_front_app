@@ -9,6 +9,7 @@ class Routes{
   static const String ROUTE_ROOT = '/';
   static const String ROUTE_PRICE = '/price/:id';
   static const String ROUTE_PRODUCT = '/product';
+  static const String ROUTE_PROFILE = '/profile';
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = new Handler(
@@ -20,5 +21,6 @@ class Routes{
     //在这个地方增加权限的限制（只通过角色来判断？）
     router.define(ROUTE_ROOT, handler: rootHandler);
     router.define(ROUTE_PRODUCT, handler: productHandler);
+    router.define(ROUTE_PROFILE, handler: profileHandler);
   }
 }

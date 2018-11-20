@@ -34,6 +34,10 @@ class ColorStyle {
 
   //加载中组件的颜色
   static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
+  //个人设置组件的头部渐变颜色开始
+  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_BEGIN = Colors.redAccent;
+  //个人设置组件的头部渐变颜色结束
+  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_END = Colors.yellow;
 
 
 
@@ -112,7 +116,7 @@ class ImageStyle {
   //logo图片
   static const String IMAGE_LOGO = 'assets/images/logo.png';
   //默认图片
-  static const String IMAGE_DEFAULT = 'assets/images/default_img.png';
+  static const String IMAGE_DEFAULT = 'assets/images/bg.jpg';
   //背景图片
   static const String IMAGE_BACKGROUND = 'assets/images/background.png';
   //默认头像图片
