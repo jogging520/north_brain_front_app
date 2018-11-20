@@ -17,12 +17,18 @@ class ColorStyle {
   //提示框的停留时长
   static const Duration COLOR_COMMON_PROMPT_FLUSH_BAR_DURATION = Duration(seconds: 3);
 
+  //登录页面背景色
+  static const Color COLOR_WIDGET_LOGIN_BACKGROUND = Colors.black26;
+  //登录的text输入框填出颜色
+  static const Color COLOR_WIDGET_LOGIN_FORM   = Colors.teal;
   //登录的text输入框填出颜色
   static const Color COLOR_WIDGET_LOGIN_FORM_TEXT_FILL   = Colors.black12;
   //登录组件按钮阴影的颜色
   static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_SHADOW   = Colors.green;
   //登录组件按钮的颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = Colors.green;
+  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = COLOR_WIDGET_LOGIN_FORM;
+  //登录组件按钮文字的颜色
+  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT   = Colors.white;
 
   //加载中组件的颜色
   static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
@@ -70,8 +76,9 @@ class ContextStyle {
     fontSize: CONTEXT_MIN_SIZE
   );
 
-  static const TextStyle CONTEXT_LOGIN = TextStyle(
-      color: Color(ColorStyle.COLOR_CONTEXT_WHITE),
+  //登录页面的字体样式
+  static const TextStyle CONTEXT_WIDGET_LOGIN = TextStyle(
+      color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
       fontSize: CONTEXT_NORMAL_SIZE,
       fontWeight: FontWeight.bold,
       letterSpacing: CONTEXT_LETTER_SPACING
@@ -105,5 +112,7 @@ class ImageStyle {
   //默认图片
   static const String IMAGE_DEFAULT = 'assets/images/default_img.png';
   //背景图片
-  static const String IMAGE_BACKGROUND = 'assets/images/bg.jpg';
+  static const String IMAGE_BACKGROUND = 'assets/images/background.png';
+  //默认头像图片
+  static const String IMAGE_AVATAR = 'assets/images/avatar.png';
 }

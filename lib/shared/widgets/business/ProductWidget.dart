@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:north_brain_front_app/shared/blocs/business/product/Product.dart';
-import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
-import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
 
 final Uint8List placeholderImages = new Uint8List.fromList(<int>[
   0x89,

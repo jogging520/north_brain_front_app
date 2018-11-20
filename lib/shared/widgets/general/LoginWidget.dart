@@ -62,53 +62,82 @@ class LoginWidgetState extends State<LoginWidget> {
   }
 
   Widget _form(LoginState loginState) {
-    return Form(
-      child: Column(
-        children: <Widget>[
-          TextFormField(
-            controller: _userNameTextEditingController,
-            decoration: InputDecoration(
-                prefixIcon: Icon(IconStyle.ICON_LOGIN_USER),
-                labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_USERNAME_LABEL,
-                filled: true,
-                fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
-                border: InputBorder.none
+    return Stack(
+      fit: StackFit.expand,
+      children: <Widget>[
+        Image(
+            image: AssetImage(ImageStyle.IMAGE_BACKGROUND),
+            fit: BoxFit.cover,
+            color: ColorStyle.COLOR_WIDGET_LOGIN_BACKGROUND,
+            colorBlendMode: BlendMode.darken
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image(image: AssetImage(ImageStyle.IMAGE_AVATAR),
+              width: 150.0,
             ),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          TextFormField(
-            controller: _passwordTextEditingController,
-            decoration: InputDecoration(
-                prefixIcon: Icon(IconStyle.ICON_LOGIN_PASSWORD),
-                labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_PASSWORD_LABEL,
-                filled: true,
-                fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
-                border: InputBorder.none
-            ),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          Material(
-            borderRadius: BorderRadius.all(const Radius.circular(5.0)),
-            shadowColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_SHADOW,
-            child: MaterialButton(
-              minWidth: 400.0,
-              height: 55.0,
-              color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
-              onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
-              child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTION_TEXT,
-                style: ContextStyle.CONTEXT_LOGIN,
-              ),
-            ),
-          ),
-          Container(
-            child: loginState.isLoading ? CircularProgressIndicator() : null,
-          )
-        ],
-      ),
+            Form(
+              child: Theme(
+                  data: ThemeData(
+                    brightness: Brightness.dark,
+                    primarySwatch: ColorStyle.COLOR_WIDGET_LOGIN_FORM,
+                    inputDecorationTheme: InputDecorationTheme(
+                        labelStyle: ContextStyle.CONTEXT_WIDGET_LOGIN
+                    ),
+                  ),
+                  child: Container(
+                    padding: const EdgeInsets.all(40.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(IconStyle.ICON_LOGIN_USER),
+                              labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_USERNAME_LABEL,
+                              filled: true,
+                              fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
+                              border: InputBorder.none
+                          ),
+                          keyboardType: TextInputType.text,
+                          controller: _userNameTextEditingController,
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(IconStyle.ICON_LOGIN_PASSWORD),
+                              labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_PASSWORD_LABEL,
+                              filled: true,
+                              fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
+                              border: InputBorder.none
+                          ),
+                          keyboardType: TextInputType.text,
+                          obscureText: true,
+                          controller: _passwordTextEditingController,
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        MaterialButton(
+                          height: 40.0,
+                          minWidth: 160.0,
+                          color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
+                          textColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
+                          child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTION_TEXT,
+                            style: ContextStyle.CONTEXT_WIDGET_LOGIN,
+                          ),
+                          onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
+                          splashColor: Colors.redAccent,
+                        )
+                      ],
+                    ),
+                  )),
+            )
+          ],
+        )
+      ],
     );
   }
 
