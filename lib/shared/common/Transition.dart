@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:fluro/fluro.dart';
 
 class Transition {
-  static const Duration CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION = Duration(seconds: 2);
+  static const Duration CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION = Duration(seconds: 1);
 
   static List<TransitionType> _transitionTypes
   = [TransitionType.inFromBottom, TransitionType.fadeIn,

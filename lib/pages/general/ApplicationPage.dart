@@ -38,7 +38,7 @@ class ApplicationPage extends StatelessWidget{
         child: MaterialApp(
           title: GeneralConstants.CONSTANT_COMMON_APPLICATION_TITLE,
           debugShowCheckedModeBanner: false,
-          theme: new ThemeData(
+          theme: ThemeData(
               primarySwatch: ColorStyle.COLOR_PRIMARY_SWATCH
           ),
           onGenerateRoute: Application.router.generator,

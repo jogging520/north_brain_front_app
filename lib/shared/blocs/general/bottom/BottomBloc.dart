@@ -2,11 +2,68 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
+final List<List<Image>> tabImages = [
+  [
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_HOME, width: 24.0, height: 24.0),
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_HOME_SELECTED, width: 24.0, height: 24.0),
+  ],
+  [
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_TRADE, width: 24.0, height: 24.0),
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_TRADE_SELECTED, width: 24.0, height: 24.0),
+  ],
+  [
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_STATION, width: 24.0, height: 24.0),
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_STATION_SELECTED, width: 24.0, height: 24.0),
+  ],
+  [
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_PROFILE, width: 24.0, height: 24.0),
+    Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_PROFILE_SELECTED, width: 24.0, height: 24.0),
+  ]
+];
+
+final List<List<Text>> tabTitles = [
+  [
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[0],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM),
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[0],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM_SELECTED),
+  ],
+  [
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[1],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM),
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[1],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM_SELECTED),
+  ],
+  [
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[2],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM),
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[2],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM_SELECTED),
+  ],
+  [
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[3],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM),
+    Text(
+        GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES[3],
+        style: ContextStyle.CONTEXT_WIDGET_BOTTOM_SELECTED),
+  ],
+];
+
 class BottomBloc extends Bloc<BottomEvent, BottomState> {
+
+
   @override
   BottomState get initialState => BottomState.initial(_initialTabImages(), _initialTabTitles());
 
@@ -23,87 +80,60 @@ class BottomBloc extends Bloc<BottomEvent, BottomState> {
   @override
   Stream<BottomState> mapEventToState(BottomState state, BottomEvent event) async* {
     if (event is TabChanged) {
-      if (event.currentIndex == 0) {
-        List<Image> tabImages = _exchangeTabImages(state.tabImages, event.currentIndex);
-        List<Text> tabTitles = _exchangeTabTitles(state.tabTitles, event.currentIndex);
+      List<Image> newTabImages = _exchangeTabImages(event.currentIndex);
+      List<Text> newTabTitles = _exchangeTabTitles(event.currentIndex);
 
-        yield BottomState.changed(event.currentIndex, tabImages, tabTitles);
-      }
+      yield BottomState.changed(event.currentIndex, newTabImages, newTabTitles);
     }
   }
 
   List<Image> _initialTabImages() {
     return [
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_HOME, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_HOME_SELECTED, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_TRADE, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_TRADE_SELECTED, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_STATION, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_STATION_SELECTED, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_PROFILE, width: 24.0, height: 24.0),
-      Image.asset(ImageStyle.IMAGE_BOTTOM_NAVIGATOR_PROFILE_SELECTED, width: 24.0, height: 24.0),
+      tabImages[0][1],
+      tabImages[1][0],
+      tabImages[2][0],
+      tabImages[3][0],
     ];
   }
 
   List<Text> _initialTabTitles() {
-    List<Text> tabTitles = [];
-
-    for (String title in GeneralConstants.CONSTANT_WIDGET_BOTTOM_TITLES) {
-      tabTitles.add(Text(
-        title,
-        style: ContextStyle.CONTEXT_WIDGET_BOTTOM));
-
-      tabTitles.add(Text(
-        title,
-        style: ContextStyle.CONTEXT_WIDGET_BOTTOM_SELECTED));
-    }
-
-    
-    return tabTitles;
+    return [
+      tabTitles[0][1],
+      tabTitles[1][0],
+      tabTitles[2][0],
+      tabTitles[3][0],
+    ];
   }
 
-  List<Image> _exchangeTabImages(List<Image> tabImages, int currentIndex) {
+  List<Image> _exchangeTabImages(int currentIndex) {
     List<Image> newTabImages = [];
 
-    if (currentIndex * 2 > tabImages.length) {
-      return tabImages;
-    }
-
     for (var i = 0; i < tabImages.length; i++) {
-      if (i == currentIndex * 2) {
-        newTabImages.add(tabImages[i + 1]);
+      if (i == currentIndex) {
+        newTabImages.add(tabImages[i][1]);
+      } else {
+        newTabImages.add(tabImages[i][0]);
       }
-
-      if (i == currentIndex * 2 + 1) {
-        newTabImages.add(tabImages[i - 1]);
-      }
-
-      newTabImages.add(tabImages[i]);
     }
 
     return newTabImages;
   }
 
-  List<Text> _exchangeTabTitles(List<Text> tabTitles, int currentIndex) {
+  List<Text> _exchangeTabTitles(int currentIndex) {
     List<Text> newTabTitles = [];
 
-    if (currentIndex * 2 > tabTitles.length) {
-      return tabTitles;
-    }
-
     for (var i = 0; i < tabTitles.length; i++) {
-      if (i == currentIndex * 2) {
-        newTabTitles.add(tabTitles[i + 1]);
+      if (i == currentIndex) {
+        newTabTitles.add(tabTitles[i][1]);
+      } else {
+        newTabTitles.add(tabTitles[i][0]);
       }
-
-      if (i == currentIndex * 2 + 1) {
-        newTabTitles.add(tabTitles[i - 1]);
-      }
-
-      newTabTitles.add(tabTitles[i]);
     }
 
     return newTabTitles;
+  }
+
+  void _navigate(int index) {
   }
 
 }
