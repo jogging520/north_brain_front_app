@@ -2,7 +2,6 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
@@ -131,9 +130,6 @@ class BottomBloc extends Bloc<BottomEvent, BottomState> {
     }
 
     return newTabTitles;
-  }
-
-  void _navigate(int index) {
   }
 
 }

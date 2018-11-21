@@ -1,9 +1,8 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:north_brain_front_app/pages/business/home/HomePage.dart';
-import 'package:north_brain_front_app/pages/business/product/ProductPage.dart';
-import 'package:north_brain_front_app/pages/general/ProfilePage.dart';
+import 'package:north_brain_front_app/pages/business/BusinessPage.dart';
+import 'package:north_brain_front_app/pages/general/GeneralPage.dart';
 
 
 var rootHandler = Handler(
@@ -32,3 +31,24 @@ var profileHandler = Handler(
       return ProfilePage();
     }
 );
+
+var policyHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return PolicyPage();
+    }
+);
+
+
+
+var policyDetailHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return PolicyDetailPage();
+    }
+);
+

@@ -61,6 +61,18 @@ class BottomWidget extends StatelessWidget {
           });
         }
 
+        if (index == 2) {
+          Application.router.navigateTo(
+              context,
+              '/policy',
+              transition: Transition.transition(),
+              transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+          ).then((result) {
+          });
+        }
+
+
+
         if (index == 3) {
           Application.router.navigateTo(
               context,

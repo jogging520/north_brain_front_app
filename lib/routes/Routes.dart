@@ -10,6 +10,8 @@ class Routes{
   static const String ROUTE_PRICE = '/price/:id';
   static const String ROUTE_PRODUCT = '/product';
   static const String ROUTE_PROFILE = '/profile';
+  static const String ROUTE_POLICY = '/policy';
+  static const String ROUTE_POLICY_DETAIL = '/policy/:id';
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = new Handler(
@@ -22,5 +24,7 @@ class Routes{
     router.define(ROUTE_ROOT, handler: rootHandler);
     router.define(ROUTE_PRODUCT, handler: productHandler);
     router.define(ROUTE_PROFILE, handler: profileHandler);
+    router.define(ROUTE_POLICY, handler: policyHandler);
+    router.define(ROUTE_POLICY_DETAIL, handler: policyDetailHandler);
   }
 }
