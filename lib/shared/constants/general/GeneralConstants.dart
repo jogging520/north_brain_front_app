@@ -145,13 +145,14 @@ class GeneralConstants {
   //会话类型中的手机号码定义常量
   static const String CONSTANT_MODULE_SHARED_MODEL_SESSION_MOBILE               = 'mobile';
 
-  /**
- * 组件常量定义
- */
+  ///组件常量定义
   //LOGIN组件的用户名标签
   static const String CONSTANT_WIDGET_LOGIN_USERNAME_LABEL                      = '用户名';
   //LOGIN组件的密码标签
   static const String CONSTANT_WIDGET_LOGIN_PASSWORD_LABEL                      = '密  码';
   //登录按钮
-  static const String CONSTANT_WIDGET_LOGIN_BUTTION_TEXT                        = '登录';
+  static const String CONSTANT_WIDGET_LOGIN_BUTTON_TEXT                         = '登录';
+
+  //app bar的标题列表
+  static const List<String> CONSTANT_WIDGET_BOTTOM_TITLES                       = ['首页', '交易', '谷仓', '我的'];
 }

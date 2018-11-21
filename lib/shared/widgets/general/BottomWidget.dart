@@ -1,0 +1,53 @@
+
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
+
+class BottomWidget extends StatelessWidget {
+  final BottomBloc _bottomBloc;
+
+  const BottomWidget({
+    Key key,
+    @required BottomBloc bottomBloc}):
+        _bottomBloc = bottomBloc,
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<BottomEvent, BottomState> (
+      bloc: _bottomBloc,
+      builder: (BuildContext context, BottomState bottomState) {
+        return _bottomNavigator(bottomState);
+      },
+    );
+  }
+
+  Widget _bottomNavigator(BottomState bottomState) {
+    return BottomNavigationBar(
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+            icon: bottomState.tabImages[0],
+            title: bottomState.tabTitles[0]
+        ),
+        BottomNavigationBarItem(
+            icon: bottomState.tabImages[2],
+            title: bottomState.tabTitles[2]
+        ),
+        BottomNavigationBarItem(
+            icon: bottomState.tabImages[4],
+            title: bottomState.tabTitles[4]
+        ),
+        BottomNavigationBarItem(
+            icon: bottomState.tabImages[6],
+            title: bottomState.tabTitles[6]
+        )
+      ],
+      type: BottomNavigationBarType.fixed,
+      currentIndex: bottomState.currentIndex,
+      iconSize: 24.0,
+      onTap: (_index) {
+        print(_index);
+      },
+    );
+  }
+}

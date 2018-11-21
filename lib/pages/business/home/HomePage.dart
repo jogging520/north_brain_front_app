@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
+import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/common/Common.dart';
+import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
 
 class HomePage extends StatefulWidget{
   static List<String> role = const <String>['admin', 'operator'];
@@ -18,6 +20,8 @@ class HomePageState extends State<HomePage>{
   Widget build(BuildContext context) {
     final AuthenticationBloc _authenticationBloc =
         BlocProvider.of<AuthenticationBloc>(context);
+    final BottomBloc _bottomBloc =
+    BlocProvider.of<BottomBloc>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -62,6 +66,7 @@ class HomePageState extends State<HomePage>{
           ],
         ),
       ),
+      bottomNavigationBar: BottomWidget(bottomBloc: _bottomBloc),
     );
   }
 

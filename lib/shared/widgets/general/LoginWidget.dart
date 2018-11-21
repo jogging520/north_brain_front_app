@@ -127,7 +127,7 @@ class LoginWidgetState extends State<LoginWidget> {
                                 height: 50.0,
                                 color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
                                 textColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
-                                child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTION_TEXT,
+                                child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTON_TEXT,
                                   style: ContextStyle.CONTEXT_WIDGET_LOGIN,
                                 ),
                                 onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,

@@ -35,11 +35,14 @@ class ColorStyle {
   //加载中组件的颜色
   static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
   //个人设置组件的头部渐变颜色开始
-  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_BEGIN = Colors.redAccent;
+  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_BEGIN = Colors.teal;
   //个人设置组件的头部渐变颜色结束
-  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_END = Colors.yellow;
+  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_END = Colors.blue;
 
-
+  //个人设置组件的头部渐变颜色开始
+  static const Color COLOR_WIDGET_BOTTOM_TITLE = Colors.teal;
+  //个人设置组件的头部渐变颜色结束
+  static const Color COLOR_WIDGET_BOTTOM_TITLE_SELECTED = Colors.redAccent;
 
 
   static const int COLOR_PRIMARY_WHITE = 0xFFFFFFFF;
@@ -89,6 +92,22 @@ class ContextStyle {
       fontWeight: FontWeight.bold,
       letterSpacing: CONTEXT_LETTER_SPACING
   );
+
+  //底部tab的字体样式
+  static const TextStyle CONTEXT_WIDGET_BOTTOM = TextStyle(
+      color: ColorStyle.COLOR_WIDGET_BOTTOM_TITLE,
+      fontSize: CONTEXT_SMALL_SIZE,
+      fontWeight: FontWeight.bold,
+      letterSpacing: CONTEXT_LETTER_SPACING
+  );
+
+  //底部tab选中的字体样式
+  static const TextStyle CONTEXT_WIDGET_BOTTOM_SELECTED = TextStyle(
+      color: ColorStyle.COLOR_WIDGET_BOTTOM_TITLE_SELECTED,
+      fontSize: CONTEXT_SMALL_SIZE,
+      fontWeight: FontWeight.bold,
+      letterSpacing: CONTEXT_LETTER_SPACING
+  );
 }
 
 
@@ -121,4 +140,20 @@ class ImageStyle {
   static const String IMAGE_BACKGROUND = 'assets/images/background.png';
   //默认头像图片
   static const String IMAGE_AVATAR = 'assets/images/avatar.png';
+  //底部导航栏首页图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_HOME = 'assets/images/home.png';
+  //底部导航栏首页选中图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_HOME_SELECTED = 'assets/images/home_selected.png';
+  //底部导航栏交易图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_TRADE = 'assets/images/trade.png';
+  //底部导航栏交易选中图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_TRADE_SELECTED = 'assets/images/trade_selected.png';
+  //底部导航栏位置图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_STATION = 'assets/images/location.png';
+  //底部导航栏位置选中图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_STATION_SELECTED = 'assets/images/location_selected.png';
+  //底部导航栏设置图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_PROFILE = 'assets/images/profile.png';
+  //底部导航栏设置选中图标
+  static const String IMAGE_BOTTOM_NAVIGATOR_PROFILE_SELECTED = 'assets/images/profile_selected.png';
 }
