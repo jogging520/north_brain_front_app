@@ -77,6 +77,8 @@ class GeneralConstants {
   static const int    CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT                      = 15000;
 
 
+  //app路由未找到错误标题
+  static const String CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_TITLE                = '错误提示';
   //app路由未找到错误
   static const String CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_ERROR                = '未找到页面路由信息。';
 
@@ -93,7 +95,7 @@ class GeneralConstants {
 
 
   //默认错误描述
-  static const String CONSTANT_COMMON_HTTP_DEFAULT_ERROR                        = '网络不可用。';
+  static const String CONSTANT_COMMON_HTTP_DEFAULT_ERROR                        = '网络请求异常。';
   //默认错误描述
   static const String CONSTANT_COMMON_HTTP_RESPONSE_ERROR                       = '服务器响应错误:';
   //网络连接超时错误描述

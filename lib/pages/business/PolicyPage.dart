@@ -45,7 +45,8 @@ class PolicyPage extends StatelessWidget {
               Text('7'),
               Text('8'),
             ],
-          )
+          ),
+        resizeToAvoidBottomPadding: false,
       ),
     );
   }

@@ -13,6 +13,7 @@ class ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ProfileWidget(),
+      resizeToAvoidBottomPadding: false,
     );
   }
 

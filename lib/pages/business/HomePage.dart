@@ -67,6 +67,7 @@ class HomePageState extends State<HomePage>{
         ),
       ),
       bottomNavigationBar: BottomWidget(bottomBloc: _bottomBloc),
+      resizeToAvoidBottomPadding: false,
     );
   }
 

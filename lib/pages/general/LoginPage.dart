@@ -16,11 +16,12 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.greenAccent,
-        body: LoginWidget(
-          authenticationBloc: BlocProvider.of<AuthenticationBloc>(context),
-          loginBloc: _loginBloc,
-      )
+      backgroundColor: Colors.greenAccent,
+      body: LoginWidget(
+        authenticationBloc: BlocProvider.of<AuthenticationBloc>(context),
+        loginBloc: _loginBloc,
+      ),
+      resizeToAvoidBottomPadding: false,
     );
   }
 

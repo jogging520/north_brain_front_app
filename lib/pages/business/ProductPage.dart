@@ -12,7 +12,8 @@ class ProductPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('产品列表'),
       ),
-      body: ProductWidget(productBloc: _productBloc)
+      body: ProductWidget(productBloc: _productBloc),
+      resizeToAvoidBottomPadding: false,
     );
   }
 }

@@ -26,7 +26,7 @@ class PolicyWidget extends StatelessWidget {
 
   Widget _policyCards() {
     return Card(
-
-    )
+      child: Text('abcd'),
+    );
   }
 }

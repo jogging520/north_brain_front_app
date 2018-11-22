@@ -13,10 +13,13 @@ class Routes{
   static const String ROUTE_POLICY = '/policy';
   static const String ROUTE_POLICY_DETAIL = '/policy/:id';
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(Router router) async {
     router.notFoundHandler = new Handler(
       handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_ERROR);
+        CommonService.prompt(
+            context,
+            GeneralConstants.CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_TITLE,
+            GeneralConstants.CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_ERROR);
       }
     );
 

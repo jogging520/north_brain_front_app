@@ -27,12 +27,12 @@ import 'package:simple_rsa/simple_rsa.dart';
 class CommonService {
 
   //方法：提示信息，通过android、ios的toast实现。
-  static hint(String message) {
+  static hint(String message) async {
     if (message == null || message == '') {
       return;
     }
 
-    Fluttertoast.showToast(
+    await Fluttertoast.showToast(
         msg: message,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
@@ -225,26 +225,26 @@ class CommonService {
   }
 
   //方法：http错误处理
-  static handleError(error) {
+  static handleError(error) async {
     if (error == null || error.response.statusCode == null || error.type == null) {
       return;
     }
 
     switch (error.type) {
       case DioErrorType.DEFAULT:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR}${error.message}');
         break;
       case DioErrorType.RESPONSE:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RESPONSE_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RESPONSE_ERROR);
         Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_RESPONSE_ERROR}${error.message}');
         break;
       case DioErrorType.CONNECT_TIMEOUT:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR);
         Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_CONNECT_TIMEOUT_ERROR}${error.message}');
         break;
       case DioErrorType.RECEIVE_TIMEOUT:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR);
         Logger.root.fine('${GeneralConstants.CONSTANT_COMMON_HTTP_RECEIVE_TIMEOUT_ERROR}${error.message}');
         break;
       default:
@@ -255,13 +255,13 @@ class CommonService {
       case 200:
         break;
       case 401:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         break;
       case 505:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         break;
       default:
-        CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
+        await CommonService.hint(GeneralConstants.CONSTANT_COMMON_HTTP_DEFAULT_ERROR);
         break;
     }
   }
@@ -341,9 +341,9 @@ class CommonService {
   }
 
   //方法：拷贝
-  static copy(String data, BuildContext context) {
+  static copy(String data, BuildContext context) async {
     Clipboard.setData(new ClipboardData(text: data));
 
-    CommonService.hint(GeneralConstants.CONSTANT_COMMON_COPY_SUCCESS_HINT);
+    await CommonService.hint(GeneralConstants.CONSTANT_COMMON_COPY_SUCCESS_HINT);
   }
 }

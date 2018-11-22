@@ -23,7 +23,7 @@ class HttpClient {
     var connectivityResult = await (new Connectivity().checkConnectivity());
 
     if (connectivityResult == ConnectivityResult.none) {
-      CommonService.hint(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
+      await CommonService.hint(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
       throw new FormatException(GeneralConstants.CONSTANT_COMMON_NETWORK_CONNECTIVITY_NONE_HINT);
     }
 
@@ -66,7 +66,7 @@ class HttpClient {
       Logger.root.severe(e);
 
       if (e.response != null) {
-        CommonService.handleError(e);
+        await CommonService.handleError(e);
       }
     }
 
