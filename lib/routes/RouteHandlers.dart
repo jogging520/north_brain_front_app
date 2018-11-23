@@ -46,7 +46,7 @@ var settingHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       HomePage.role.contains('admin');
 
-      return SettingPage();
+      return SettingPage(darkEnabled: false, darkOLED: true,);
     }
 );
 
