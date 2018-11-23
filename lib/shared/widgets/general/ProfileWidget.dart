@@ -212,7 +212,7 @@ class ProfileWidgetState extends State<ProfileWidget> {
           width: MediaQuery.of(context).size.width,
           height: 120.0,
           child: Image.asset(
-            ImageStyle.IMAGE_BACKGROUND,
+            ImageStyle.IMAGE_DEFAULT,
             fit: BoxFit.cover,
           ),
         ),

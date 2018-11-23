@@ -66,7 +66,7 @@ class LoginWidgetState extends State<LoginWidget> {
       fit: StackFit.expand,
       children: <Widget>[
         Image(
-            image: AssetImage(ImageStyle.IMAGE_BACKGROUND),
+            image: AssetImage(ImageStyle.IMAGE_DEFAULT),
             fit: BoxFit.cover,
             color: ColorStyle.COLOR_WIDGET_LOGIN_BACKGROUND,
             colorBlendMode: BlendMode.darken

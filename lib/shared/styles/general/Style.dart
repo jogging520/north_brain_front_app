@@ -26,7 +26,7 @@ class ColorStyle {
   //登录组件按钮阴影的颜色
   static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_SHADOW   = Colors.green;
   //登录组件按钮的颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = COLOR_WIDGET_LOGIN_FORM;
+  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = Colors.orange;
   //登录组件按钮文字的颜色
   static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT   = Colors.white;
   //登录组件按钮闪过的颜色
