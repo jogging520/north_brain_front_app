@@ -50,10 +50,7 @@ class LoginWidgetState extends State<LoginWidget> {
         }
         
         if (_loginFailed(loginState)) {
-          CommonService.prompt(
-              context,
-              GeneralConstants.CONSTANT_COMMON_PROMPT_ERROR_TITLE,
-              loginState.error);
+          CommonService.hint(loginState.error);
         }
 
         return _form(loginState);

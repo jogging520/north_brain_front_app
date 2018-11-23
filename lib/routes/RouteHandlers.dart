@@ -14,6 +14,15 @@ var rootHandler = Handler(
   }
 );
 
+var loginHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return LoginPage();
+    }
+);
+
 var productHandler = Handler(
   //type: HandlerType.function,
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -29,6 +38,15 @@ var profileHandler = Handler(
       HomePage.role.contains('admin');
 
       return ProfilePage();
+    }
+);
+
+var settingHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return SettingPage();
     }
 );
 

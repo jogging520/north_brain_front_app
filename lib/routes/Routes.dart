@@ -7,9 +7,11 @@ import 'package:north_brain_front_app/shared/services/general/CommonService.dart
 //类名：路由类
 class Routes{
   static const String ROUTE_ROOT = '/';
+  static const String ROUTE_LOGIN = '/login';
   static const String ROUTE_PRICE = '/price/:id';
   static const String ROUTE_PRODUCT = '/product';
   static const String ROUTE_PROFILE = '/profile';
+  static const String ROUTE_SETTING = '/setting';
   static const String ROUTE_POLICY = '/policy';
   static const String ROUTE_POLICY_DETAIL = '/policy/:id';
 
@@ -25,8 +27,10 @@ class Routes{
 
     //在这个地方增加权限的限制（只通过角色来判断？）
     router.define(ROUTE_ROOT, handler: rootHandler);
+    router.define(ROUTE_LOGIN, handler: loginHandler);
     router.define(ROUTE_PRODUCT, handler: productHandler);
     router.define(ROUTE_PROFILE, handler: profileHandler);
+    router.define(ROUTE_SETTING, handler: settingHandler);
     router.define(ROUTE_POLICY, handler: policyHandler);
     router.define(ROUTE_POLICY_DETAIL, handler: policyDetailHandler);
   }

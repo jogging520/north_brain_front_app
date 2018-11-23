@@ -32,7 +32,7 @@ class GeneralConstants {
   //拷贝成功提示
   static const String CONSTANT_COMMON_COPY_SUCCESS_HINT                         = '拷贝成功。';
   //HTTP基础URL
-  static const String CONSTANT_COMMON_HTTP_BASE_URL                             = 'http://117.157.24.67:9001/';
+  static const String CONSTANT_COMMON_HTTP_BASE_URL                             = 'http://117.157.24.67:9001/app/';
   //HTTP的get方法
   static const String CONSTANT_COMMON_HTTP_METHOD_GET                           = 'get';
   //HTTP的post方法
@@ -55,7 +55,7 @@ class GeneralConstants {
   //HTTP请求头API KEY定义常量
   static const String CONSTANT_COMMON_HTTP_HEADER_API_KEY                       = 'apiKey';
   //HTTP请求头API KEY取值
-  static const String CONSTANT_COMMON_HTTP_HEADER_API_KEY_VALUE                 = 'ENsbus03E025Mmu7yPZQUtNNpkpzhjVtADFw3wedawefaw';
+  static const String CONSTANT_COMMON_HTTP_HEADER_API_KEY_VALUE                 = 'ad323sfaef40asSDUefevBGy78781xgAPIO2E788abnm7URqwsUssIOd';
   //HTTP请求参数中公共令牌定义常量
   static const String CONSTANT_COMMON_HTTP_PARAM_PUBLIC_TOKEN                   = 'token';
   //HTTP请求参数中公共流水号定义常量
@@ -157,4 +157,11 @@ class GeneralConstants {
 
   //app bar的标题列表
   static const List<String> CONSTANT_WIDGET_BOTTOM_TITLES                       = ['首页', '交易', '谷仓', '我的'];
+
+  //闪屏页面停留的时间
+  static const int CONSTANT_PAGE_SPLASH_DELAY_DURATION                          = 3;
+  //总体页面appBar的高度
+  static const double CONSTANT_PAGE_APP_BAR_HEIGHT                              = 48.0;
+  //总体页面appBar的立体阴影高度
+  static const double CONSTANT_PAGE_APP_BAR_ELEVATION                           = 1.0;
 }

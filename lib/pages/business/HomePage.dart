@@ -56,7 +56,7 @@ class HomePageState extends State<HomePage>{
                   onPressed: () {
                     Application.router.navigateTo(
                         context,
-                        '/policy',
+                        '/setting',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
                     ).then((result) {

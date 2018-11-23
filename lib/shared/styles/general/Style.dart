@@ -136,6 +136,8 @@ class ImageStyle {
   static const String IMAGE_LOGO = 'assets/images/logo.png';
   //默认图片
   static const String IMAGE_DEFAULT = 'assets/images/bg.jpg';
+  //登录等待图片
+  static const String IMAGE_SPLASH = 'assets/images/splash.jpg';
   //背景图片
   static const String IMAGE_BACKGROUND = 'assets/images/background.png';
   //默认头像图片

@@ -62,6 +62,10 @@ class ApplicationPage extends StatelessWidget{
           widgets.add(LoginPage());
         }
 
+        if (authenticationState.isInitializing) {
+          widgets.add(SplashPage());
+        }
+
         if (authenticationState.isLoading) {
           widgets.add(LoadingWidget());
         }
