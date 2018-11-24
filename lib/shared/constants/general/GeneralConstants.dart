@@ -91,6 +91,8 @@ class GeneralConstants {
 
   //流水号缓存数据定义常量
   static const String CONSTANT_COMMON_CACHE_SERIAL_NO                           = 'serialNo';
+  //属性设置缓存数据定义常量
+  static const String CONSTANT_COMMON_CACHE_SETTING                             = 'setting';
 
 
 
@@ -113,6 +115,12 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_LOG_TOKEN_SAVE_PROMPT                     = '存储token：';
   //token日志清除提示
   static const String CONSTANT_COMMON_LOG_TOKEN_DELETE_PROMPT                   = '清除token：';
+  //setting日志获取提示
+  static const String CONSTANT_COMMON_LOG_SETTING_GET_PROMPT                    = '获取到setting：';
+  //setting日志设置提示
+  static const String CONSTANT_COMMON_LOG_SETTING_SAVE_PROMPT                   = '存储setting：';
+  //setting日志清除提示
+  static const String CONSTANT_COMMON_LOG_SETTING_DELETE_PROMPT                 = '清除setting：';
   //cache日志保存提示
   static const String CONSTANT_COMMON_LOG_CACHE_SAVE_PROMPT                     = '保存到本地缓存：';
   //cache日志保存提示

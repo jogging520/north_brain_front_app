@@ -1,5 +1,4 @@
 
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
@@ -62,13 +61,8 @@ final List<List<Text>> tabTitles = [
 
 class BottomBloc extends Bloc<BottomEvent, BottomState> {
 
-
   @override
   BottomState get initialState => BottomState.initial(_initialTabImages(), _initialTabTitles());
-
-  void onApplicationStart() {
-    dispatch(ApplicationStarted());
-  }
 
   void onTabChanged(int index) {
     dispatch(

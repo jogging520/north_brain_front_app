@@ -7,13 +7,7 @@ import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart'
 
 
 class ProductWidget extends StatelessWidget {
-  final ProductBloc _productBloc;
-
-  const ProductWidget({
-    Key key,
-    @required ProductBloc productBloc}):
-        _productBloc = productBloc,
-        super(key: key);
+  final ProductBloc _productBloc = ProductBloc();
 
   @override
   Widget build(BuildContext context) {

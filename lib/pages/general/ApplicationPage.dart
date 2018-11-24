@@ -23,8 +23,6 @@ class ApplicationPage extends StatelessWidget{
     Routes.configureRoutes(router);
 
     Application.router = router;
-
-    _bottomBloc.onApplicationStart();
   }
 
   @override

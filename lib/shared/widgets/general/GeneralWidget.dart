@@ -3,3 +3,4 @@ export 'LoginWidget.dart';
 export 'ProfileWidget.dart';
 export 'BottomWidget.dart';
 export 'MenuWidget.dart';
+export 'SettingWidget.dart';

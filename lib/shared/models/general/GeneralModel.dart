@@ -7,3 +7,4 @@ export 'Storage.dart';
 export 'Strategy.dart';
 export 'Token.dart';
 export 'User.dart';
+export 'Setting.dart';

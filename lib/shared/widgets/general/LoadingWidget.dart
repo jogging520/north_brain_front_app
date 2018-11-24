@@ -1,20 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Opacity(
-          opacity: 0.3,
-          child: ModalBarrier(dismissible: false, color: ColorStyle.COLOR_WIDGET_LOADING_INDICATOR),
-        ),
-        Center(
-          child: CircularProgressIndicator(),
-        )
-      ],
+    return SpinKitSpinningCircle(
+      color: ColorStyle.COLOR_WIDGET_LOADING_INDICATOR,
+      shape: BoxShape.circle,
     );
   }
 

@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/pages/business/BusinessPage.dart';
-import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
-import 'package:north_brain_front_app/shared/common/Common.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
+import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
 import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class HomePage extends StatefulWidget{
   static List<String> role = const <String>['admin', 'operator'];
@@ -18,78 +18,67 @@ class HomePage extends StatefulWidget{
 
 class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
 
-  ScrollController _scrollController = ScrollController();
-  TextEditingController _textController = TextEditingController();
-  bool isSearching = true;
-  TabController _tabController;
-
   @override
   Widget build(BuildContext context) {
     final AuthenticationBloc _authenticationBloc =
         BlocProvider.of<AuthenticationBloc>(context);
-    final BottomBloc _bottomBloc =
-    BlocProvider.of<BottomBloc>(context);
+    final BottomBloc _bottomBloc = BlocProvider.of<BottomBloc>(context);
+    final RefreshController _refreshController = RefreshController();
 
     return Scaffold(
+      appBar: AppBar(
+        title: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              DiscoveryWidget()
+            ],
+          ),
+        ),
+      ),
       drawer: MenuWidget(),
-      body: NestedScrollView(
-        controller: _scrollController,
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return <Widget>[
-            SliverAppBar(
-              title: TextField(
-                  controller: _textController,
-                  autocorrect: false,
-                  keyboardType: TextInputType.text,
-                  style: Theme.of(context).textTheme.subhead,
-                  onChanged: null,
-                  autofocus: true,
-                  textCapitalization: TextCapitalization.none,
-                  decoration: InputDecoration.collapsed(hintText: '请输入搜索内容'),
-                ),
-              actions: <Widget>[
-
-              ],
-              pinned: true,
-              floating: true,
-              titleSpacing: 3.0,
-              elevation: GeneralConstants.CONSTANT_PAGE_APP_BAR_ELEVATION,
-              forceElevated: innerBoxIsScrolled,
-              bottom: PreferredSize(
-                preferredSize: Size.fromHeight(8.0),
-                child: Container(
-                  height: 38.0,
-                  child: TabBar(
-                    controller: _tabController,
-                    indicatorColor: Theme.of(context).accentIconTheme.color,
-                    unselectedLabelColor: Theme.of(context).disabledColor,
-                    labelColor: Theme.of(context).accentIconTheme.color,
-                    tabs: <Widget>[
-                      Tab(icon: Icon(Icons.description),),
-                      Tab(icon: Icon(Icons.storage),)
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              child: GestureDetector(
+                onTap: () {
+                  FocusScope.of(context).requestFocus(new FocusNode());
+                },
+                child: SmartRefresher(
+                  enablePullDown: true,
+                  enablePullUp: true,
+                  controller: _refreshController,
+                  onRefresh: _onRefresh,
+                  onOffsetChange: _onOffsetChange,
+                  child: ListView(
+                    physics: AlwaysScrollableScrollPhysics(),
+                    padding: EdgeInsets.all(0.0),
+                    scrollDirection: Axis.vertical,
+                    children: <Widget>[
+                      CarouselWidget()
                     ],
                   ),
                 ),
               ),
-            )
-          ];
-        },
-        body: TabBarView(
-            controller: _tabController,
-            children: [
-              PolicyDetailPage(),
-              PolicyPage()
-            ]),
+            ),
+          )
+        ],
       ),
       bottomNavigationBar: BottomWidget(bottomBloc: _bottomBloc),
       resizeToAvoidBottomPadding: false,
     );
   }
 
-  @override
-  void initState() {
-    super.initState();
-    _tabController = new TabController(length: 2, vsync: this);
+  void _onRefresh(up) {
+    Future.delayed(Duration(microseconds: 1000)).then((value) {
+      print('1111');
+    }
+    );
   }
 
+  void _onOffsetChange(bool isUp, double offset) {
+    // if you want change some widgets state ,you should rewrite the callback
+  }
 }

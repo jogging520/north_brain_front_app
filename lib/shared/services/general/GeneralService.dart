@@ -4,3 +4,4 @@ export 'CommonService.dart';
 export 'OperationService.dart';
 export 'SessionService.dart';
 export 'TokenService.dart';
+export 'SettingService.dart';

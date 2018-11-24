@@ -24,7 +24,8 @@ class BottomWidget extends StatelessWidget {
     );
   }
 
-  Widget _bottomNavigator(BuildContext context, BottomBloc bottomBloc, BottomState bottomState) {
+  Widget _bottomNavigator(BuildContext context, BottomBloc bottomBloc,
+      BottomState bottomState) {
     return BottomNavigationBar(
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
@@ -64,7 +65,7 @@ class BottomWidget extends StatelessWidget {
         if (index == 2) {
           Application.router.navigateTo(
               context,
-              '/policy',
+              '/setting',
               transition: Transition.transition(),
               transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
           ).then((result) {
