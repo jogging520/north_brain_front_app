@@ -5,3 +5,5 @@ export 'OperationService.dart';
 export 'SessionService.dart';
 export 'TokenService.dart';
 export 'SettingService.dart';
+export 'MenuService.dart';
+export 'StrategyService.dart';

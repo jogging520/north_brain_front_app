@@ -18,12 +18,19 @@ class HomePage extends StatefulWidget{
 
 class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
 
+  final RefreshController _refreshController = RefreshController();
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final AuthenticationBloc _authenticationBloc =
         BlocProvider.of<AuthenticationBloc>(context);
     final BottomBloc _bottomBloc = BlocProvider.of<BottomBloc>(context);
-    final RefreshController _refreshController = RefreshController();
+
 
     return Scaffold(
       appBar: AppBar(

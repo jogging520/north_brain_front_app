@@ -86,6 +86,10 @@ class GeneralConstants {
   static const String CONSTANT_COMMON_ROUTE_PATH_STORAGE                        = 'storage';
   //登录路由的login路径
   static const String CONSTANT_COMMON_ROUTE_PATH_LOGIN                          = 'login';
+  //菜单路由的login路径
+  static const String CONSTANT_COMMON_ROUTE_PATH_MENU                           = 'menus/app';
+  //政策路由的login路径
+  static const String CONSTANT_COMMON_ROUTE_PATH_POLICY                         = 'policies';
 
 
 

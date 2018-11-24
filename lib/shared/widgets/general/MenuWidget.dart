@@ -1,27 +1,42 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:north_brain_front_app/shared/blocs/business/menu/Menu.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 class MenuWidget extends StatelessWidget {
+  final MenuBloc _menuBloc = MenuBloc();
+
   @override
   Widget build(BuildContext context) {
+    return BlocBuilder<MenuEvent, MenuState> (
+      bloc: _menuBloc,
+      builder: (BuildContext context, MenuState menuState) {
+        return _drawer(context, _menuBloc, menuState);
+      },
+    );
+  }
+
+  Widget _drawer(BuildContext context, MenuBloc menuBloc,
+      MenuState menuState
+      ) {
     return Drawer(
       child: Scaffold(
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
-            border: Border(
-              top: BorderSide(color: Theme.of(context).bottomAppBarColor)
-            )
+              border: Border(
+                  top: BorderSide(color: Theme.of(context).bottomAppBarColor)
+              )
           ),
           child: ListTile(
-            onTap: null,
-            leading: Icon(Icons.airport_shuttle),
-            title: Text(
-              '抽屉',
-              style: Theme.of(context).textTheme.body2.apply(
-                color: Theme.of(context).buttonColor
-              ),
-            )
+              onTap: null,
+              leading: Icon(Icons.airport_shuttle),
+              title: Text(
+                '抽屉',
+                style: Theme.of(context).textTheme.body2.apply(
+                    color: Theme.of(context).buttonColor
+                ),
+              )
           ),
         ),
         body: ListView(
@@ -30,11 +45,11 @@ class MenuWidget extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 9 / 11,
               height: MediaQuery.of(context).size.height * 1 / 3,
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
-                image: DecorationImage(
-                  image: AssetImage(ImageStyle.IMAGE_DEFAULT),
-                  fit: BoxFit.fill
-                )
+                  color: Theme.of(context).primaryColor,
+                  image: DecorationImage(
+                      image: AssetImage(ImageStyle.IMAGE_DEFAULT),
+                      fit: BoxFit.fill
+                  )
               ),
             ),
             ListTile(
@@ -57,12 +72,12 @@ class MenuWidget extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Theme.of(context).bottomAppBarColor,
-                    width: 1.0
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Theme.of(context).bottomAppBarColor,
+                          width: 1.0
+                      )
                   )
-                )
               ),
               padding: EdgeInsets.symmetric(vertical: 4.0),
             ),
