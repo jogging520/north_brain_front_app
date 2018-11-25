@@ -1,9 +1,23 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:north_brain_front_app/shared/blocs/business/search/Search.dart';
 
-class DiscoveryWidget extends StatelessWidget {
+class SearchWidget extends StatelessWidget {
+
+  final SearchBloc _searchBloc = SearchBloc();
+
   @override
   Widget build(BuildContext context) {
+    return BlocBuilder<SearchEvent, SearchState> (
+      bloc: _searchBloc,
+      builder: (BuildContext context, SearchState searchState) {
+        return _searchBar(context, _searchBloc, searchState);
+      },
+    );
+  }
+
+  Widget _searchBar(BuildContext context, SearchBloc searchBloc, SearchState searchState) {
     return Container(
       margin: EdgeInsets.only(left: 10.0),
       padding: EdgeInsets.only(left: 10.0),

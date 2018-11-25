@@ -27,7 +27,8 @@ class OperationService {
     );
     
     return HttpClient
-        .post(GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL, null, body: operation)
+        .post('${GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL}${GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_OPERATION}',
+        null, body: operation)
         .then((json) => Operation.fromJson(json));
   }
 
@@ -36,6 +37,7 @@ class OperationService {
     await CommonService.setSerialNo();
 
     return HttpClient
-        .get(GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL, conditions);
+        .get('${GeneralConstants.CONSTANT_COMMON_HTTP_BASE_URL}${GeneralConstants.CONSTANT_COMMON_ROUTE_PATH_OPERATION}',
+        conditions);
   }
 }

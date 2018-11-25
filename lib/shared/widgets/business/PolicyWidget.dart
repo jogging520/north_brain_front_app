@@ -8,8 +8,7 @@ class PolicyWidget extends StatelessWidget {
 
   const PolicyWidget({
     Key key,
-    @required PolicyBloc policyBloc})
-      :
+    @required PolicyBloc policyBloc}):
         _policyBloc = policyBloc,
         super(key: key);
 

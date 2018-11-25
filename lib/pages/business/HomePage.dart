@@ -38,7 +38,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              DiscoveryWidget()
+              SearchWidget()
             ],
           ),
         ),

@@ -2,4 +2,6 @@ export 'ProductWidget.dart';
 export 'PolicyDetailWidget.dart';
 export 'CarouselWidget.dart';
 export 'PolicyWidget.dart';
-export 'DiscoveryWidget.dart';
+export 'SearchWidget.dart';
+export 'ProductDetailWidget.dart';
+export 'TradeWidget.dart';
