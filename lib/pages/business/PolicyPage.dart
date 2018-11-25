@@ -78,7 +78,7 @@ class PolicyPageState extends State<PolicyPage> with SingleTickerProviderStateMi
         body: TabBarView(
             controller: _tabController,
             children: [
-              PolicyDetailPage(),
+              TestPage(),
               TestPage()
             ]),
       ),

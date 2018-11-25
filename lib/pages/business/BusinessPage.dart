@@ -4,3 +4,4 @@ export 'PolicyDetailPage.dart';
 export 'PolicyPage.dart';
 export 'TradePage.dart';
 export 'TestPage.dart';
+export 'ProductDetailPage.dart';

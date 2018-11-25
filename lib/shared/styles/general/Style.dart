@@ -34,10 +34,6 @@ class ColorStyle {
 
   //加载中组件的颜色
   static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
-  //个人设置组件的头部渐变颜色开始
-  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_BEGIN = Colors.teal;
-  //个人设置组件的头部渐变颜色结束
-  static const Color COLOR_WIDGET_PROFILE_HEADER_GRADIENT_END = Colors.blue;
 
   //个人设置组件的头部渐变颜色开始
   static const Color COLOR_WIDGET_BOTTOM_TITLE = Colors.teal;

@@ -1,10 +1,5 @@
-export 'ProductWidget.dart';
-export 'PolicyDetailWidget.dart';
-export 'CarouselWidget.dart';
-export 'PolicyWidget.dart';
-export 'SearchWidget.dart';
-export 'ProductDetailWidget.dart';
-export 'TradeWidget.dart';
-export 'TradeItemWidget.dart';
-export 'TradeHeaderWidget.dart';
-export 'TransactionWidget.dart';
+export 'search/Search.dart';
+export 'trade/Trade.dart';
+export 'product/Product.dart';
+export 'policy/Policy.dart';
+export 'carousel/Carousel.dart';

@@ -65,7 +65,7 @@ var policyDetailHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       HomePage.role.contains('admin');
 
-      return PolicyDetailPage();
+      return PolicyDetailPage(params['id'][0]);
     }
 );
 

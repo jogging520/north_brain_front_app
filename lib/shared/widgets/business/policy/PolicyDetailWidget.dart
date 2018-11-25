@@ -45,11 +45,14 @@ Enjoy!
 """;
 
 class PolicyDetailWidget extends StatelessWidget {
+  final String _id;
   final PolicyDetailBloc _policyDetailBloc;
 
   const PolicyDetailWidget({
     Key key,
+    @required String id,
     @required PolicyDetailBloc policyDetailBloc}):
+        _id = id,
         _policyDetailBloc = policyDetailBloc,
         super(key: key);
 
