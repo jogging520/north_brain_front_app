@@ -78,7 +78,7 @@ class TradeWidget extends StatelessWidget {
             ]
             ),
           ),
-          tradeState.trades == null ?
+          tradeState.trades != null ?
           SliverList(
             delegate: SliverChildListDelegate(<Widget>[
               Container(
