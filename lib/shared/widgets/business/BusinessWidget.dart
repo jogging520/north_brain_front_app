@@ -5,3 +5,6 @@ export 'PolicyWidget.dart';
 export 'SearchWidget.dart';
 export 'ProductDetailWidget.dart';
 export 'TradeWidget.dart';
+export 'TradeItemWidget.dart';
+export 'TradeHeaderWidget.dart';
+export 'TransactionWidget.dart';

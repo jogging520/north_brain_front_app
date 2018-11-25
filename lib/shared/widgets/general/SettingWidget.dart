@@ -8,7 +8,7 @@ class SettingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _settingBloc.onWidgetInitialed();
+    _settingBloc.onWidgetInitialized();
 
     return BlocBuilder<SettingEvent, SettingState> (
       bloc: _settingBloc,

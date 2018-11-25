@@ -11,13 +11,13 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
   @override
   MenuState get initialState => MenuState.initial();
 
-  void onWidgetInitialed() {
-    dispatch(WidgetInitialed());
+  void onWidgetInitialized() {
+    dispatch(WidgetInitialized());
   }
 
   @override
   Stream<MenuState> mapEventToState(MenuState state, MenuEvent event) async* {
-    if (event is WidgetInitialed) {
+    if (event is WidgetInitialized) {
       yield MenuState.loading();
 
       Menu menu = await _getMenus();

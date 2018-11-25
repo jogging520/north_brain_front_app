@@ -11,13 +11,13 @@ class PolicyDetailBloc extends Bloc<PolicyDetailEvent, PolicyDetailState>{
   @override
   PolicyDetailState get initialState => PolicyDetailState.initial();
 
-  void onWidgetInitialed(String id) {
-    dispatch(WidgetInitialed(id));
+  void onWidgetInitialized(String id) {
+    dispatch(WidgetInitialized(id));
   }
 
   @override
   Stream<PolicyDetailState> mapEventToState(PolicyDetailState state, PolicyDetailEvent event) async* {
-    if (event is WidgetInitialed) {
+    if (event is WidgetInitialized) {
       yield PolicyDetailState.loading();
 
       Policy policy = await _getPolicy(event.id);

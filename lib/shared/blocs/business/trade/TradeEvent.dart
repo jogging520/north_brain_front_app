@@ -1,9 +1,9 @@
 
 abstract class TradeEvent {}
 
-class WidgetInitialed extends TradeEvent {
+class WidgetInitialized extends TradeEvent {
 
-  WidgetInitialed();
+  WidgetInitialized();
 
   @override
   int get hashCode => this.hashCode;
@@ -11,7 +11,7 @@ class WidgetInitialed extends TradeEvent {
   @override
   bool operator ==(other) =>
       identical(this, other) ||
-          other is WidgetInitialed;
+          other is WidgetInitialized;
 }
 
 

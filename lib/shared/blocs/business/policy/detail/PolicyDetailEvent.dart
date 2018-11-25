@@ -1,11 +1,11 @@
 
 abstract class PolicyDetailEvent {}
 
-class WidgetInitialed extends PolicyDetailEvent {
+class WidgetInitialized extends PolicyDetailEvent {
 
   final String id;
 
-  WidgetInitialed(this.id);
+  WidgetInitialized(this.id);
 
   @override
   int get hashCode => this.id.hashCode;
@@ -13,6 +13,6 @@ class WidgetInitialed extends PolicyDetailEvent {
   @override
   bool operator ==(other) =>
       identical(this, other) ||
-          other is WidgetInitialed &&
+          other is WidgetInitialized &&
               id == other.id;
 }

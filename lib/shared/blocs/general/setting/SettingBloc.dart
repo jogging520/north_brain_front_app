@@ -11,8 +11,8 @@ class SettingBloc extends Bloc<SettingEvent, SettingState> {
   @override
   SettingState get initialState => SettingState.initial();
 
-  void onWidgetInitialed() {
-    dispatch(WidgetInitialed());
+  void onWidgetInitialized() {
+    dispatch(WidgetInitialized());
   }
 
   void onPropertyChanged(Setting setting) {
@@ -21,7 +21,7 @@ class SettingBloc extends Bloc<SettingEvent, SettingState> {
 
   @override
   Stream<SettingState> mapEventToState(SettingState state, SettingEvent event) async* {
-    if (event is WidgetInitialed) {
+    if (event is WidgetInitialized) {
       yield SettingState.loading();
 
       Setting setting = await _getSetting();

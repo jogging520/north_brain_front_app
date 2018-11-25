@@ -158,4 +158,7 @@ class ImageStyle {
   static const String IMAGE_BOTTOM_NAVIGATOR_PROFILE = 'assets/images/profile.png';
   //底部导航栏设置选中图标
   static const String IMAGE_BOTTOM_NAVIGATOR_PROFILE_SELECTED = 'assets/images/profile_selected.png';
+
+  //交易图片
+  static const String IMAGE_TRADE = 'assets/images/blz.png';
 }

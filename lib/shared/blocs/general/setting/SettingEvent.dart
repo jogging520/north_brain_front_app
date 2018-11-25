@@ -4,9 +4,9 @@ import 'package:north_brain_front_app/shared/models/general/GeneralModel.dart';
 
 abstract class SettingEvent {}
 
-class WidgetInitialed extends SettingEvent {
+class WidgetInitialized extends SettingEvent {
 
-  WidgetInitialed();
+  WidgetInitialized();
 
   @override
   int get hashCode => this.hashCode;
@@ -14,7 +14,7 @@ class WidgetInitialed extends SettingEvent {
   @override
   bool operator ==(other) =>
       identical(this, other) ||
-          other is WidgetInitialed;
+          other is WidgetInitialized;
 }
 
 class PropertyChanged extends SettingEvent {

@@ -11,8 +11,8 @@ class TradeBloc extends Bloc<TradeEvent, TradeState> {
   @override
   TradeState get initialState => TradeState.initial();
 
-  void onWidgetInitialed() {
-    dispatch(WidgetInitialed());
+  void onWidgetInitialized() {
+    dispatch(WidgetInitialized());
   }
 
   void onRefreshButtonPressed(Map<String, dynamic> conditions) {
@@ -22,7 +22,7 @@ class TradeBloc extends Bloc<TradeEvent, TradeState> {
   @override
   Stream<TradeState> mapEventToState(TradeState state, TradeEvent event) async* {
 
-    if (event is WidgetInitialed) {
+    if (event is WidgetInitialized) {
       yield TradeState.loading();
 
       List<Trade> trades = await _queryTrades(conditions: null);

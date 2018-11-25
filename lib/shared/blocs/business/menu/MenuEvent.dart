@@ -1,9 +1,9 @@
 
 abstract class MenuEvent {}
 
-class WidgetInitialed extends MenuEvent {
+class WidgetInitialized extends MenuEvent {
 
-  WidgetInitialed();
+  WidgetInitialized();
 
   @override
   int get hashCode => this.hashCode;
@@ -11,5 +11,5 @@ class WidgetInitialed extends MenuEvent {
   @override
   bool operator ==(other) =>
       identical(this, other) ||
-          other is WidgetInitialed;
+          other is WidgetInitialized;
 }
