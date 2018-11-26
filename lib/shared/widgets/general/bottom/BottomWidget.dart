@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
+import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
-import 'package:north_brain_front_app/shared/common/Common.dart';
 
 class BottomWidget extends StatelessWidget {
   final BottomBloc _bottomBloc;
@@ -65,7 +65,7 @@ class BottomWidget extends StatelessWidget {
         if (index == 2) {
           Application.router.navigateTo(
               context,
-              '/setting',
+              '/product/1',
               transition: Transition.transition(),
               transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
           ).then((result) {

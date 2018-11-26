@@ -10,6 +10,7 @@ class Routes{
   static const String ROUTE_LOGIN = '/login';
   static const String ROUTE_PRICE = '/price/:id';
   static const String ROUTE_PRODUCT = '/product';
+  static const String ROUTE_PRODUCT_DETAIL = '/product/:id';
   static const String ROUTE_PROFILE = '/profile';
   static const String ROUTE_SETTING = '/setting';
   static const String ROUTE_POLICY = '/policy';
@@ -30,6 +31,7 @@ class Routes{
     router.define(ROUTE_ROOT, handler: rootHandler);
     router.define(ROUTE_LOGIN, handler: loginHandler);
     router.define(ROUTE_PRODUCT, handler: productHandler);
+    router.define(ROUTE_PRODUCT_DETAIL, handler: productDetailHandler);
     router.define(ROUTE_PROFILE, handler: profileHandler);
     router.define(ROUTE_SETTING, handler: settingHandler);
     router.define(ROUTE_POLICY, handler: policyHandler);

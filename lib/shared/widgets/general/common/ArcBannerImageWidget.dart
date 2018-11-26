@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 
-class ArcBannerImage extends StatelessWidget {
+class ArcBannerImageWidget extends StatelessWidget {
   final String imageUrl;
 
-  const ArcBannerImage({Key key, this.imageUrl}) : super(key: key);
+  const ArcBannerImageWidget({Key key, this.imageUrl}) : super(key: key);
 
 
   @override

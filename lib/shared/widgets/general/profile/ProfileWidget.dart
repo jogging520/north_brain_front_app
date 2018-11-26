@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:north_brain_front_app/shared/common/ArcBannerImage.dart';
+import 'package:north_brain_front_app/shared/widgets/general/common/ArcBannerImageWidget.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 class ProfileWidget extends StatefulWidget {
@@ -19,7 +19,7 @@ class ProfileWidgetState extends State<ProfileWidget> {
             children: <Widget>[
               Padding(
                   padding: const EdgeInsets.only(bottom: 25.0),
-                  child: ArcBannerImage()
+                  child: ArcBannerImageWidget(imageUrl: ImageStyle.IMAGE_DEFAULT,)
               ),
               Positioned(
                 bottom: 0.0,

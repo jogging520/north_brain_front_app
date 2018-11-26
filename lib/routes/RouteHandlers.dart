@@ -31,6 +31,15 @@ var productHandler = Handler(
   }
 );
 
+var productDetailHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return ProductDetailPage(id: params['id'][0]);
+    }
+);
+
 var profileHandler = Handler(
   //type: HandlerType.function,
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {

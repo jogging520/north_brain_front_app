@@ -6,6 +6,7 @@ import 'package:bloc/bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/business/product/Product.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
 import 'package:north_brain_front_app/shared/services/business/BusinessService.dart';
+import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 final Uint8List placeholderImages = new Uint8List.fromList(<int>[
   0x89,
@@ -116,7 +117,9 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
             '谷物' + (random.nextInt(1000) + 200).toString(),
             'COMMON',
             (random.nextInt(500) + 200),
-            (random.nextInt(800) + 200)
+            (random.nextInt(800) + 200),
+              ImageStyle.IMAGE_DEFAULT,
+              ImageStyle.IMAGE_BACKGROUND
         )
     );
   }

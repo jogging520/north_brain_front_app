@@ -10,15 +10,18 @@ class Product {
   String type;
   int width;
   int height;
+  String banner;
+  String image;
 
-  Product(this.id, this.name, this.type, this.width, this.height);
+  Product(this.id, this.name, this.type, this.width, this.height, this.banner, this.image);
 
   factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProductToJson(this);
 
   @override
-  int get hashCode => id.hashCode ^ name.hashCode ^ type.hashCode ^ width.hashCode ^ height.hashCode;
+  int get hashCode => id.hashCode ^ name.hashCode ^ type.hashCode
+  ^ width.hashCode ^ height.hashCode ^ banner.hashCode ^ image.hashCode;
 
   @override
   bool operator ==(Object other) =>
@@ -29,5 +32,7 @@ class Product {
               name == other.name &&
               type == other.type &&
               width == other.width &&
-              height == other.height;
+              height == other.height &&
+              banner == other.banner &&
+              image == other.image;
 }

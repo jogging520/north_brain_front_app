@@ -175,6 +175,9 @@ class GeneralConstants {
 
   //app bar的标题列表
   static const List<String> CONSTANT_WIDGET_BOTTOM_TITLES                       = ['首页', '交易', '谷仓', '我的'];
+  //poster组件的长宽比
+  static const double CONSTANT_WIDGET_POSTER_RATIO                              = 0.7;
+
 
   //闪屏页面停留的时间
   static const int CONSTANT_PAGE_SPLASH_DELAY_DURATION                          = 3;
