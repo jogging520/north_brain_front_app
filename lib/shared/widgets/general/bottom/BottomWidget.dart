@@ -77,7 +77,7 @@ class BottomWidget extends StatelessWidget {
         if (index == 3) {
           Application.router.navigateTo(
               context,
-              '/policy/1',
+              '/test',
               transition: Transition.transition(),
               transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
           ).then((result) {

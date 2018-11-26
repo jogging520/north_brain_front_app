@@ -16,6 +16,7 @@ class Routes{
   static const String ROUTE_POLICY = '/policy';
   static const String ROUTE_POLICY_DETAIL = '/policy/:id';
   static const String ROUTE_TRADE = '/trade';
+  static const String ROUTE_TEST = '/test';
 
   static void configureRoutes(Router router) async {
     router.notFoundHandler = new Handler(
@@ -37,5 +38,6 @@ class Routes{
     router.define(ROUTE_POLICY, handler: policyHandler);
     router.define(ROUTE_POLICY_DETAIL, handler: policyDetailHandler);
     router.define(ROUTE_TRADE, handler: tradeHandler);
+    router.define(ROUTE_TEST, handler: testHandler);
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
+import 'package:north_brain_front_app/shared/widgets/business/home/Home.dart';
 import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
 
 
@@ -54,12 +55,22 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                   padding: EdgeInsets.all(0.0),
                   scrollDirection: Axis.vertical,
                   children: <Widget>[
-                    CarouselWidget()
+                    CarouselWidget(),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    HomeShortcutWidget(),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+
                   ],
                 ),
               ),
             ),
-          )
+          ),
+
+          HomeHotspotWidget()
         ],
       ),
       bottomNavigationBar: BottomWidget(bottomBloc: _bottomBloc),

@@ -9,22 +9,18 @@ final List<Image> hotspotImages = [
   Image.asset(ImageStyle.IMAGE_DEFAULT, fit: BoxFit.cover),
 ];
 
-class TestPage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => TestPageState();
-}
-
-class TestPageState extends State<TestPage> {
-
+class HomeHotspotWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return _hotspot(context);
+  }
+
+  Widget _hotspot(BuildContext context) {
     return GridView.count(
+      padding: EdgeInsets.all(50.0),
+      mainAxisSpacing: 8.0,
+      crossAxisSpacing: 8.0,
       crossAxisCount: 2,
-      padding: const EdgeInsets.all(4.0),
-      //主轴间隔
-      mainAxisSpacing: 4.0,
-      //横轴间隔
-      crossAxisSpacing: 4.0,
       children: <Widget>[
         _getGridViewItemUI(context, hotspotImages[0]),
         _getGridViewItemUI(context, hotspotImages[1]),
