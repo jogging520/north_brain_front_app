@@ -22,7 +22,7 @@ class PosterWidget extends StatelessWidget {
       elevation: 2.0,
       child: Image.asset(
         imageUrl,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
         width: width,
         height: height,
       ),
