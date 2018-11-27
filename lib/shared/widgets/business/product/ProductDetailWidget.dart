@@ -20,17 +20,20 @@ class ProductDetailWidget extends StatelessWidget {
               'COMMON',
               (random.nextInt(500) + 200),
               (random.nextInt(800) + 200),
-              ImageStyle.IMAGE_DEFAULT,
-              ImageStyle.IMAGE_BACKGROUND
+              ImageStyle.IMAGE_IMG1,
+              ImageStyle.IMAGE_IMG2
           ),),
           Padding(
             padding: EdgeInsets.all(20.0),
             child: ProductDetailIntroductionWidget('测试产品'),
           ),
           ProductDetailPhotoWidget(
-            [ImageStyle.IMAGE_DEFAULT,
-            ImageStyle.IMAGE_DEFAULT,
-            ImageStyle.IMAGE_DEFAULT]
+            [ImageStyle.IMAGE_IMG1,
+            ImageStyle.IMAGE_IMG2,
+            ImageStyle.IMAGE_IMG3,
+            ImageStyle.IMAGE_IMG4,
+            ImageStyle.IMAGE_IMG5,
+            ]
           ),
           SizedBox(height: 20.0),
         ],

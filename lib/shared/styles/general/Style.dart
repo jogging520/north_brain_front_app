@@ -157,4 +157,9 @@ class ImageStyle {
 
   //交易图片
   static const String IMAGE_TRADE = 'assets/images/blz.png';
+  static const String IMAGE_IMG1 = 'assets/images/img1.jpg';
+  static const String IMAGE_IMG2 = 'assets/images/img2.jpg';
+  static const String IMAGE_IMG3 = 'assets/images/img3.jpg';
+  static const String IMAGE_IMG4 = 'assets/images/img4.jpg';
+  static const String IMAGE_IMG5 = 'assets/images/img5.png';
 }

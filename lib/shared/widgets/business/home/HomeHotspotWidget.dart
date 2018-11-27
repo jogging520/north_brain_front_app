@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 final List<Image> hotspotImages = [
-  Image.asset(ImageStyle.IMAGE_DEFAULT, fit: BoxFit.cover),
-  Image.asset(ImageStyle.IMAGE_DEFAULT, fit: BoxFit.cover),
-  Image.asset(ImageStyle.IMAGE_DEFAULT, fit: BoxFit.cover),
-  Image.asset(ImageStyle.IMAGE_DEFAULT, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG1, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG2, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG3, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG4, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG5, fit: BoxFit.cover),
 ];
 
 class HomeHotspotWidget extends StatelessWidget {
@@ -16,26 +17,30 @@ class HomeHotspotWidget extends StatelessWidget {
   }
 
   Widget _hotspot(BuildContext context) {
-    return GridView.count(
-      padding: EdgeInsets.all(50.0),
-      mainAxisSpacing: 8.0,
-      crossAxisSpacing: 8.0,
-      crossAxisCount: 2,
-      children: <Widget>[
-        _getGridViewItemUI(context, hotspotImages[0]),
-        _getGridViewItemUI(context, hotspotImages[1]),
-        _getGridViewItemUI(context, hotspotImages[2]),
-        _getGridViewItemUI(context, hotspotImages[3]),
-      ],
+    return Container(
+      child: Scrollbar(
+        child: GridView.builder(
+            padding: EdgeInsets.only(bottom: 5.0),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 2.0,
+              childAspectRatio: 2/3
+            ),
+            itemCount: hotspotImages.length,
+            itemBuilder: _items),
+      ),
     );
   }
 
-  Widget _getGridViewItemUI(BuildContext context, Image image) {
+  Widget _items(BuildContext context, int index) {
     return Card(
       elevation: 4.0,
       child: Column(
         children: <Widget>[
-          image,
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: hotspotImages[index],
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -61,6 +66,5 @@ class HomeHotspotWidget extends StatelessWidget {
         ],
       ),
     ) ;
-
   }
 }

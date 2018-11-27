@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
+import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
 import 'package:north_brain_front_app/shared/widgets/business/home/Home.dart';
 import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
@@ -63,14 +64,39 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                     SizedBox(
                       height: 10.0,
                     ),
-
+                    SizedBox(
+                      height: 200.0,
+                      child: HomeHotspotWidget(),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      child: Divider(
+                        color: Colors.black12,
+                        height: 2.0,
+                      ),
+                      margin: EdgeInsets.only(left: 18.0, right: 18.0, top: 10.0),
+                    ),
+                    Container(
+                      child: Text(
+                        '北脑红包大大地',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0),
+                      ),
+                      margin: EdgeInsets.only(left: 15.0, top: 8.0),
+                    ),
+                    Container(
+                      child: Image.asset(ImageStyle.IMAGE_DEFAULT),
+                    )
                   ],
                 ),
               ),
             ),
           ),
+          SizedBox(
+            height: 10.0,
+          ),
 
-          HomeHotspotWidget()
         ],
       ),
       bottomNavigationBar: BottomWidget(bottomBloc: _bottomBloc),

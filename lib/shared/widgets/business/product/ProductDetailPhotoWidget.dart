@@ -21,7 +21,7 @@ class ProductDetailPhotoWidget extends StatelessWidget {
         SizedBox.fromSize(
           size: Size.fromHeight(100.0),
           child: ListView.builder(
-            itemCount: phoneUrls.length,
+              itemCount: phoneUrls.length,
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.only(top: 8.0, left: 20.0),
               itemBuilder: _photos),
@@ -41,7 +41,7 @@ class ProductDetailPhotoWidget extends StatelessWidget {
           photo,
           width: 160.0,
           height: 120.0,
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
         ),
       ),
     );

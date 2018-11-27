@@ -20,9 +20,9 @@ class HomeShortcutWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 30.0, bottom: 1.0),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: _items(context)
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: _items(context)
       ),
     );
   }
@@ -33,7 +33,7 @@ class HomeShortcutWidget extends StatelessWidget {
         onTap: null,
         child: Container(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               ClipOval(
                 child: SizedBox(
