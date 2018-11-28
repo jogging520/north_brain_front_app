@@ -22,6 +22,8 @@ class ApplicationPage extends StatelessWidget{
     final router = new Router();
     Routes.configureRoutes(router);
 
+
+
     Application.router = router;
   }
 
@@ -61,7 +63,7 @@ class ApplicationPage extends StatelessWidget{
         }
 
         if (authenticationState.isInitializing) {
-          widgets.add(SplashPage());
+          widgets.add(LoadingWidget());
         }
 
         if (authenticationState.isLoading) {

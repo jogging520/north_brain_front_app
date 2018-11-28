@@ -5,6 +5,7 @@ import 'package:north_brain_front_app/pages/general/ApplicationPage.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
 import 'package:logging/logging.dart';
+import 'package:flutter_amap/flutter_amap.dart';
 
 void main(){
   debugPaintSizeEnabled = GeneralConstants.CONSTANT_COMMON_APPLICATION_DEBUG_PAINT_SIZE_ENABLED;      //打开视觉调试开关
@@ -12,6 +13,8 @@ void main(){
 
   final AuthenticationBloc _authenticationBloc = AuthenticationBloc();
   _authenticationBloc.onApplicationStart();
+
+  FlutterAmap.setApiKey("1d54cf0e4dac3ed6da30cbad7627dcdd");
 
   runApp(
       BlocProvider<AuthenticationBloc> (

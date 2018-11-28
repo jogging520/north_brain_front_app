@@ -65,7 +65,7 @@ class BottomWidget extends StatelessWidget {
         if (index == 2) {
           Application.router.navigateTo(
               context,
-              '/product/1',
+              '/station',
               transition: Transition.transition(),
               transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
           ).then((result) {
