@@ -6,10 +6,14 @@ import 'package:fluro/fluro.dart';
 class Transition {
   static const Duration CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION = Duration(seconds: 1);
 
-  static List<TransitionType> _transitionTypes
-  = [TransitionType.inFromBottom, TransitionType.fadeIn,
-  TransitionType.inFromLeft, TransitionType.inFromRight,
-  TransitionType.native, TransitionType.nativeModal];
+  static List<TransitionType> _transitionTypes = [
+    TransitionType.inFromBottom,
+    TransitionType.fadeIn,
+    TransitionType.inFromLeft,
+    TransitionType.inFromRight,
+    TransitionType.native,
+    TransitionType.nativeModal
+  ];
 
   static Random _random = Random();
 

@@ -20,14 +20,14 @@ class TradeItemWidget extends StatelessWidget {
         decoration: BoxDecoration(),
         padding: EdgeInsets.all(8.0),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width * columnProperties[0],
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Text(index.toString(),
+                  Text((index+1).toString(),
                       style: Theme.of(context)
                           .textTheme
                           .body2

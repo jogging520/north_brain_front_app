@@ -26,7 +26,7 @@ class StationPage extends StatelessWidget {
       mapview: AMapView(
         centerCoordinate: LatLng(36.0925283829,103.7159156799),
         zoomLevel: 13.0,
-        mapType: MapType.night,
+        mapType: MapType.standard,
         showsUserLocation: true
       ),
       title: TitleOptions(title: '仓库'),

@@ -10,7 +10,7 @@ class TradeHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10.0),
-      color: Theme.of(context).accentTextTheme.body2.color,
+      color: Theme.of(context).textTheme.caption.color,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
@@ -44,6 +44,7 @@ class TradeHeaderWidget extends StatelessWidget {
               Text(
                 '市场',
                 style: Theme.of(context).textTheme.body2.apply(
+                    color: Colors.white,
                     fontSizeFactor: 1.2,
                     fontWeightDelta: 2
                 ),
@@ -51,6 +52,7 @@ class TradeHeaderWidget extends StatelessWidget {
               Text(
                 '北脑',
                 style: Theme.of(context).textTheme.body2.apply(
+                    color: Colors.white,
                     fontSizeFactor: 1.2,
                     fontWeightDelta: 2
                 ),
