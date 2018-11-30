@@ -8,6 +8,12 @@ import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dar
 import 'package:north_brain_front_app/shared/widgets/business/home/Home.dart';
 import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
 
+final List<Image> _hotspotImages = [
+  Image.asset(ImageStyle.IMAGE_IMG1, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG2, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG3, fit: BoxFit.cover),
+  Image.asset(ImageStyle.IMAGE_IMG4, fit: BoxFit.cover),
+];
 
 class HomePage extends StatefulWidget{
   static List<String> role = const <String>['admin', 'operator'];
@@ -26,7 +32,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
   @override
   Widget build(BuildContext context) {
     final AuthenticationBloc _authenticationBloc =
-        BlocProvider.of<AuthenticationBloc>(context);
+    BlocProvider.of<AuthenticationBloc>(context);
     final BottomBloc _bottomBloc = BlocProvider.of<BottomBloc>(context);
 
 
@@ -64,10 +70,14 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                     SizedBox(
                       height: 10.0,
                     ),
-                    SizedBox(
-                      height: 200.0,
-                      child: HomeHotspotWidget(),
+                    Container(
+                      child: Divider(
+                        color: Colors.black12,
+                        height: 2.0,
+                      ),
+                      margin: EdgeInsets.only(left: 18.0, right: 18.0, top: 10.0),
                     ),
+                    HomeHotspotWidget(),
                     SizedBox(
                       height: 10.0,
                     ),

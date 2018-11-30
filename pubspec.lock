@@ -515,6 +515,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.2+4"
+  side_header_list_view:
+    dependency: "direct main"
+    description:
+      name: side_header_list_view
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.4"
   simple_rsa:
     dependency: "direct main"
     description:

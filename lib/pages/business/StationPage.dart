@@ -4,7 +4,7 @@ import 'package:flutter_amap/flutter_amap.dart';
 import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
 
 class StationPage extends StatelessWidget {
-  FlutterAmap _flutterAmap = FlutterAmap();
+  final FlutterAmap _flutterAmap = FlutterAmap();
 
   @override
   Widget build(BuildContext context) {
