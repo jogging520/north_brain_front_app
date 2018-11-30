@@ -96,6 +96,15 @@ var stationHandler = Handler(
     }
 );
 
+var orderHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return OrderPage();
+    }
+);
+
 var testHandler = Handler(
   //type: HandlerType.function,
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {

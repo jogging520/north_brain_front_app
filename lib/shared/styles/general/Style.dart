@@ -3,12 +3,6 @@
 import 'package:flutter/material.dart';
 
 class ColorStyle {
-  static const String COLOR_PRIMARY_VALUE_STRING             = '#24292E';
-  static const int    COLOR_PRIMARY_VALUE             = 0xFF24292E;
-  static const String COLOR_PRIMARY_LIGHT_VALUE_STRING             = '#42464b';
-  static const int    COLOR_PRIMARY_LIGHT_VALUE             = 0xFF42464b;
-  static const String COLOR_PRIMARY_DARK_VALUE_STRING             = '#121917';
-  static const int    COLOR_PRIMARY_DARK_VALUE             = 0xFF121917;
 
   //提示框的颜色
   static const Color COLOR_COMMON_PROMPT_FLUSH_BAR_BACKGROUND = Colors.lightGreen;
@@ -56,10 +50,11 @@ class ColorStyle {
     dividerColor: Colors.grey[200],
     bottomAppBarColor: Colors.grey[200],
     buttonColor: Colors.purple[700],
-    iconTheme: new IconThemeData(color: Colors.white),
-    primaryIconTheme: new IconThemeData(color: Colors.black),
-    accentIconTheme: new IconThemeData(color: Colors.purple[700]),
+    iconTheme: IconThemeData(color: Colors.white),
+    primaryIconTheme: IconThemeData(color: Colors.black),
+    accentIconTheme: IconThemeData(color: Colors.purple[700]),
     disabledColor: Colors.grey[500],
+    cardColor: Colors.grey[200]
   );
 
   final ThemeData darkTheme = ThemeData(
@@ -70,29 +65,13 @@ class ColorStyle {
     primaryColorLight: Colors.deepPurpleAccent[100],
     textSelectionHandleColor: Colors.deepPurpleAccent[100],
     buttonColor: Colors.deepPurpleAccent[100],
-    iconTheme: new IconThemeData(color: Colors.white),
-    accentIconTheme: new IconThemeData(color: Colors.deepPurpleAccent[100]),
+    iconTheme: IconThemeData(color: Colors.white),
+    accentIconTheme: IconThemeData(color: Colors.deepPurpleAccent[100]),
     cardColor: Color.fromRGBO(55, 55, 55, 1.0),
     dividerColor: Color.fromRGBO(60, 60, 60, 1.0),
     bottomAppBarColor: Colors.black26,
+    fontFamily: 'wxcIconFont'
   );
-
-
-
-  static const MaterialColor COLOR_PRIMARY_SWATCH = const MaterialColor(
-      COLOR_PRIMARY_VALUE,
-      const <int, Color>{
-        50: const Color(COLOR_PRIMARY_LIGHT_VALUE),
-        100: const Color(COLOR_PRIMARY_LIGHT_VALUE),
-        200: const Color(COLOR_PRIMARY_LIGHT_VALUE),
-        300: const Color(COLOR_PRIMARY_LIGHT_VALUE),
-        400: const Color(COLOR_PRIMARY_LIGHT_VALUE),
-        500: const Color(COLOR_PRIMARY_VALUE),
-        600: const Color(COLOR_PRIMARY_DARK_VALUE),
-        700: const Color(COLOR_PRIMARY_DARK_VALUE),
-        800: const Color(COLOR_PRIMARY_DARK_VALUE),
-        900: const Color(COLOR_PRIMARY_DARK_VALUE)
-      });
 }
 
 

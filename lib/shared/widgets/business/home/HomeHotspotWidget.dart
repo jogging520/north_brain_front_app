@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:north_brain_front_app/routes/Application.dart';
+import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 final List<Image> _hotspotImages = [
@@ -12,6 +14,11 @@ final List<Image> _hotspotImages = [
 ];
 
 class HomeHotspotWidget extends StatelessWidget {
+
+  final VoidCallback onTapped;
+
+  const HomeHotspotWidget({Key key, this.onTapped}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,16 +29,38 @@ class HomeHotspotWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Container(
-                  width: MediaQuery.of(context).size.width / 2 - 10,
-                  height: MediaQuery.of(context).size.width / 2,
-                  child: _items(context, 0),
+                GestureDetector(
+                  onTap: () {
+                    Application.router.navigateTo(
+                        context,
+                        '/policy',
+                        transition: Transition.transition(),
+                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+                    ).then((result) {
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 2 - 10,
+                    height: MediaQuery.of(context).size.width / 2 + 30,
+                    child: _items(context, 0),
+                  ),
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2 - 10,
-                  height: MediaQuery.of(context).size.width / 2,
-                  child: _items(context, 1),
-                )
+                GestureDetector(
+                  onTap: () {
+                    Application.router.navigateTo(
+                        context,
+                        '/order',
+                        transition: Transition.transition(),
+                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+                    ).then((result) {
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 2 - 10,
+                    height: MediaQuery.of(context).size.width / 2 + 30,
+                    child: _items(context, 1),
+                  ),
+                ),
               ]
           ),
           SizedBox(
@@ -41,16 +70,38 @@ class HomeHotspotWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Container(
-                  width: MediaQuery.of(context).size.width / 2 - 10,
-                  height: MediaQuery.of(context).size.width / 2,
-                  child: _items(context, 2),
+                GestureDetector(
+                  onTap: () {
+                    Application.router.navigateTo(
+                        context,
+                        '/product/1',
+                        transition: Transition.transition(),
+                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+                    ).then((result) {
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 2 - 10,
+                    height: MediaQuery.of(context).size.width / 2 + 30,
+                    child: _items(context, 2),
+                  ),
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2 - 10,
-                  height: MediaQuery.of(context).size.width / 2,
-                  child: _items(context, 3),
-                )
+                GestureDetector(
+                  onTap: () {
+                    Application.router.navigateTo(
+                        context,
+                        '/profile',
+                        transition: Transition.transition(),
+                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+                    ).then((result) {
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 2 - 10,
+                    height: MediaQuery.of(context).size.width / 2 + 30,
+                    child: _items(context, 3),
+                  ),
+                ),
               ]
           ),
         ],
@@ -63,16 +114,17 @@ class HomeHotspotWidget extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(0.0),
             child: Container(
-              width: 100,
-              height: 100,
+              width: MediaQuery.of(context).size.width / 2 - 10,
+              height: MediaQuery.of(context).size.width / 2 - 40,
               child: _hotspotImages[index],
             ),
           ),
-          Container(
-            color: Colors.black12,
+          Padding(
+            padding: EdgeInsets.all(0.0),
             child: Column(
+              mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[

@@ -17,6 +17,7 @@ class Routes{
   static const String ROUTE_POLICY_DETAIL = '/policy/:id';
   static const String ROUTE_TRADE = '/trade';
   static const String ROUTE_STATION = '/station';
+  static const String ROUTE_ORDER = '/order';
   static const String ROUTE_TEST = '/test';
 
 
@@ -41,6 +42,7 @@ class Routes{
     router.define(ROUTE_POLICY_DETAIL, handler: policyDetailHandler);
     router.define(ROUTE_TRADE, handler: tradeHandler);
     router.define(ROUTE_STATION, handler: stationHandler);
+    router.define(ROUTE_ORDER, handler: orderHandler);
     router.define(ROUTE_TEST, handler: testHandler);
   }
 }

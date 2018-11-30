@@ -15,7 +15,7 @@ class ArcBannerImageWidget extends StatelessWidget {
         imageUrl,
         width: MediaQuery.of(context).size.width,
         height: 230.0,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
       ),
     );
   }
