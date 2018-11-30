@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
+import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 import 'package:side_header_list_view/side_header_list_view.dart';
 
 final List<Order> _orders = [
@@ -47,21 +48,18 @@ class OrderWidget extends StatelessWidget {
 
   Widget _header(BuildContext context, int index) {
     return SizedBox(
-        width: MediaQuery.of(context).size.width - 100,
-        child: Text(
-            _orders[index].type,
-            style: Theme.of(context).textTheme.headline));
+      width: 100,
+      //height: 700,
+      child: Text(
+          _orders[index].type,
+          style: Theme.of(context).textTheme.title)
+    );
+
   }
 
 
   Widget _item(BuildContext context, int index) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width - 100,
-      child: Text(
-        _orders[index].name,
-        style: Theme.of(context).textTheme.headline,
-      ),
-    );
+    return Text(_orders[index].name);
   }
 
   bool _isSame(int a, int b) {

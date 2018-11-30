@@ -12,22 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pages/business/OrderPage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/models/business/Order.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/models/business/Order.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeDecorationWidget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/widgets/business/order/Order.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/business/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/HomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/Routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/Routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/home/Home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/home/Home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/general/common/ArcBannerImageWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/general/common/ArcBannerImageWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -42,35 +28,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomePage.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/pages/business/HomePage.dart">
+      <file leaf-file-name="OrderWidget.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+            <state relative-caret-position="196">
+              <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/flutter_amap-0.0.1/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Style.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -78,59 +43,8 @@
       <file leaf-file-name="HomeHotspotWidget.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="112" column="21" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
-              <folding>
-                <element signature="e#1#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDetailPage.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/pages/business/ProductDetailPage.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDetailWidget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailWidget.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding>
-                <element signature="e#1#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDetailHeaderWidget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailHeaderWidget.dart">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArcBannerImageWidget.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/common/ArcBannerImageWidget.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeDecorationWidget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeDecorationWidget.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="26" />
+              <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="122" selection-end-column="12" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -138,14 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderWidget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart">
+      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-              <folding>
-                <element signature="e#1#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="116">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -162,7 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MenuWidget</find>
       <find>AppBar</find>
       <find>scrollDirection</find>
       <find>onW</find>
@@ -192,6 +102,7 @@
       <find>Alignment</find>
       <find>COLOR_PRIMARY_VALUE_STRING</find>
       <find>FONT_FAMILY</find>
+      <find>Card</find>
     </findStrings>
     <replaceStrings>
       <replace>PolicyState</replace>
@@ -252,12 +163,12 @@
         <option value="$PROJECT_DIR$/lib/pages/business/OrderPage.dart" />
         <option value="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" />
         <option value="$PROJECT_DIR$/lib/routes/Routes.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" />
         <option value="$PROJECT_DIR$/lib/pages/business/HomePage.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/PosterWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/ArcBannerImageWidget.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" />
       </list>
     </option>
   </component>
@@ -695,13 +606,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538959054366</updated>
     </task>
-    <task id="LOCAL-00006" summary="完善了解密方法。">
-      <created>1539779619358</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1539779619358</updated>
-    </task>
     <task id="LOCAL-00007" summary="增加了log服务，晚上了httpclient">
       <created>1539853137646</created>
       <option name="number" value="00007" />
@@ -1038,12 +942,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543550491594</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="完善了订单页面">
+      <created>1543580309607</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1543580309608</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="13" show_stripe_button="false" />
       <window_info id="Build Variants" order="7" side_tool="true" />
@@ -1061,11 +971,11 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34101382" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34101382" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32718894" />
       <window_info id="Captures" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -1083,7 +993,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改了operationService的bug" />
     <MESSAGE value="完成了sessionService" />
     <MESSAGE value="修改了部分bug" />
     <MESSAGE value="增加了base64解码" />
@@ -1108,7 +1017,8 @@
     <MESSAGE value="完成了home组件。" />
     <MESSAGE value="完成了地图页面。" />
     <MESSAGE value="完成了首页的图片scroll。" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了首页的图片scroll。" />
+    <MESSAGE value="完善了订单页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了订单页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1235,6 +1145,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="77" column="6" selection-start-line="47" selection-start-column="4" selection-end-line="77" selection-end-column="6" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1371,16 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/flutter_amap-0.0.1/lib/flutter_amap.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-433">
@@ -1452,27 +1355,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="112" column="21" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1512,8 +1398,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/common/ArcBannerImageWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="187">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="122" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
