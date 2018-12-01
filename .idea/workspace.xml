@@ -12,20 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/shared/common/LoadingView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/business/TestPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/TestPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/Routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/Routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/common/Common.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/common/Common.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/general/loading/LoadingWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/general/loading/LoadingWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -76,11 +63,20 @@
       <file leaf-file-name="OrderDetailPage.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+            <state relative-caret-position="315">
+              <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Style.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="47" column="21" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -662,13 +658,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538959054366</updated>
     </task>
-    <task id="LOCAL-00008" summary="完善了日志的打印">
-      <created>1539854358281</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1539854358281</updated>
-    </task>
     <task id="LOCAL-00009" summary="增加了style">
       <created>1539854848156</created>
       <option name="number" value="00009" />
@@ -1005,7 +994,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543583811205</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="完成了订单详情页面（新增。）">
+      <created>1543658025266</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1543658025267</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1028,11 +1024,11 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34101382" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34101382" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32718894" />
       <window_info id="Captures" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -1050,7 +1046,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成了sessionService" />
     <MESSAGE value="修改了部分bug" />
     <MESSAGE value="增加了base64解码" />
     <MESSAGE value="完成了authentication的bloc" />
@@ -1075,7 +1070,8 @@
     <MESSAGE value="完成了地图页面。" />
     <MESSAGE value="完成了首页的图片scroll。" />
     <MESSAGE value="完善了订单页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了订单页面" />
+    <MESSAGE value="完成了订单详情页面（新增。）" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了订单详情页面（新增。）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1299,13 +1295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/business/HomePage.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -1466,16 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/routes/Routes.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
@@ -1496,10 +1475,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/styles/general/Style.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+        <state relative-caret-position="315">
+          <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>

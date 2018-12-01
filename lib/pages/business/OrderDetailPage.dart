@@ -40,33 +40,43 @@ class OrderDetailPage extends StatelessWidget {
       ),
       body: Form(
         key: _formKey,
-        child: _detail(),
+        child: _detail(context),
       ),
       resizeToAvoidBottomPadding: false,
     );
   }
 
-  CardSettings _detail() {
+  CardSettings _detail(BuildContext context) {
     return CardSettings(
       children: <Widget>[
-        CardSettingsHeader(label: '商户信息', color: Colors.teal,),
+        CardSettingsHeader(
+          label: '商户信息', 
+          color: Theme.of(context).primaryColorLight),
         _businessName(),
         _number(),
         _paragraph(),
         _multiselect(),
-        CardSettingsHeader(label: '订单量', color: Colors.teal),
+        CardSettingsHeader(
+            label: '订单量',
+            color: Theme.of(context).primaryColorLight),
         _height(),
         _weight(),
-        CardSettingsHeader(label: '农户信息', color: Colors.teal),
+        CardSettingsHeader(
+            label: '农户信息',
+            color: Theme.of(context).primaryColorLight),
         _instructions(),
         _datePicker(),
         _timePicker(),
         _currency(),
         _phone(),
-        CardSettingsHeader(label: '科技信息', color: Colors.teal),
+        CardSettingsHeader(
+            label: '科技信息',
+            color: Theme.of(context).primaryColorLight),
         _email(),
         _password(),
-        CardSettingsHeader(label: '动作', color: Colors.teal),
+        CardSettingsHeader(
+            label: '动作',
+            color: Theme.of(context).primaryColorLight),
         _saveButton(),
         _resetButton(),
       ],
@@ -213,7 +223,7 @@ class OrderDetailPage extends StatelessWidget {
     return CardSettingsPhone(
       key: _phoneKey,
       label: '电话号码',
-      initialValue: 1389323323,
+      initialValue: 13893234323,
       autovalidate: true,
       validator: (value) {
         if (value != null && value > 100) return '真不对';
