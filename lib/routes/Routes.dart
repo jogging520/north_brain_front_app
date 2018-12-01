@@ -18,6 +18,7 @@ class Routes{
   static const String ROUTE_TRADE = '/trade';
   static const String ROUTE_STATION = '/station';
   static const String ROUTE_ORDER = '/order';
+  static const String ROUTE_ORDER_DETAIL = '/order/:id';
   static const String ROUTE_TEST = '/test';
 
 
@@ -43,6 +44,7 @@ class Routes{
     router.define(ROUTE_TRADE, handler: tradeHandler);
     router.define(ROUTE_STATION, handler: stationHandler);
     router.define(ROUTE_ORDER, handler: orderHandler);
+    router.define(ROUTE_ORDER_DETAIL, handler: orderDetailHandler);
     router.define(ROUTE_TEST, handler: testHandler);
   }
 }

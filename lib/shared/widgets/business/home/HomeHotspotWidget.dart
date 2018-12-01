@@ -90,7 +90,7 @@ class HomeHotspotWidget extends StatelessWidget {
                   onTap: () {
                     Application.router.navigateTo(
                         context,
-                        '/profile',
+                        '/order/1',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
                     ).then((result) {

@@ -5,6 +5,14 @@ enum AvatarType {
   text
 }
 
+//加载状态枚举值
+enum LoadingStatus {
+  idle,
+  loading,
+  error,
+  success,
+}
+
 //类名：通用的常量定义类
 class GeneralConstants {
 

@@ -11,5 +11,4 @@ class LoadingWidget extends StatelessWidget {
       shape: BoxShape.circle,
     );
   }
-
 }

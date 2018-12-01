@@ -44,6 +44,10 @@ dependencies:
   flutter_circular_chart: ^0.1.0
   flutter_amap: ^0.0.1
   side_header_list_view: ^0.0.4
+  intl: ^0.15.7
+  flutter_datetime_picker: ^1.0.4
+  card_settings: ^1.2.2
+  datetime_picker_formfield: ^0.1.7
 
 dev_dependencies:
   flutter_test:

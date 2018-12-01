@@ -105,6 +105,17 @@ var orderHandler = Handler(
     }
 );
 
+var orderDetailHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      if (params['id'][0] != null) {
+        return OrderDetailPage(params['id'][0]);
+      }
+    }
+);
+
 var testHandler = Handler(
   //type: HandlerType.function,
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {

@@ -7,3 +7,4 @@ export 'TestPage.dart';
 export 'ProductDetailPage.dart';
 export 'StationPage.dart';
 export 'OrderPage.dart';
+export 'OrderDetailPage.dart';

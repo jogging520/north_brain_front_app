@@ -12,8 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d72aa230-ecb1-4602-ade4-5917513350ba" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/common/LoadingView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/business/TestPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/business/TestPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes/Routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/Routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/common/Common.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/common/Common.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/general/loading/LoadingWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/general/loading/LoadingWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -28,25 +40,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderWidget.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart">
+      <file leaf-file-name="CommonService.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+            <state relative-caret-position="123">
+              <caret line="274" column="28" selection-start-line="274" selection-start-column="18" selection-end-line="274" selection-end-column="28" />
               <folding>
-                <element signature="e#1#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeHotspotWidget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="122" selection-end-column="12" />
-              <folding>
-                <element signature="e#1#40#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,8 +55,32 @@
       <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="45" column="23" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="23" />
+            <state relative-caret-position="184">
+              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeHotspotWidget.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+              <folding>
+                <element signature="e#1#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDetailPage.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+              <folding>
+                <element signature="e#1#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,12 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AppBar</find>
-      <find>scrollDirection</find>
-      <find>onW</find>
-      <find>WidgetInitialed</find>
-      <find>SearchState</find>
-      <find>SearchEvent</find>
       <find>BlocProvider</find>
       <find>_openTransaction</find>
       <find>package:north_brain_front_app/shared/widgets/general/</find>
@@ -103,6 +121,12 @@
       <find>COLOR_PRIMARY_VALUE_STRING</find>
       <find>FONT_FAMILY</find>
       <find>Card</find>
+      <find>dateFormat</find>
+      <find>DecoratedBox</find>
+      <find>ListView</find>
+      <find>zh</find>
+      <find>china</find>
+      <find>Format</find>
     </findStrings>
     <replaceStrings>
       <replace>PolicyState</replace>
@@ -118,12 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/shared/widgets/general/GeneralWidget.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/animations/Animation.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/common/Common.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/models/business/Product.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/models/business/Product.g.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailInformation.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/RatingWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/CategoryChipsWidget.dart" />
@@ -135,7 +153,6 @@
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/profile/ProfileWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailHeaderWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeShortcut.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/business/TestPage.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeShortcutWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailPhotoWidget.dart" />
@@ -154,21 +171,28 @@
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/Home.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeBottom.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeDecorationWidget.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/order/Order.dart" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/shared/models/business/Order.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/business/Order.g.dart" />
         <option value="$PROJECT_DIR$/lib/shared/models/business/BusinessModel.dart" />
         <option value="$PROJECT_DIR$/lib/pages/business/OrderPage.dart" />
-        <option value="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" />
-        <option value="$PROJECT_DIR$/lib/routes/Routes.dart" />
         <option value="$PROJECT_DIR$/lib/pages/business/HomePage.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/styles/general/Style.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/PosterWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/ArcBannerImageWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/common/LoadingView.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/widgets/general/loading/LoadingWidget.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/common/DateSelector.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/common/Common.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/business/BusinessPage.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/pages/business/TestPage.dart" />
+        <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart" />
+        <option value="$PROJECT_DIR$/lib/routes/Routes.dart" />
+        <option value="$PROJECT_DIR$/lib/routes/RouteHandlers.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart" />
       </list>
     </option>
   </component>
@@ -236,22 +260,36 @@
               <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
               <item name="general" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -326,6 +364,24 @@
               <item name="shared" type="462c0819:PsiDirectoryNode" />
               <item name="widgets" type="462c0819:PsiDirectoryNode" />
               <item name="general" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
+              <item name="loading" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -376,7 +432,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539184111520" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../product/tourism-demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../product/card_settings/example" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -605,13 +661,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538959054366</updated>
-    </task>
-    <task id="LOCAL-00007" summary="增加了log服务，晚上了httpclient">
-      <created>1539853137646</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1539853137646</updated>
     </task>
     <task id="LOCAL-00008" summary="完善了日志的打印">
       <created>1539854358281</created>
@@ -949,11 +998,19 @@
       <option name="project" value="LOCAL" />
       <updated>1543580309608</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="完善了订单页面">
+      <created>1543583811203</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1543583811205</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="13" show_stripe_button="false" />
       <window_info id="Build Variants" order="7" side_tool="true" />
@@ -975,7 +1032,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32718894" />
       <window_info id="Captures" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -1022,86 +1079,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/shared/animations/Transition.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/business/TradePage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/trade/TradeHeaderWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/models/business/Trade.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/trade/TradeItemWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/services/business/TradeService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/business/trade/Trade.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/login/LoginWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="151" column="27" lean-forward="true" selection-start-line="151" selection-start-column="27" selection-end-line="151" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/general/login/LoginBloc.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/business/trade/TradeEvent.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/blocs/business/trade/TradeState.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/blocs/business/trade/TradeBloc.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1178,13 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/business/BusinessPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/Order.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1247,40 +1221,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/business/OrderPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/search/SearchWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="43" column="40" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/routes/Routes.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/routes/RouteHandlers.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1403,17 +1347,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+    <entry file="file://$PROJECT_DIR$/lib/shared/constants/general/GeneralConstants.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="23" />
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/general/loading/LoadingWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="122" selection-end-column="12" />
+        <state relative-caret-position="187">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/common/LoadingView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#1#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/services/general/CommonService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="274" column="28" selection-start-line="274" selection-start-column="18" selection-end-line="274" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/common/DateSelector.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/business/BusinessPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/business/OrderPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/common/Common.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/datetime_picker_formfield-0.1.7/lib/datetime_picker_formfield.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/datetime_picker_formfield-0.1.7/lib/time_picker_formfield.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="79" column="2" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../android/flutter/flutter/bin/cache/pkg/sky_engine/lib/ui/window.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="240" column="45" selection-start-line="240" selection-start-column="40" selection-end-line="240" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/business/TestPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
@@ -1422,8 +1451,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/order/OrderWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="935">
           <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/routes/Routes.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/routes/RouteHandlers.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="114" column="7" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/business/OrderDetailPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
