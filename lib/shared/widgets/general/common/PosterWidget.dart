@@ -10,7 +10,7 @@ class PosterWidget extends StatelessWidget {
   const PosterWidget({
     Key key,
     @required this.imageUrl,
-    this.height = 100.0}) : super(key: key);
+    this.height = 160.0}) : super(key: key);
 
 
   @override
@@ -20,12 +20,15 @@ class PosterWidget extends StatelessWidget {
     return Material(
       borderRadius: BorderRadius.circular(4.0),
       elevation: 2.0,
-      child: Image.asset(
-        imageUrl,
-        fit: BoxFit.fill,
-        width: width,
-        height: height,
-      ),
+      child: Container(
+        padding: EdgeInsets.all(14.0),
+        child: Image.asset(
+          imageUrl,
+          fit: BoxFit.fill,
+          width: width,
+          height: height,
+        ),
+      )
     );
   }
 

@@ -21,7 +21,7 @@ class ProductDetailInformationWidget extends StatelessWidget {
         SizedBox(height: 8.0),
         RatingWidget(rating: 3.5,),
         SizedBox(height: 12.0),
-        CategoryChipsWidget(categories: ['特殊属性1', '特殊属性2'],)
+        CategoryChipsWidget(categories: ['特殊属性1', '特殊属性2', '特殊属性2', '特殊属性2'],)
       ],
     );
   }

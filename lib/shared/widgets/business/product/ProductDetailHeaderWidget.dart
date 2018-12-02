@@ -27,7 +27,7 @@ class ProductDetailHeaderWidget extends StatelessWidget {
             children: <Widget>[
               PosterWidget(
                 imageUrl: product.image,
-                height: 180.0,
+                height: 160.0,
               ),
               SizedBox(
                 width: 16.0,

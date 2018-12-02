@@ -8,22 +8,25 @@ class CategoryChipsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: _chips(context),
+    return SizedBox.fromSize(
+      size: Size.fromHeight(40.0),
+      child: ListView.builder(
+          itemCount: categories.length,
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.only(top: 8.0, left: 20.0),
+          itemBuilder: _chips),
     );
   }
 
-  List<Widget> _chips(BuildContext context) {
-    return categories.map((category) {
-      return Padding(
-        padding: EdgeInsets.only(right: 8.0),
-        child: Chip(
-          label: Text(category),
-          labelStyle: Theme.of(context).textTheme.caption,
-          backgroundColor: Colors.black12,
-        ),
-      );
-    }).toList();
+  Widget _chips(BuildContext context, int index) {
+    return Padding(
+      padding: EdgeInsets.only(right: 8.0),
+      child: Chip(
+        label: Text(categories[index]),
+        labelStyle: Theme.of(context).textTheme.caption,
+        backgroundColor: Colors.black12,
+      ),
+    );
   }
 
 }
