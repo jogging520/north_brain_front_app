@@ -83,7 +83,7 @@ class SearchHistoryWidget extends StatelessWidget {
   }
 
   List<Widget> _hotHistory(BuildContext context) {
-    return _selfHistories.map((history) {
+    return _hotHistories.map((history) {
       return Container(
         height: 32.0,
         margin: EdgeInsets.all(5.9),

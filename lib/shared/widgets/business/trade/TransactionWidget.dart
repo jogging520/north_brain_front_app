@@ -33,7 +33,9 @@ class TransactionWidget extends StatelessWidget {
       tooltip: "关闭交易",
     ) :
     FloatingActionButton(
-      onPressed: _openTransaction,
+      onPressed: () {
+        _openTransaction(context);
+      },
       child: Icon(Icons.add),
       foregroundColor: Theme.of(context).primaryColor,
       backgroundColor: Theme.of(context).accentIconTheme.color,
@@ -42,14 +44,8 @@ class TransactionWidget extends StatelessWidget {
     );
   }
 
-  Widget _bottomSheet() {
+  Widget _bottomSheet(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          border: Border(
-            top: BorderSide(color: Colors.green),
-          ),
-          color: Colors.white
-      ),
       padding: EdgeInsets.only(top: 8.0, bottom: 8.0, left: 16.0, right: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,22 +57,28 @@ class TransactionWidget extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Text('购买'),
+                  SizedBox(
+                    width: 50,
+                  ),
                   Text('售出'),
                   Radio(
                       value: 1,
                       groupValue: 0,
                       onChanged: null,
                       activeColor: Colors.purple),
-                  Padding(
-                      padding:
-                      const EdgeInsets.symmetric(horizontal: 6.0)),
                 ],
+              ),
+              SizedBox(
+                height: 10,
               ),
               Row(
                 children: <Widget>[
                   Text('数量'),
                   Text('金额'),
                 ],
+              ),
+              SizedBox(
+                height: 10,
               ),
               Row(
                 children: <Widget>[
@@ -90,8 +92,8 @@ class TransactionWidget extends StatelessWidget {
             child: new FloatingActionButton(
                 child: Icon(Icons.check),
                 elevation: 4.0,
-                backgroundColor: Colors.green,
-                foregroundColor: Colors.red,
+                backgroundColor: Theme.of(context).accentColor,
+                foregroundColor: Theme.of(context).cardColor,
                 onPressed: null),
           )
         ],
@@ -99,12 +101,12 @@ class TransactionWidget extends StatelessWidget {
     );
   }
 
-  _openTransaction() {
+  _openTransaction(BuildContext context) {
     _transactionBloc.onBottomSheetOpened();
 
     scaffoldKey.currentState
         .showBottomSheet((BuildContext context) {
-          return _bottomSheet();})
+          return _bottomSheet(context);})
     .closed
     .whenComplete(() {
       _transactionBloc.onBottomSheetClosed();

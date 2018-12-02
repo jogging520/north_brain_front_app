@@ -9,6 +9,7 @@ class ColorStyle {
     cardColor: Colors.white, // background color of fields
     backgroundColor: Colors.indigo[100], // color outside the card
     primaryColor: Colors.teal, // color of page header
+    dividerColor: Color.fromRGBO(60, 60, 60, 1.0),
     buttonColor: Colors.lightBlueAccent[100], // background color of buttons
     textTheme: TextTheme(
       button:

@@ -17,7 +17,10 @@ class TradeItemWidget extends StatelessWidget {
     return InkWell(
       onTap: () {CommonService.hint('--------dddd');},
       child: Container(
-        decoration: BoxDecoration(),
+        decoration: BoxDecoration(
+            color: index.isEven
+                ? Theme.of(context).cardColor
+                : Theme.of(context).selectedRowColor),
         padding: EdgeInsets.all(8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
