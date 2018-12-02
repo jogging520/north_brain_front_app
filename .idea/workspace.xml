@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductDetailPhotoWidget.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductDetailPhotoWidget.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailPhotoWidget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+            <state relative-caret-position="179">
+              <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -72,11 +72,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GalleryPhotoView.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GalleryPhotoView.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/shared/common/GalleryPhotoView.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            <state relative-caret-position="247">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -87,8 +96,8 @@
       <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="48">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -178,7 +187,6 @@
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/home/HomeShortcutWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/profile/ProfileHeaderWidget.dart" />
         <option value="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" />
-        <option value="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/trade/TransactionWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/trade/TradeHeaderWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/trade/TradeItemWidget.dart" />
@@ -223,8 +231,9 @@
         <option value="$PROJECT_DIR$/lib/shared/widgets/general/common/PosterWidget.dart" />
         <option value="$PROJECT_DIR$/lib/shared/common/Common.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailWidget.dart" />
-        <option value="$PROJECT_DIR$/lib/shared/common/GalleryPhotoView.dart" />
         <option value="$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailPhotoWidget.dart" />
+        <option value="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lib/shared/common/GalleryPhotoView.dart" />
       </list>
     </option>
   </component>
@@ -250,6 +259,32 @@
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="north_brain_front_app" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="north_brain_front_app" type="b2602c69:ProjectViewProjectNode" />
@@ -677,13 +712,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538959054366</updated>
     </task>
-    <task id="LOCAL-00011" summary="增加了路由">
-      <created>1539947717223</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1539947717223</updated>
-    </task>
     <task id="LOCAL-00012" summary="增加了路由">
       <created>1539947826020</created>
       <option name="number" value="00012" />
@@ -1020,7 +1048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543721728334</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="图片的好了。">
+      <created>1543754935572</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1543754935573</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1036,7 +1071,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34101382" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34101382" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32718894" />
       <window_info anchor="right" id="Flutter Outline" order="9" weight="0.32977098" />
@@ -1044,7 +1079,7 @@
       <window_info id="Captures" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24961832" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1065,7 +1100,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加了base64解码" />
     <MESSAGE value="完成了authentication的bloc" />
     <MESSAGE value="完成了login的bloc" />
     <MESSAGE value="新增了login的widget" />
@@ -1090,7 +1124,8 @@
     <MESSAGE value="完善了订单页面" />
     <MESSAGE value="完成了订单详情页面（新增。）" />
     <MESSAGE value="登出还是有问题。" />
-    <option name="LAST_COMMIT_MESSAGE" value="登出还是有问题。" />
+    <MESSAGE value="图片的好了。" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片的好了。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1098,13 +1133,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/flutter_amap-0.0.1/lib/flutter_amap.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-433">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/flutter_amap-0.0.1/lib/latlng.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -1369,13 +1397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/home/HomeHotspotWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1445">
@@ -1479,20 +1500,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/common/GalleryPhotoView.dart">
+    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailPhotoWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state relative-caret-position="179">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/shared/widgets/business/product/ProductDetailPhotoWidget.dart">
+    <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        <state relative-caret-position="170">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/shared/common/GalleryPhotoView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
