@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
-import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
 import 'package:north_brain_front_app/shared/widgets/business/home/Home.dart';
@@ -36,12 +35,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              Application.router.navigateTo(
-                  context,
-                  '/search',
-                  transition: Transition.transition(),
-                  transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-              );
+              Application.navigateTo(context, '/search');
             },
           ),
         ],

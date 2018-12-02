@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
-import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 final List<Image> _hotspotImages = [
@@ -31,12 +30,7 @@ class HomeHotspotWidget extends StatelessWidget {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    Application.router.navigateTo(
-                        context,
-                        '/search',
-                        transition: Transition.transition(),
-                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    );
+                    Application.navigateTo(context, '/policy');
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
@@ -46,12 +40,7 @@ class HomeHotspotWidget extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Application.router.navigateTo(
-                        context,
-                        '/search',
-                        transition: Transition.transition(),
-                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    );
+                    Application.navigateTo(context, '/order');
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
@@ -70,12 +59,7 @@ class HomeHotspotWidget extends StatelessWidget {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    Application.router.navigateTo(
-                        context,
-                        '/search',
-                        transition: Transition.transition(),
-                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    );
+                    Application.navigateTo(context, '/product/1');
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
@@ -85,12 +69,7 @@ class HomeHotspotWidget extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Application.router.navigateTo(
-                        context,
-                        '/search',
-                        transition: Transition.transition(),
-                        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    );
+                    Application.navigateTo(context, '/order/1');
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,

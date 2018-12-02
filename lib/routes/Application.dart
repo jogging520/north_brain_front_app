@@ -10,4 +10,13 @@ EventBus eventBus = new EventBus();
 
 class Application {
   static Router router;
+
+  static void navigateTo(BuildContext context, String route) {
+    Application.router.navigateTo(
+        context,
+        route,
+        transition: Transition.transition(),
+        transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+    ).then((_) {});
+  }
 }

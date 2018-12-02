@@ -3,10 +3,10 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_amap/flutter_amap.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/pages/business/BusinessPage.dart';
 import 'package:north_brain_front_app/pages/general/GeneralPage.dart';
-import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';
@@ -45,6 +45,14 @@ class ApplicationPage extends StatelessWidget{
           theme: _colorStyle.lightTheme,
           onGenerateRoute: Application.router.generator,
           home: _rootPage(_authenticationBloc),
+          localizationsDelegates: [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate
+          ],
+          supportedLocales: [
+            const Locale('zh','CH'),
+            const Locale('en','US'),
+          ],
         )
 
     );

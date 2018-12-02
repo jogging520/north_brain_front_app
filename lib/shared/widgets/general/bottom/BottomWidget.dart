@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
-import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 
 class BottomWidget extends StatelessWidget {
@@ -54,36 +53,16 @@ class BottomWidget extends StatelessWidget {
 
         switch (index) {
           case 0:
-            Application.router.navigateTo(
-                context,
-                '/search',
-                transition: Transition.transition(),
-                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-            );
+            Application.navigateTo(context, '/');
             break;
           case 1:
-            Application.router.navigateTo(
-                context,
-                '/search',
-                transition: Transition.transition(),
-                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-            );
+            Application.navigateTo(context, '/trade');
             break;
           case 2:
-            Application.router.navigateTo(
-                context,
-                '/search',
-                transition: Transition.transition(),
-                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-            );
+            Application.navigateTo(context, '/station');
             break;
           case 3:
-            Application.router.navigateTo(
-                context,
-                '/search',
-                transition: Transition.transition(),
-                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-            );
+            Application.navigateTo(context, '/profile');
             break;
         }
       },

@@ -11,19 +11,17 @@ class MenuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AuthenticationBloc _authenticationBloc = BlocProvider.of<AuthenticationBloc>(context);
 
     return BlocBuilder<MenuEvent, MenuState> (
       bloc: _menuBloc,
       builder: (BuildContext context, MenuState menuState) {
-        return _drawer(context, _menuBloc, menuState, _authenticationBloc);
+        return _drawer(context, _menuBloc, menuState);
       },
     );
   }
 
   Widget _drawer(BuildContext context, MenuBloc menuBloc,
-      MenuState menuState, AuthenticationBloc authenticationBloc
-      ) {
+      MenuState menuState) {
     return Drawer(
       child: Scaffold(
         bottomNavigationBar: Container(
@@ -33,12 +31,10 @@ class MenuWidget extends StatelessWidget {
               )
           ),
           child: ListTile(
-              onTap: () {
-                _logout(context, authenticationBloc);
-              },
-              leading: Icon(Icons.directions_run),
+              onTap: () {},
+              leading: Icon(Icons.apps),
               title: Text(
-                '退出系统',
+                '陇上粮仓',
               )
           ),
         ),
@@ -57,9 +53,11 @@ class MenuWidget extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.settings),
-              title: Text('中华人民共和国'),
+              title: Text('政策信息'),
               subtitle: Text('伟大祖国'),
-              onTap: null,
+              onTap: () {
+                Application.navigateTo(context, '/policy/1');
+              },
             ),
             ListTile(
               leading: Icon(Icons.timeline),
