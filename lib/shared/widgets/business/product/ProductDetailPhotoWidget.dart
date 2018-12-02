@@ -25,7 +25,7 @@ class ProductDetailPhotoWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 5.0),
         child: GestureDetector(
           onTap: () {
-            _open(context);
+            _open(context, index);
           },
           child: Hero(
             tag: photos[index],
@@ -39,12 +39,13 @@ class ProductDetailPhotoWidget extends StatelessWidget {
     );
   }
 
-  void _open(BuildContext context) {
+  void _open(BuildContext context, int index) {
     Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => GalleryPhotoView(
               photos: photos,
+              initialPage: index,
             )
         ));
   }

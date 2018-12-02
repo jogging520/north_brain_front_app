@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_amap/flutter_amap.dart';
 import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
+import 'package:north_brain_front_app/shared/widgets/general/camera/Camera.dart';
 
 class StationPage extends StatelessWidget {
   final FlutterAmap _flutterAmap = FlutterAmap();
@@ -13,10 +14,15 @@ class StationPage extends StatelessWidget {
         title: Text('高德地图'),
       ),
       body: Center(
-        child: InkWell(
-          child: Text('点我呀'),
-          onTap: _show,
-        ),
+        child: Column(
+          children: <Widget>[
+            InkWell(
+              child: Text('点我呀'),
+              onTap: _show,
+            ),
+            CameraWidget(),
+          ],
+        )
       ),
     );
   }

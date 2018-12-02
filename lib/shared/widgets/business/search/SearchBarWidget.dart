@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/business/search/Search.dart';
 
-class SearchWidget extends StatelessWidget {
+class SearchBarWidget extends StatelessWidget {
 
   final SearchBloc _searchBloc = SearchBloc();
 
@@ -21,21 +21,18 @@ class SearchWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 10.0),
       padding: EdgeInsets.only(left: 10.0),
+      alignment: Alignment.center,
       height: 30.0,
-      width: 260.0,
+      width: MediaQuery.of(context).size.width - 100,
       decoration: BoxDecoration(
           color: Color(0xFFEEEEEE),
           borderRadius: BorderRadius.all(Radius.circular(58.0))
       ),
       child: Row(
         children: <Widget>[
-          Icon(Icons.search,
-            size: 20.0,
-            color: Colors.red,
-          ),
           Container(
             height: 35.0,
-            width: 135.0,
+            width: 200,
             child: Container(
               padding: EdgeInsets.only(left: 10.0),
               child: Center(
@@ -48,21 +45,13 @@ class SearchWidget extends StatelessWidget {
                     child: TextFormField(
                       enabled: true,
                       autofocus: false,
-                      style: TextStyle(
-                          color: Colors.teal),
                       textAlign: TextAlign.start,
                       decoration: InputDecoration.collapsed(
-                          fillColor: Colors.white,
-                          hintText: '请北脑......',
-                          hintStyle: TextStyle(
-                              fontSize: 13.0,
-                              color:
-                              Colors.black45),
+                          hintText: '请输入要搜索的内容',
                           filled: false
                       ),
                     ),
                   ),
-
                 ),
               ),
             ),

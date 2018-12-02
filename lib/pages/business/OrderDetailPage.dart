@@ -5,6 +5,8 @@ import 'package:card_settings/card_settings.dart';
 class OrderDetailPage extends StatelessWidget {
   final String id;
 
+  final FocusNode _focusNode = FocusNode();
+
   OrderDetailPage(this.id);
 
 
@@ -35,6 +37,7 @@ class OrderDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text('订单种植'),
       ),
@@ -42,7 +45,7 @@ class OrderDetailPage extends StatelessWidget {
         key: _formKey,
         child: _detail(context),
       ),
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomPadding: false,
     );
   }
 
@@ -52,7 +55,7 @@ class OrderDetailPage extends StatelessWidget {
         CardSettingsHeader(
           label: '商户信息', 
           color: Theme.of(context).primaryColorLight),
-        _businessName(),
+        _businessName(context),
         _number(),
         _paragraph(),
         _multiselect(),
@@ -83,21 +86,27 @@ class OrderDetailPage extends StatelessWidget {
     );
   }
 
-  CardSettingsText _businessName() {
+  CardSettingsText _businessName(BuildContext context) {
     return CardSettingsText(
       key: _nameKey,
       label: '名字',
       hintText: '请输入商户名称',
       requiredIndicator: Text('*', style: TextStyle(color: Colors.red),),
-      autovalidate: true,
+      autovalidate: false,
+      keyboardType: TextInputType.number,
+      focusNode: _focusNode,
       validator: (value) {
         if (value == null || value.isEmpty) {
           return '必须要输入名称';
         }
         return null;
       },
-      onSaved: (value) {print('$value');},
-      onChanged: (value) {print('$value');},
+      onSaved: (value) {
+        //FocusScope.of(context).requestFocus(new FocusNode());
+      },
+      onChanged: (value) {
+        //FocusScope.of(context).requestFocus(new FocusNode());
+      },
     );
   }
 

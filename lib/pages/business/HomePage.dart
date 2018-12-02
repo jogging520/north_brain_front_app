@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
+import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
 import 'package:north_brain_front_app/shared/widgets/business/home/Home.dart';
@@ -16,6 +17,8 @@ class HomePage extends StatefulWidget{
 
 class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   void dispose() {
     super.dispose();
@@ -24,8 +27,10 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
   @override
   Widget build(BuildContext context) {
     final BottomBloc _bottomBloc = BlocProvider.of<BottomBloc>(context);
+    final AuthenticationBloc _authenticationBloc = BlocProvider.of<AuthenticationBloc>(context);
 
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Container(
           alignment: Alignment.center,
@@ -36,6 +41,12 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
             icon: Icon(Icons.search),
             onPressed: () {
               Application.navigateTo(context, '/search');
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.directions_run),
+            onPressed: () {
+              _authenticationBloc.onLogout();
             },
           ),
         ],

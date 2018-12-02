@@ -1,1 +1,2 @@
-export 'SearchWidget.dart';
+export 'SearchBarWidget.dart';
+export 'SearchHistoryWidget.dart';
