@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
@@ -34,10 +33,10 @@ class LoginWidgetState extends State<LoginWidget> {
   TextEditingController _passwordTextEditingController = TextEditingController();
 
   LoginWidgetState({
-  @required LoginBloc loginBloc,
-  @required AuthenticationBloc authenticationBloc}):
-  _loginBloc = loginBloc,
-  _authenticationBloc = authenticationBloc;
+    @required LoginBloc loginBloc,
+    @required AuthenticationBloc authenticationBloc}):
+        _loginBloc = loginBloc,
+        _authenticationBloc = authenticationBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +47,7 @@ class LoginWidgetState extends State<LoginWidget> {
           _authenticationBloc.onLogin(token: loginState.token);
           _loginBloc.onLoginSuccess();
         }
-        
+
         if (_loginFailed(loginState)) {
           CommonService.hint(loginState.error);
         }
@@ -65,7 +64,7 @@ class LoginWidgetState extends State<LoginWidget> {
         Image(
             image: AssetImage(ImageStyle.IMAGE_DEFAULT),
             fit: BoxFit.cover,
-            color: ColorStyle.COLOR_WIDGET_LOGIN_BACKGROUND,
+            color: Colors.black26,
             colorBlendMode: BlendMode.darken
         ),
         Column(
@@ -78,7 +77,7 @@ class LoginWidgetState extends State<LoginWidget> {
               child: Theme(
                   data: ThemeData(
                     brightness: Brightness.dark,
-                    primarySwatch: ColorStyle.COLOR_WIDGET_LOGIN_FORM,
+                    primarySwatch: Colors.teal,
                     inputDecorationTheme: InputDecorationTheme(
                         labelStyle: ContextStyle.CONTEXT_WIDGET_LOGIN
                     ),
@@ -93,7 +92,7 @@ class LoginWidgetState extends State<LoginWidget> {
                               prefixIcon: Icon(IconStyle.ICON_LOGIN_USER),
                               labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_USERNAME_LABEL,
                               filled: true,
-                              fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
+                              fillColor: Colors.black12,
                               border: InputBorder.none
                           ),
                           keyboardType: TextInputType.text,
@@ -107,7 +106,7 @@ class LoginWidgetState extends State<LoginWidget> {
                               prefixIcon: Icon(IconStyle.ICON_LOGIN_PASSWORD),
                               labelText: GeneralConstants.CONSTANT_WIDGET_LOGIN_PASSWORD_LABEL,
                               filled: true,
-                              fillColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_TEXT_FILL,
+                              fillColor: Colors.black12,
                               border: InputBorder.none
                           ),
                           keyboardType: TextInputType.text,
@@ -120,16 +119,16 @@ class LoginWidgetState extends State<LoginWidget> {
                         Row(
                           children: <Widget>[
                             Expanded(
-                              child: MaterialButton(
-                                height: 50.0,
-                                color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON,
-                                textColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
-                                child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTON_TEXT,
-                                  style: ContextStyle.CONTEXT_WIDGET_LOGIN,
-                                ),
-                                onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
-                                splashColor: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_SPLASH,
-                              )
+                                child: MaterialButton(
+                                  height: 50.0,
+                                  color: Colors.orange,
+                                  textColor: Colors.white,
+                                  child: Text(GeneralConstants.CONSTANT_WIDGET_LOGIN_BUTTON_TEXT,
+                                    style: ContextStyle.CONTEXT_WIDGET_LOGIN,
+                                  ),
+                                  onPressed: loginState.isLoginButtonEnabled ? _onLoginButtonPressed : null,
+                                  splashColor: Colors.cyanAccent,
+                                )
                             ),
                           ],
                         ),

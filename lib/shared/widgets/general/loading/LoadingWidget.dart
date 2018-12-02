@@ -7,7 +7,7 @@ class LoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SpinKitSpinningCircle(
-      color: ColorStyle.COLOR_WIDGET_LOADING_INDICATOR,
+      color: Theme.of(context).primaryColor,
       shape: BoxShape.circle,
     );
   }

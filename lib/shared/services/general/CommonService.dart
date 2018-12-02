@@ -14,7 +14,6 @@ import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.
 import 'package:north_brain_front_app/shared/models/general/Token.dart';
 import 'package:north_brain_front_app/shared/services/general/CacheService.dart';
 import 'package:north_brain_front_app/shared/services/general/TokenService.dart';
-import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 import 'package:uuid/uuid.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -49,9 +48,7 @@ class CommonService {
     Flushbar()
       ..title = title
       ..message = message
-      ..backgroundColor = ColorStyle.COLOR_COMMON_PROMPT_FLUSH_BAR_BACKGROUND
-      ..shadowColor = ColorStyle.COLOR_COMMON_PROMPT_FLUSH_BAR_SHADOW
-      ..duration = ColorStyle.COLOR_COMMON_PROMPT_FLUSH_BAR_DURATION
+      ..duration = GeneralConstants.CONSTANT_COMMON_PROMPT_FLUSH_BAR_DURATION
       ..show(context);
   }
 

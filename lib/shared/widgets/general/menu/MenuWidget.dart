@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/business/menu/Menu.dart';
+import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 class MenuWidget extends StatelessWidget {
@@ -9,16 +11,18 @@ class MenuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AuthenticationBloc _authenticationBloc = BlocProvider.of<AuthenticationBloc>(context);
+
     return BlocBuilder<MenuEvent, MenuState> (
       bloc: _menuBloc,
       builder: (BuildContext context, MenuState menuState) {
-        return _drawer(context, _menuBloc, menuState);
+        return _drawer(context, _menuBloc, menuState, _authenticationBloc);
       },
     );
   }
 
   Widget _drawer(BuildContext context, MenuBloc menuBloc,
-      MenuState menuState
+      MenuState menuState, AuthenticationBloc authenticationBloc
       ) {
     return Drawer(
       child: Scaffold(
@@ -29,13 +33,12 @@ class MenuWidget extends StatelessWidget {
               )
           ),
           child: ListTile(
-              onTap: null,
-              leading: Icon(Icons.airport_shuttle),
+              onTap: () {
+                _logout(context, authenticationBloc);
+              },
+              leading: Icon(Icons.directions_run),
               title: Text(
-                '抽屉',
-                style: Theme.of(context).textTheme.body2.apply(
-                    color: Theme.of(context).buttonColor
-                ),
+                '退出系统',
               )
           ),
         ),
@@ -97,6 +100,10 @@ class MenuWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _logout(BuildContext context, AuthenticationBloc authenticationBloc) {
+    authenticationBloc.onLogout();
   }
 
 }

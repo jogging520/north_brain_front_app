@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
+import 'package:north_brain_front_app/routes/Application.dart';
+import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
 import 'package:north_brain_front_app/shared/widgets/business/home/Home.dart';
@@ -23,21 +24,27 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
 
   @override
   Widget build(BuildContext context) {
-    final AuthenticationBloc _authenticationBloc =
-    BlocProvider.of<AuthenticationBloc>(context);
     final BottomBloc _bottomBloc = BlocProvider.of<BottomBloc>(context);
-
 
     return Scaffold(
       appBar: AppBar(
         title: Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              SearchWidget()
-            ],
-          ),
+          alignment: Alignment.center,
+          child: Text('陇上粮仓'),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              Application.router.navigateTo(
+                  context,
+                  '/search',
+                  transition: Transition.transition(),
+                  transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+              );
+            },
+          ),
+        ],
       ),
       drawer: MenuWidget(),
       body: Column(

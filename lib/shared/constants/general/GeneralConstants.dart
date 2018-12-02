@@ -83,7 +83,8 @@ class GeneralConstants {
 
   //HTTP请求的超时时间定义（毫秒）
   static const int    CONSTANT_COMMON_HTTP_REQUEST_TIMEOUT                      = 15000;
-
+  //提示框的停留时长
+  static const Duration CONSTANT_COMMON_PROMPT_FLUSH_BAR_DURATION               = Duration(seconds: 3);
 
   //app路由未找到错误标题
   static const String CONSTANT_COMMON_PAGE_ROUTE_NOT_FOUND_TITLE                = '错误提示';
@@ -193,4 +194,6 @@ class GeneralConstants {
   static const double CONSTANT_PAGE_APP_BAR_HEIGHT                              = 48.0;
   //总体页面appBar的立体阴影高度
   static const double CONSTANT_PAGE_APP_BAR_ELEVATION                           = 1.0;
+
+
 }

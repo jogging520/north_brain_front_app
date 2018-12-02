@@ -42,7 +42,7 @@ class OrderDetailPage extends StatelessWidget {
         key: _formKey,
         child: _detail(context),
       ),
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomPadding: true,
     );
   }
 
@@ -223,7 +223,7 @@ class OrderDetailPage extends StatelessWidget {
     return CardSettingsPhone(
       key: _phoneKey,
       label: '电话号码',
-      initialValue: 13893234323,
+      initialValue: 8005551212,
       autovalidate: true,
       validator: (value) {
         if (value != null && value > 100) return '真不对';

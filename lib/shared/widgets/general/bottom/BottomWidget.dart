@@ -52,36 +52,39 @@ class BottomWidget extends StatelessWidget {
         print(index);
         bottomBloc.onTabChanged(index);
 
-        if (index == 1) {
-          Application.router.navigateTo(
-              context,
-              '/trade',
-              transition: Transition.transition(),
-              transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-          ).then((result) {
-          });
-        }
-
-        if (index == 2) {
-          Application.router.navigateTo(
-              context,
-              '/station',
-              transition: Transition.transition(),
-              transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-          ).then((result) {
-          });
-        }
-
-
-
-        if (index == 3) {
-          Application.router.navigateTo(
-              context,
-              '/test',
-              transition: Transition.transition(),
-              transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-          ).then((result) {
-          });
+        switch (index) {
+          case 0:
+            Application.router.navigateTo(
+                context,
+                '/search',
+                transition: Transition.transition(),
+                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+            );
+            break;
+          case 1:
+            Application.router.navigateTo(
+                context,
+                '/search',
+                transition: Transition.transition(),
+                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+            );
+            break;
+          case 2:
+            Application.router.navigateTo(
+                context,
+                '/search',
+                transition: Transition.transition(),
+                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+            );
+            break;
+          case 3:
+            Application.router.navigateTo(
+                context,
+                '/search',
+                transition: Transition.transition(),
+                transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
+            );
+            break;
         }
       },
     );

@@ -4,57 +4,23 @@ import 'package:flutter/material.dart';
 
 class ColorStyle {
 
-  //提示框的颜色
-  static const Color COLOR_COMMON_PROMPT_FLUSH_BAR_BACKGROUND = Colors.lightGreen;
-  //提示框的阴影颜色
-  static const Color COLOR_COMMON_PROMPT_FLUSH_BAR_SHADOW = Colors.red;
-  //提示框的停留时长
-  static const Duration COLOR_COMMON_PROMPT_FLUSH_BAR_DURATION = Duration(seconds: 3);
-
-  //登录页面背景色
-  static const Color COLOR_WIDGET_LOGIN_BACKGROUND = Colors.black26;
-  //登录的text输入框填出颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM   = Colors.teal;
-  //登录的text输入框填出颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_TEXT_FILL   = Colors.black12;
-  //登录组件按钮阴影的颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_SHADOW   = Colors.green;
-  //登录组件按钮的颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON   = Colors.orange;
-  //登录组件按钮文字的颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT   = Colors.white;
-  //登录组件按钮闪过的颜色
-  static const Color COLOR_WIDGET_LOGIN_FORM_BUTTON_SPLASH = Colors.cyanAccent;
-
-  //加载中组件的颜色
-  static const Color COLOR_WIDGET_LOADING_INDICATOR   = Colors.grey;
-
-  //个人设置组件的头部渐变颜色开始
-  static const Color COLOR_WIDGET_BOTTOM_TITLE = Colors.teal;
-  //个人设置组件的头部渐变颜色结束
-  static const Color COLOR_WIDGET_BOTTOM_TITLE_SELECTED = Colors.redAccent;
-
-
-  static const int COLOR_PRIMARY_WHITE = 0xFFFFFFFF;
-
-
-  static const int COLOR_CONTEXT_WHITE = COLOR_PRIMARY_WHITE;
-
   final ThemeData lightTheme = ThemeData(
-    primarySwatch: Colors.purple,
-    brightness: Brightness.light,
-    accentColor: Colors.purpleAccent[100],
-    primaryColor: Colors.white,
-    primaryColorLight: Colors.purple[700],
-    textSelectionHandleColor: Colors.purple[700],
-    dividerColor: Colors.grey[200],
-    bottomAppBarColor: Colors.grey[200],
-    buttonColor: Colors.purple[700],
-    iconTheme: IconThemeData(color: Colors.white),
-    primaryIconTheme: IconThemeData(color: Colors.black),
-    accentIconTheme: IconThemeData(color: Colors.purple[700]),
-    disabledColor: Colors.grey[500],
-    cardColor: Colors.grey[200]
+    accentColor: Colors.indigo[400], // background color of card headers
+    cardColor: Colors.white, // background color of fields
+    backgroundColor: Colors.indigo[100], // color outside the card
+    primaryColor: Colors.teal, // color of page header
+    buttonColor: Colors.lightBlueAccent[100], // background color of buttons
+    textTheme: TextTheme(
+      button:
+      TextStyle(color: Colors.deepPurple[900]), // style of button text
+      subhead: TextStyle(color: Colors.grey[800]), // style of input text
+    ),
+    primaryTextTheme: TextTheme(
+      title: TextStyle(color: Colors.lightBlue[50]), // style for headers
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      labelStyle: TextStyle(color: Colors.indigo[400]), // style for labels
+    ),
   );
 
   final ThemeData darkTheme = ThemeData(
@@ -86,14 +52,8 @@ class ContextStyle {
 
   static const num CONTEXT_LETTER_SPACING = 0.3;
 
-  static const TextStyle CONTEXT_MIN = TextStyle(
-    color: Color(ColorStyle.COLOR_CONTEXT_WHITE),
-    fontSize: CONTEXT_MIN_SIZE
-  );
-
   //登录页面的字体样式
   static const TextStyle CONTEXT_WIDGET_LOGIN = TextStyle(
-      color: ColorStyle.COLOR_WIDGET_LOGIN_FORM_BUTTON_TEXT,
       fontSize: CONTEXT_NORMAL_SIZE,
       fontWeight: FontWeight.bold,
       letterSpacing: CONTEXT_LETTER_SPACING
@@ -101,7 +61,7 @@ class ContextStyle {
 
   //底部tab的字体样式
   static const TextStyle CONTEXT_WIDGET_BOTTOM = TextStyle(
-      color: ColorStyle.COLOR_WIDGET_BOTTOM_TITLE,
+      color: Colors.black,
       fontSize: CONTEXT_SMALL_SIZE,
       fontWeight: FontWeight.bold,
       letterSpacing: CONTEXT_LETTER_SPACING
@@ -109,7 +69,7 @@ class ContextStyle {
 
   //底部tab选中的字体样式
   static const TextStyle CONTEXT_WIDGET_BOTTOM_SELECTED = TextStyle(
-      color: ColorStyle.COLOR_WIDGET_BOTTOM_TITLE_SELECTED,
+      color: Colors.teal,
       fontSize: CONTEXT_SMALL_SIZE,
       fontWeight: FontWeight.bold,
       letterSpacing: CONTEXT_LETTER_SPACING

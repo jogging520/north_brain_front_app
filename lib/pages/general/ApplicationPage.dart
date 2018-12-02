@@ -6,6 +6,7 @@ import 'package:flutter_amap/flutter_amap.dart';
 import 'package:logging/logging.dart';
 import 'package:north_brain_front_app/pages/business/BusinessPage.dart';
 import 'package:north_brain_front_app/pages/general/GeneralPage.dart';
+import 'package:north_brain_front_app/shared/animations/Animation.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/blocs/general/bottom/Bottom.dart';
 import 'package:north_brain_front_app/shared/constants/general/GeneralConstants.dart';

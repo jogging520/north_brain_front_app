@@ -33,32 +33,30 @@ class HomeHotspotWidget extends StatelessWidget {
                   onTap: () {
                     Application.router.navigateTo(
                         context,
-                        '/policy',
+                        '/search',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    ).then((result) {
-                    });
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 0),
+                    child: _items(context, 0, '政策信息'),
                   ),
                 ),
                 GestureDetector(
                   onTap: () {
                     Application.router.navigateTo(
                         context,
-                        '/order',
+                        '/search',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    ).then((result) {
-                    });
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 1),
+                    child: _items(context, 1, '订单信息'),
                   ),
                 ),
               ]
@@ -74,32 +72,30 @@ class HomeHotspotWidget extends StatelessWidget {
                   onTap: () {
                     Application.router.navigateTo(
                         context,
-                        '/product/1',
+                        '/search',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    ).then((result) {
-                    });
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 2),
+                    child: _items(context, 2, '产品详情'),
                   ),
                 ),
                 GestureDetector(
                   onTap: () {
                     Application.router.navigateTo(
                         context,
-                        '/order/1',
+                        '/search',
                         transition: Transition.transition(),
                         transitionDuration: Transition.CONSTANT_PAGE_ANIMATION_TRANSITION_DURATION
-                    ).then((result) {
-                    });
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 3),
+                    child: _items(context, 3, '订单详情'),
                   ),
                 ),
               ]
@@ -108,13 +104,17 @@ class HomeHotspotWidget extends StatelessWidget {
       ));
   }
 
-  Widget _items(BuildContext context, int index) {
+  Widget _items(BuildContext context, int index, String title) {
     return Card(
       elevation: 4.0,
       child: Column(
         children: <Widget>[
+          Container(
+            color: Theme.of(context).backgroundColor,
+            height: 10.0,
+          ),
           Padding(
-            padding: EdgeInsets.all(0.0),
+            padding: EdgeInsets.all(10.0),
             child: Container(
               width: MediaQuery.of(context).size.width / 2 - 10,
               height: MediaQuery.of(context).size.width / 2 - 40,
@@ -128,21 +128,12 @@ class HomeHotspotWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                Container(
+                  height: 0.0,
+                ),
                 Text(
-                  '图片',
+                  title,
                   style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  '兰州',
-                  style: TextStyle(
-                    fontSize: 13.0,
-                  ),
-                ),
-                Text(
-                  "人口",
-                  style: TextStyle(
-                    fontSize: 11.0,
-                  ),
                 ),
               ],
             ),

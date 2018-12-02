@@ -22,6 +22,16 @@ var loginHandler = Handler(
     }
 );
 
+
+var searchHandler = Handler(
+  //type: HandlerType.function,
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      HomePage.role.contains('admin');
+
+      return SearchPage();
+    }
+);
+
 var productHandler = Handler(
   //type: HandlerType.function,
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {

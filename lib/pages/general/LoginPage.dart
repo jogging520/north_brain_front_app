@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
@@ -16,7 +15,6 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
       body: LoginWidget(
         authenticationBloc: BlocProvider.of<AuthenticationBloc>(context),
         loginBloc: _loginBloc,
@@ -30,5 +28,4 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
     _loginBloc.dispose();
     super.dispose();
   }
-
 }
