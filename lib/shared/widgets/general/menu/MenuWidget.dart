@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
 import 'package:north_brain_front_app/shared/blocs/business/menu/Menu.dart';
-import 'package:north_brain_front_app/shared/blocs/general/authentication/Authentication.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 class MenuWidget extends StatelessWidget {
@@ -61,15 +60,19 @@ class MenuWidget extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.timeline),
-              title: Text('甘肃省'),
+              title: Text('产品列表'),
               subtitle: Text('兰州市'),
-              onTap: null,
+              onTap: () {
+                Application.navigateTo(context, '/product');
+              },
             ),
             ListTile(
               leading: Icon(Icons.pie_chart_outlined),
-              title: Text('甘肃省'),
+              title: Text('参数配置'),
               subtitle: Text('兰州市'),
-              onTap: null,
+              onTap: () {
+                Application.navigateTo(context, '/setting');
+              },
             ),
             Container(
               decoration: BoxDecoration(
@@ -98,10 +101,6 @@ class MenuWidget extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _logout(BuildContext context, AuthenticationBloc authenticationBloc) {
-    authenticationBloc.onLogout();
   }
 
 }

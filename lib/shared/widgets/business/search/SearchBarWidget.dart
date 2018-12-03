@@ -18,6 +18,8 @@ class SearchBarWidget extends StatelessWidget {
   }
 
   Widget _searchBar(BuildContext context, SearchBloc searchBloc, SearchState searchState) {
+    final TextEditingController _textEditingController = TextEditingController();
+
     return Container(
       margin: EdgeInsets.only(left: 10.0),
       padding: EdgeInsets.only(left: 10.0),
@@ -30,32 +32,41 @@ class SearchBarWidget extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          Container(
-            height: 35.0,
-            width: 200,
+          Flexible(
             child: Container(
-              padding: EdgeInsets.only(left: 10.0),
-              child: Center(
-                child: Form(
-                  autovalidate: false,
-                  child: GestureDetector(
-                    onTap: () {
-                      print('search......');
-                    },
-                    child: TextFormField(
-                      enabled: true,
-                      autofocus: false,
-                      textAlign: TextAlign.start,
-                      decoration: InputDecoration.collapsed(
-                          hintText: '请输入要搜索的内容',
-                          filled: false
+              height: 35.0,
+              width: 200,
+              child: Container(
+                padding: EdgeInsets.only(left: 10.0),
+                child: Center(
+                  child: Form(
+                    autovalidate: false,
+                    child: GestureDetector(
+                      onTap: () {
+                        print('search......');
+                      },
+                      child: TextFormField(
+                        controller: _textEditingController,
+                        enabled: true,
+                        autofocus: false,
+                        textAlign: TextAlign.start,
+                        decoration: InputDecoration.collapsed(
+                            hintText: '请输入要搜索的内容',
+                            filled: false
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
             ),
-          )
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              print(_textEditingController.value);
+            },
+          ),
         ],
       ),
     );

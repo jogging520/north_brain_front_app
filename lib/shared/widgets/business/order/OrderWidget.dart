@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
-import 'package:north_brain_front_app/shared/styles/general/Style.dart';
-import 'package:side_header_list_view/side_header_list_view.dart';
+import 'package:north_brain_front_app/shared/widgets/business/order/Order.dart';
 
 final List<Order> _orders = [
   Order(id: '111', name: 'abcd', type: 'COMMON'),
@@ -36,33 +36,54 @@ final List<Order> _orders = [
 class OrderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SideHeaderListView(
-      padding: EdgeInsets.all(16.0),
-      itemExtend: 48.0,
-      itemCount: _orders.length,
-      headerBuilder: _header,
-      itemBuilder: _item,
-      hasSameHeader: _isSame,
+    return CustomScrollView(
+      slivers: _slivers(context),
     );
   }
 
-  Widget _header(BuildContext context, int index) {
-    return SizedBox(
-      width: 100,
-      //height: 700,
-      child: Text(
-          _orders[index].type,
-          style: Theme.of(context).textTheme.title)
-    );
+  List<Widget> _slivers(BuildContext context) {
+    List<String> _orderTypes = [];
+    _orders.forEach((order) {
+      if (!_orderTypes.contains(order.type)) {
+        _orderTypes.add(order.type);
+      }
+    });
 
-  }
+    return _orderTypes.map((orderType) {
+      List<Order> _typedOrders = [];
 
+      _orders.forEach((order) {
+        if (order.type == orderType) {
+          _typedOrders.add(order);
+        }
+      });
 
-  Widget _item(BuildContext context, int index) {
-    return Text(_orders[index].name);
-  }
-
-  bool _isSame(int a, int b) {
-    return _orders[a].type == _orders[b].type;
+      return SliverStickyHeader(
+        overlapsContent: true,
+        header: OrderHeaderWidget(month: orderType),
+        sliver: SliverPadding(
+          padding: EdgeInsets.only(left: 60.0),
+          sliver: SliverGrid(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 1,
+              crossAxisSpacing: 4.0,
+              mainAxisSpacing: 4.0,
+              childAspectRatio: 2.0
+            ),
+            delegate: SliverChildBuilderDelegate(
+                (context, i) => GestureDetector(
+                  onTap: () {
+                    print('------------$i');
+                  },
+                  child: GridTile(
+                    child: OrderItemWidget(order: _typedOrders[i])
+                  ),
+                ),
+              childCount: _typedOrders.length
+            ),
+          ),
+        ),
+      );
+    }).toList();
   }
 }
