@@ -15,9 +15,9 @@ class OrderResultWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            _buildResultsRow('Name', order.name),
-            _buildResultsRow('Type', order.type, linebreak: true),
-            _buildResultsRow('id', order.id),
+            _buildResultsRow(context, 'Name', order.name),
+            _buildResultsRow(context, 'Type', order.type, linebreak: true),
+            _buildResultsRow(context, 'id', order.id),
           ],
         ),
       ),
@@ -32,19 +32,33 @@ class OrderResultWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildResultsRow(String name, dynamic value, {bool linebreak: false}) {
+  Widget _buildResultsRow(BuildContext context, String name, dynamic value, {bool linebreak: false}) {
     return Column(
       children: <Widget>[
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: Text(
-                name,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 2.0),
+          decoration: BoxDecoration(
+              border: Border(
+                  left: BorderSide(
+                      width: 4.0,
+                      color: Theme.of(context).accentColor
+                  )
+              )
             ),
-            _buildValueInline(value, linebreak),
-          ],
+        ),
+        Container(
+          margin: const EdgeInsets.all(12.0),
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: Text(
+                  name,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              _buildValueInline(value, linebreak),
+            ],
+          ),
         ),
         _buildValueOnOwnRow(value, linebreak),
         Container(height: 12.0,)

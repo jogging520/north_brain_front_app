@@ -14,34 +14,36 @@ class OrderItemWidget extends StatelessWidget {
       onTap: () {
         _showOrderResult(context);
       },
-      child: Card(
-        elevation: 2.0,
-        child: ListTile(
-          isThreeLine: false,
-          leading: Icon(
-              Icons.add_circle,
-              color: Colors.green,
-              size: 28.0),
-          title: RichText(
-            text: TextSpan(
-                children: <TextSpan>[
-                  TextSpan(
-                    text: order.name,
-                    style: Theme.of(context).textTheme.body2.apply(fontWeightDelta: 2),
-                  ),
-                  TextSpan(
-                    text: order.id,
-                    style: Theme.of(context).textTheme.body2.apply(fontWeightDelta: 2),
-                  ),
-                ]
-            ),
-          ),
-          //subtitle: Text('子标题'),
-          trailing: Icon(
-              Icons.chevron_right
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 2.0),
+        decoration: BoxDecoration(
+          border: Border(
+            left: BorderSide(
+              width: 4.0,
+              color: Theme.of(context).accentColor
+            )
+          )
+        ),
+        child: Container(
+          margin: const EdgeInsets.all(12.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Icon(
+                  Icons.add_circle,
+                  color: Colors.green,
+                  size: 28.0),
+              Text(
+                order.name,
+                style: Theme.of(context).textTheme.body2.apply(fontWeightDelta: 2),
+              ),
+              Icon(
+                  Icons.chevron_right
+              ),
+            ],
           ),
         ),
-      ),
+      )
     );
   }
 
