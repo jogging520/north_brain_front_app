@@ -44,7 +44,7 @@ class TransactionWidget extends StatelessWidget {
     );
   }
 
-  Widget _bottomSheet(BuildContext context) {
+  Widget _buildBottomSheet(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 8.0, bottom: 8.0, left: 16.0, right: 16.0),
       child: Row(
@@ -101,12 +101,12 @@ class TransactionWidget extends StatelessWidget {
     );
   }
 
-  _openTransaction(BuildContext context) {
+  void _openTransaction(BuildContext context) {
     _transactionBloc.onBottomSheetOpened();
 
     scaffoldKey.currentState
         .showBottomSheet((BuildContext context) {
-          return _bottomSheet(context);})
+          return _buildBottomSheet(context);})
     .closed
     .whenComplete(() {
       _transactionBloc.onBottomSheetClosed();

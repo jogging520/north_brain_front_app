@@ -14,12 +14,12 @@ class MenuWidget extends StatelessWidget {
     return BlocBuilder<MenuEvent, MenuState> (
       bloc: _menuBloc,
       builder: (BuildContext context, MenuState menuState) {
-        return _drawer(context, _menuBloc, menuState);
+        return _buildDrawer(context, _menuBloc, menuState);
       },
     );
   }
 
-  Widget _drawer(BuildContext context, MenuBloc menuBloc,
+  Widget _buildDrawer(BuildContext context, MenuBloc menuBloc,
       MenuState menuState) {
     return Drawer(
       child: Scaffold(
@@ -87,9 +87,11 @@ class MenuWidget extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.short_text),
-              title: Text('甘肃省'),
+              title: Text('测试'),
               subtitle: Text('兰州市'),
-              onTap: null,
+              onTap: () {
+                Application.navigateTo(context, '/test');
+              },
             ),
             ListTile(
               leading: Icon(Icons.opacity),

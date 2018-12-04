@@ -18,12 +18,12 @@ class BottomWidget extends StatelessWidget {
     return BlocBuilder<BottomEvent, BottomState> (
       bloc: _bottomBloc,
       builder: (BuildContext context, BottomState bottomState) {
-        return _bottomNavigator(context, _bottomBloc, bottomState);
+        return _buildBottomNavigator(context, _bottomBloc, bottomState);
       },
     );
   }
 
-  Widget _bottomNavigator(BuildContext context, BottomBloc bottomBloc,
+  Widget _buildBottomNavigator(BuildContext context, BottomBloc bottomBloc,
       BottomState bottomState) {
     return BottomNavigationBar(
       items: <BottomNavigationBarItem>[

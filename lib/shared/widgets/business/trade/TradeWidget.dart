@@ -17,12 +17,12 @@ class TradeWidget extends StatelessWidget {
     return BlocBuilder<TradeEvent, TradeState> (
       bloc: _tradeBloc,
       builder: (BuildContext context, TradeState tradeState) {
-        return _sliverList(context, _tradeBloc, tradeState);
+        return _buildSliverList(context, _tradeBloc, tradeState);
       },
     );
   }
 
-  Widget _sliverList(BuildContext context, TradeBloc tradeBloc, TradeState tradeState) {
+  Widget _buildSliverList(BuildContext context, TradeBloc tradeBloc, TradeState tradeState) {
     return RefreshIndicator(
       onRefresh: () {},
       child: CustomScrollView(

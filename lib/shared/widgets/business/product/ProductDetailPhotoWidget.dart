@@ -15,11 +15,11 @@ class ProductDetailPhotoWidget extends StatelessWidget {
           itemCount: photos.length,
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(top: 8.0, left: 20.0),
-          itemBuilder: _photos),
+          itemBuilder: _buildPhotos),
     );
   }
 
-  Widget _photos(BuildContext context, int index) {
+  Widget _buildPhotos(BuildContext context, int index) {
     return Card(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 5.0),

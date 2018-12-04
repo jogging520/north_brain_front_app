@@ -7,6 +7,7 @@ class ColorStyle {
   final ThemeData lightTheme = ThemeData(
     accentColor: Colors.indigo[400], // background color of card headers
     cardColor: Colors.white, // background color of fields
+    primaryColorLight: Colors.deepPurple[900],
     backgroundColor: Colors.indigo[100], // color outside the card
     primaryColor: Colors.teal, // color of page header
     dividerColor: Color.fromRGBO(60, 60, 60, 1.0),

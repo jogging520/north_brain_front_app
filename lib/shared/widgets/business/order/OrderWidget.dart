@@ -36,12 +36,15 @@ final List<Order> _orders = [
 class OrderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: _slivers(context),
+    return RefreshIndicator(
+      onRefresh: () {},
+      child: CustomScrollView(
+        slivers: _buildItems(context),
+      ),
     );
   }
 
-  List<Widget> _slivers(BuildContext context) {
+  List<Widget> _buildItems(BuildContext context) {
     List<String> _orderTypes = [];
     _orders.forEach((order) {
       if (!_orderTypes.contains(order.type)) {
@@ -62,22 +65,20 @@ class OrderWidget extends StatelessWidget {
         overlapsContent: true,
         header: OrderHeaderWidget(month: orderType),
         sliver: SliverPadding(
-          padding: EdgeInsets.only(left: 60.0),
+          padding: EdgeInsets.only(top: 1.0, left: 60.0),
           sliver: SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,
               crossAxisSpacing: 4.0,
-              mainAxisSpacing: 4.0,
-              childAspectRatio: 2.0
+              mainAxisSpacing: 1.0,
+              childAspectRatio: 6.0
             ),
             delegate: SliverChildBuilderDelegate(
                 (context, i) => GestureDetector(
                   onTap: () {
                     print('------------$i');
                   },
-                  child: GridTile(
-                    child: OrderItemWidget(order: _typedOrders[i])
-                  ),
+                  child: OrderItemWidget(order: _typedOrders[i]),
                 ),
               childCount: _typedOrders.length
             ),

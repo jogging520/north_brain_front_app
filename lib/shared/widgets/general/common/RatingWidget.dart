@@ -12,14 +12,14 @@ class RatingWidget extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
-        _numericRating(context),
+        _buildNumericRating(context),
         SizedBox(width: 16.0),
-        _starRating(context),
+        _buildStarRating(context),
       ],
     );
   }
 
-  Widget _numericRating(BuildContext context) {
+  Widget _buildNumericRating(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,7 +37,7 @@ class RatingWidget extends StatelessWidget {
     );
   }
 
-  Widget _starRating(BuildContext context) {
+  Widget _buildStarRating(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,

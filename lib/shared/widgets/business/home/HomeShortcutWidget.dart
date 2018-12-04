@@ -22,12 +22,12 @@ class HomeShortcutWidget extends StatelessWidget {
       child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: _items(context)
+          children: _buildItems(context)
       ),
     );
   }
 
-  List<Widget> _items(BuildContext context) {
+  List<Widget> _buildItems(BuildContext context) {
     return images.map((image) {
       return GestureDetector(
         onTap: null,

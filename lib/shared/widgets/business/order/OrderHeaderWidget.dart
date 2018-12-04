@@ -13,19 +13,24 @@ class OrderHeaderWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerLeft,
         child: SizedBox(
-          height: 44.0,
+          height: 54.0,
           width: 44.0,
           child: GestureDetector(
             onTap: () {
               print('head');
             },
             child: Card(
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).primaryColorLight,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(month)
+                  Text(
+                    month,
+                    style: Theme.of(context).textTheme.body2.apply(
+                        color: Colors.white,
+                        fontWeightDelta: 2),
+                  )
                 ],
               ),
             ),

@@ -13,12 +13,12 @@ class SettingWidget extends StatelessWidget {
     return BlocBuilder<SettingEvent, SettingState> (
       bloc: _settingBloc,
       builder: (BuildContext context, SettingState settingState) {
-        return _settingListTile(context, _settingBloc, settingState);
+        return _buildSettingListTile(context, _settingBloc, settingState);
       },
     );
   }
 
-  Widget _settingListTile(BuildContext context, SettingBloc settingBloc,
+  Widget _buildSettingListTile(BuildContext context, SettingBloc settingBloc,
       SettingState settingState) {
     return ListView(
       children: <Widget>[

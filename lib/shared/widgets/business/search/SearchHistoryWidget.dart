@@ -41,7 +41,7 @@ class SearchHistoryWidget extends StatelessWidget {
         Container(
           margin: new EdgeInsets.only(left: 6.0),
           child: Wrap(
-            children: _hotHistory(context)
+            children: _buildHotHistory(context)
           ),
         ),
         Container(
@@ -53,14 +53,14 @@ class SearchHistoryWidget extends StatelessWidget {
         Container(
           margin: new EdgeInsets.only(left: 6.0),
           child: Wrap(
-              children: _selfHistory(context)
+              children: _buildSelfHistory(context)
           ),
         ),
       ],
     );
   }
   
-  List<Widget> _selfHistory(BuildContext context) {
+  List<Widget> _buildSelfHistory(BuildContext context) {
     return _selfHistories.map((history) {
       return Container(
         height: 32.0,
@@ -82,7 +82,7 @@ class SearchHistoryWidget extends StatelessWidget {
     }).toList();
   }
 
-  List<Widget> _hotHistory(BuildContext context) {
+  List<Widget> _buildHotHistory(BuildContext context) {
     return _hotHistories.map((history) {
       return Container(
         height: 32.0,

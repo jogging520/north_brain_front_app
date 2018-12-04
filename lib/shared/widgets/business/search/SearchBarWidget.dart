@@ -12,48 +12,43 @@ class SearchBarWidget extends StatelessWidget {
     return BlocBuilder<SearchEvent, SearchState> (
       bloc: _searchBloc,
       builder: (BuildContext context, SearchState searchState) {
-        return _searchBar(context, _searchBloc, searchState);
+        return _buildSearchBar(context, _searchBloc, searchState);
       },
     );
   }
 
-  Widget _searchBar(BuildContext context, SearchBloc searchBloc, SearchState searchState) {
+  Widget _buildSearchBar(BuildContext context, SearchBloc searchBloc, SearchState searchState) {
     final TextEditingController _textEditingController = TextEditingController();
 
     return Container(
-      margin: EdgeInsets.only(left: 10.0),
+      margin: EdgeInsets.only(right: 50.0),
       padding: EdgeInsets.only(left: 10.0),
       alignment: Alignment.center,
-      height: 30.0,
-      width: MediaQuery.of(context).size.width - 100,
+      height: 35.0,
       decoration: BoxDecoration(
-          color: Color(0xFFEEEEEE),
-          borderRadius: BorderRadius.all(Radius.circular(58.0))
+          color: Theme.of(context).backgroundColor,
+          borderRadius: BorderRadius.all(Radius.circular(8.0))
       ),
       child: Row(
         children: <Widget>[
-          Flexible(
+          Expanded(
             child: Container(
-              height: 35.0,
-              width: 200,
-              child: Container(
-                padding: EdgeInsets.only(left: 10.0),
-                child: Center(
-                  child: Form(
-                    autovalidate: false,
-                    child: GestureDetector(
-                      onTap: () {
-                        print('search......');
-                      },
-                      child: TextFormField(
-                        controller: _textEditingController,
-                        enabled: true,
-                        autofocus: false,
-                        textAlign: TextAlign.start,
-                        decoration: InputDecoration.collapsed(
-                            hintText: '请输入要搜索的内容',
-                            filled: false
-                        ),
+              padding: EdgeInsets.only(left: 10.0),
+              child: Center(
+                child: Form(
+                  autovalidate: false,
+                  child: GestureDetector(
+                    onTap: () {
+                      print('search......');
+                    },
+                    child: TextFormField(
+                      controller: _textEditingController,
+                      enabled: true,
+                      autofocus: false,
+                      textAlign: TextAlign.start,
+                      decoration: InputDecoration.collapsed(
+                          hintText: '请输入搜索内容',
+                          filled: false
                       ),
                     ),
                   ),
@@ -61,12 +56,14 @@ class SearchBarWidget extends StatelessWidget {
               ),
             ),
           ),
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              print(_textEditingController.value);
-            },
-          ),
+          Container(
+            child: IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                print(_textEditingController.value);
+              },
+            ),
+          )
         ],
       ),
     );

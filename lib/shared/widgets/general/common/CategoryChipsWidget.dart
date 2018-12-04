@@ -14,11 +14,11 @@ class CategoryChipsWidget extends StatelessWidget {
           itemCount: categories.length,
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(top: 8.0, left: 20.0),
-          itemBuilder: _chips),
+          itemBuilder: _buildChips),
     );
   }
 
-  Widget _chips(BuildContext context, int index) {
+  Widget _buildChips(BuildContext context, int index) {
     return Padding(
       padding: EdgeInsets.only(right: 8.0),
       child: Chip(

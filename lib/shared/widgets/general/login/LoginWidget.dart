@@ -52,12 +52,12 @@ class LoginWidgetState extends State<LoginWidget> {
           CommonService.hint(loginState.error);
         }
 
-        return _form(loginState);
+        return _buildForm(loginState);
       },
     );
   }
 
-  Widget _form(LoginState loginState) {
+  Widget _buildForm(LoginState loginState) {
     return Stack(
       fit: StackFit.expand,
       children: <Widget>[
@@ -147,7 +147,7 @@ class LoginWidgetState extends State<LoginWidget> {
 
   bool _loginFailed(LoginState loginState) => loginState.error.isNotEmpty;
 
-  _onLoginButtonPressed() {
+  void _onLoginButtonPressed() {
     _loginBloc.onLoginButtonPressed(
         userName: _userNameTextEditingController.text,
         password: _passwordTextEditingController.text

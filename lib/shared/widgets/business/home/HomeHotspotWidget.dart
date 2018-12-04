@@ -35,7 +35,7 @@ class HomeHotspotWidget extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 0, '政策信息'),
+                    child: _buildItems(context, 0, '政策信息'),
                   ),
                 ),
                 GestureDetector(
@@ -45,7 +45,7 @@ class HomeHotspotWidget extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 1, '订单信息'),
+                    child: _buildItems(context, 1, '订单信息'),
                   ),
                 ),
               ]
@@ -64,7 +64,7 @@ class HomeHotspotWidget extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 2, '产品详情'),
+                    child: _buildItems(context, 2, '产品详情'),
                   ),
                 ),
                 GestureDetector(
@@ -74,7 +74,7 @@ class HomeHotspotWidget extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     height: MediaQuery.of(context).size.width / 2 + 30,
-                    child: _items(context, 3, '订单详情'),
+                    child: _buildItems(context, 3, '订单详情'),
                   ),
                 ),
               ]
@@ -83,7 +83,7 @@ class HomeHotspotWidget extends StatelessWidget {
       ));
   }
 
-  Widget _items(BuildContext context, int index, String title) {
+  Widget _buildItems(BuildContext context, int index, String title) {
     return Card(
       elevation: 4.0,
       child: Column(
