@@ -3,9 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/business/search/Search.dart';
 
-class SearchBarWidget extends StatelessWidget {
-
+class SearchBarWidget extends StatefulWidget {
   final SearchBloc _searchBloc = SearchBloc();
+
+  @override
+  State<StatefulWidget> createState() => SearchBarWidgetState(searchBloc: _searchBloc);
+}
+
+class SearchBarWidgetState extends State<SearchBarWidget> {
+  final SearchBloc _searchBloc;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _textEditingController = TextEditingController();
+
+  SearchBarWidgetState({@required searchBloc}): _searchBloc = searchBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +28,6 @@ class SearchBarWidget extends StatelessWidget {
   }
 
   Widget _buildSearchBar(BuildContext context, SearchBloc searchBloc, SearchState searchState) {
-    final TextEditingController _textEditingController = TextEditingController();
-
     return Container(
       margin: EdgeInsets.only(right: 50.0),
       padding: EdgeInsets.only(left: 10.0),
@@ -36,10 +44,11 @@ class SearchBarWidget extends StatelessWidget {
               padding: EdgeInsets.only(left: 10.0),
               child: Center(
                 child: Form(
+                  key: _formKey,
                   autovalidate: false,
                   child: GestureDetector(
                     onTap: () {
-                      print('search......');
+                      print(_textEditingController.value);
                     },
                     child: TextFormField(
                       controller: _textEditingController,

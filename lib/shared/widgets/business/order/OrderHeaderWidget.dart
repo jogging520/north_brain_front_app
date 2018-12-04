@@ -9,7 +9,7 @@ class OrderHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+      padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
       child: Align(
         alignment: Alignment.centerLeft,
         child: SizedBox(
@@ -26,7 +26,7 @@ class OrderHeaderWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    month,
+                    month.substring(0, 2) + '月',
                     style: Theme.of(context).textTheme.body2.apply(
                         color: Colors.white,
                         fontWeightDelta: 2),

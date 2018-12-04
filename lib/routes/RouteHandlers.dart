@@ -121,7 +121,7 @@ var orderDetailHandler = Handler(
       HomePage.role.contains('admin');
 
       if (params['id'][0] != null) {
-        return OrderDetailPage(params['id'][0]);
+        return OrderDetailPage();
       }
     }
 );

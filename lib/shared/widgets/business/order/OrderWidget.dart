@@ -71,7 +71,7 @@ class OrderWidget extends StatelessWidget {
               crossAxisCount: 1,
               crossAxisSpacing: 4.0,
               mainAxisSpacing: 1.0,
-              childAspectRatio: 6.0
+              childAspectRatio: 5.0
             ),
             delegate: SliverChildBuilderDelegate(
                 (context, i) => GestureDetector(
