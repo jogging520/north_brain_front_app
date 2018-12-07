@@ -28,6 +28,7 @@ class TradeWidget extends StatelessWidget {
       child: CustomScrollView(
         slivers: <Widget>[
           SliverStickyHeader(
+            overlapsContent: false,
             header: TradeHeaderWidget(200),
             sliver: tradeState.trades == null ?
             SliverList(

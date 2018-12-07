@@ -4,3 +4,4 @@ export 'profile/Profile.dart';
 export 'bottom/Bottom.dart';
 export 'menu/Menu.dart';
 export 'setting/Setting.dart';
+export 'search/Search.dart';

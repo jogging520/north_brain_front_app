@@ -16,13 +16,13 @@ class TransactionWidget extends StatelessWidget {
     return BlocBuilder<TransactionEvent, TransactionState> (
       bloc: _transactionBloc,
       builder: (BuildContext context, TransactionState transactionState) {
-        return _floatingActionButton(context, _transactionBloc, transactionState);
+        return _buildFloatingActionButton(context, _transactionBloc, transactionState);
       },
     );
   }
 
-  Widget _floatingActionButton(BuildContext context, TransactionBloc transactionBloc,
-      TransactionState transactionState) {
+  Widget _buildFloatingActionButton(BuildContext context,
+      TransactionBloc transactionBloc, TransactionState transactionState) {
     return transactionState.isBottomSheetOpened ?
     FloatingActionButton(
       onPressed: () => Navigator.of(context).pop(),

@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:north_brain_front_app/shared/widgets/business/BusinessWidget.dart';
+import 'package:north_brain_front_app/shared/blocs/general/search/Search.dart';
+import 'package:north_brain_front_app/shared/blocs/general/trail/Trail.dart';
+import 'package:north_brain_front_app/shared/widgets/general/GeneralWidget.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -10,14 +12,17 @@ class SearchPage extends StatefulWidget {
 class SearchPageState extends State<SearchPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
+  final SearchBloc _searchBloc = SearchBloc();
+  final TrailBloc _trailBloc = TrailBloc();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: SearchBarWidget(),
+        title: SearchBarWidget(searchBloc: _searchBloc,),
       ),
-      body: SearchHistoryWidget(),
+      body: SearchHistoryWidget(trailBloc: _trailBloc,),
     );
   }
 

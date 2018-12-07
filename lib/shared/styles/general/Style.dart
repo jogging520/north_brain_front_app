@@ -4,6 +4,13 @@ import 'package:flutter/material.dart';
 
 class ColorStyle {
 
+  //订单列表头颜色
+  static const Color COLOR_COMMON_ORDER_HEADER = Colors.purple;
+  //订单列表边框颜色
+  static const Color COLOR_COMMON_ORDER_ITEM_BORDER = Colors.orange;
+  //订单列表底色
+  static const Color COLOR_COMMON_ORDER_ITEM_BACKGROUND = Colors.black12;
+
   final ThemeData lightTheme = ThemeData(
     accentColor: Colors.indigo[400], // background color of card headers
     cardColor: Colors.white, // background color of fields

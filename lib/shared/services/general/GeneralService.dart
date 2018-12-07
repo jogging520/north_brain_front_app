@@ -7,3 +7,4 @@ export 'TokenService.dart';
 export 'SettingService.dart';
 export 'MenuService.dart';
 export 'StrategyService.dart';
+export 'TrailService.dart';

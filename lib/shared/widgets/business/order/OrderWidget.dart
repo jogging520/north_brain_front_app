@@ -62,26 +62,17 @@ class OrderWidget extends StatelessWidget {
       });
 
       return SliverStickyHeader(
-        overlapsContent: true,
+        overlapsContent: false,
         header: OrderHeaderWidget(month: orderType),
-        sliver: SliverPadding(
-          padding: EdgeInsets.only(top: 1.0, left: 60.0),
-          sliver: SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 1,
-              crossAxisSpacing: 4.0,
-              mainAxisSpacing: 1.0,
-              childAspectRatio: 5.0
-            ),
-            delegate: SliverChildBuilderDelegate(
-                (context, i) => GestureDetector(
-                  onTap: () {
-                    print('------------$i');
-                  },
-                  child: OrderItemWidget(order: _typedOrders[i]),
-                ),
+        sliver: SliverList(
+          delegate: SliverChildBuilderDelegate(
+                  (context, i) => GestureDetector(
+                onTap: () {
+                  print('------------$i');
+                },
+                child: OrderItemWidget(order: _typedOrders[i]),
+              ),
               childCount: _typedOrders.length
-            ),
           ),
         ),
       );

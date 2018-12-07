@@ -1,6 +1,7 @@
 ﻿
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
+import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 import 'package:north_brain_front_app/shared/widgets/business/order/Order.dart';
 
 class OrderItemWidget extends StatelessWidget {
@@ -15,17 +16,18 @@ class OrderItemWidget extends StatelessWidget {
         _showOrderResult(context);
       },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 2.0),
+        margin: EdgeInsets.symmetric(vertical: 1.0),
         decoration: BoxDecoration(
+          color: ColorStyle.COLOR_COMMON_ORDER_ITEM_BACKGROUND,
           border: Border(
             left: BorderSide(
               width: 4.0,
-              color: Theme.of(context).accentColor
+              color: ColorStyle.COLOR_COMMON_ORDER_ITEM_BORDER
             )
           )
         ),
         child: Container(
-          margin: const EdgeInsets.all(12.0),
+          margin: const EdgeInsets.all(10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[

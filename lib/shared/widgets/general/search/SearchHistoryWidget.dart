@@ -1,5 +1,7 @@
 ﻿
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:north_brain_front_app/shared/blocs/general/trail/Trail.dart';
 
 const _selfHistories = [
   '兰州', '西站', '中心广场', '兰渝铁路', '移动公司', '码农', '主机故障', '怀特', 'MDB', 'HBA卡坏了',
@@ -13,41 +15,53 @@ const _selfHistories = [
 
 ];
 
-const _hotHistories = [
-  '智能搜索引擎', '是结合了人工智能技术的新', '一代搜索引擎。', '他除了能提供传统的快速检索',
-  '、相关度排序等功能', '，还能提供用户角色登记、用户兴趣自动识别', '内容的语义理解、智能信息化过滤和推送等功能。',
-      '兰州', '西站', '中心广场', '兰渝铁路', '移动公司', '码农', '主机故障', '怀特', 'MDB', 'HBA卡坏了',
-  '用户只要一次性输入搜索关键词就可以通过鼠标点击迅速切换到不同的分类或者引擎', '购物等目前互联网上所能查询到的所有主流资',
-  '兰州', '西站', '中心广场', '兰渝铁路', '移动公司', '码农', '主机故障', '怀特', 'MDB', 'HBA卡坏了',
-  '用户只要一次性输入搜索关键词就可以通过鼠标点击迅速切换到不同的分类或者引擎', '购物等目前互联网上所能查询到的所有主流资',
-  '兰州', '西站', '中心广场', '兰渝铁路', '移动公司', '码农', '主机故障', '怀特', 'MDB', 'HBA卡坏了',
-  '用户只要一次性输入搜索关键词就可以通过鼠标点击迅速切换到不同的分类或者引擎', '购物等目前互联网上所能查询到的所有主流资',
-
-];
-
 const int maxLength = 10;
 
 class SearchHistoryWidget extends StatelessWidget {
+  final TrailBloc _trailBloc;
+
+  const SearchHistoryWidget({Key key, trailBloc, searchBloc}) :
+        _trailBloc = trailBloc,
+        super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    _trailBloc.onWidgetInitialized();
+
+    return BlocBuilder<TrailEvent, TrailState>(
+      bloc: _trailBloc,
+      builder: (BuildContext context, TrailState trailState) {
+        return _buildHistoryList(context, _trailBloc, trailState);
+      },
+    );
+  }
+
+  Widget _buildHistoryList(BuildContext context,
+      TrailBloc trailBloc, TrailState trailState) {
     return ListView(
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(left: 12.0, top: 20.0),
-          child: Text(
-            '热门搜索'
+          child: Container(
+            color: Theme.of(context).accentColor,
+            child: Text(
+                '热门搜索'
+            ),
           ),
         ),
         Container(
           margin: new EdgeInsets.only(left: 6.0),
           child: Wrap(
-            children: _buildHotHistory(context)
+              children: _buildHotHistory(context, trailState)
           ),
         ),
         Container(
           margin: EdgeInsets.only(left: 12.0, top: 20.0),
-          child: Text(
-              '历史搜索'
+          child: Container(
+            color: Theme.of(context).accentColor,
+            child: Text(
+                '历史搜索'
+            ),
           ),
         ),
         Container(
@@ -59,7 +73,7 @@ class SearchHistoryWidget extends StatelessWidget {
       ],
     );
   }
-  
+
   List<Widget> _buildSelfHistory(BuildContext context) {
     return _selfHistories.map((history) {
       return Container(
@@ -82,8 +96,10 @@ class SearchHistoryWidget extends StatelessWidget {
     }).toList();
   }
 
-  List<Widget> _buildHotHistory(BuildContext context) {
-    return _hotHistories.map((history) {
+  List<Widget> _buildHotHistory(BuildContext context, TrailState trailState) {
+    return trailState.trails == null ?
+    <Widget>[] :
+    trailState.trails.map((history) {
       return Container(
         height: 32.0,
         margin: EdgeInsets.all(5.9),

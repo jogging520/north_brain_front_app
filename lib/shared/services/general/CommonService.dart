@@ -277,7 +277,7 @@ class CommonService {
   }
 
   //方法：获取本地存储的路径
-  static getLocalPath() async {
+  static Future<Directory> getLocalPath() async {
     Directory applicationDirectory;
 
     if (Platform.isIOS) {
@@ -304,6 +304,33 @@ class CommonService {
     await applicationDocumentPath.create(recursive: true);
 
     return applicationDirectory;
+  }
+
+  //获取文件内容
+  static Future<List<String>> getFileContent(String fileName) async {
+    return getLocalPath().then((directory) async {
+      File file = File(directory.path + "/" + fileName);
+
+      if (file.existsSync()) {
+        return file.readAsLines();
+      } else {
+        file.createSync();
+      }
+    });
+  }
+
+  //写入文件
+  static Future<void> saveContentToFile(String fileName, dynamic content) async {
+    return getLocalPath().then((directory) async {
+      File file = File(directory.path + "/" + fileName);
+
+      if (file.existsSync()) {
+        print(content.toString());
+        return file.writeAsStringSync(content.toString());
+      } else {
+        file.createSync();
+      }
+    });
   }
 
   //方法：通过路径获取文件名

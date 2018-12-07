@@ -1,10 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:north_brain_front_app/shared/blocs/business/search/Search.dart';
+import 'package:north_brain_front_app/shared/blocs/general/search/Search.dart';
 
 class SearchBarWidget extends StatefulWidget {
-  final SearchBloc _searchBloc = SearchBloc();
+  final SearchBloc _searchBloc;
+
+  const SearchBarWidget({Key key, searchBloc}) :
+      _searchBloc = searchBloc,
+        super(key: key);
 
   @override
   State<StatefulWidget> createState() => SearchBarWidgetState(searchBloc: _searchBloc);
@@ -68,9 +72,9 @@ class SearchBarWidgetState extends State<SearchBarWidget> {
           Container(
             child: IconButton(
               icon: Icon(Icons.search),
-              onPressed: () {
-                print(_textEditingController.value);
-              },
+              onPressed: searchState.isSearchButtonEnabled
+                  ? _onSearchButtonPressed
+                  : null,
             ),
           )
         ],
@@ -78,4 +82,7 @@ class SearchBarWidgetState extends State<SearchBarWidget> {
     );
   }
 
+  void _onSearchButtonPressed() {
+    _searchBloc.onSearchButtonPressed(_textEditingController.text);
+  }
 }

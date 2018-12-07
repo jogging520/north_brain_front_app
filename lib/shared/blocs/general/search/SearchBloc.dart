@@ -1,15 +1,17 @@
 
 import 'package:bloc/bloc.dart';
-import 'package:north_brain_front_app/shared/blocs/business/search/Search.dart';
+import 'package:north_brain_front_app/shared/blocs/general/search/Search.dart';
 import 'package:north_brain_front_app/shared/models/business/BusinessModel.dart';
 import 'package:north_brain_front_app/shared/services/business/BusinessService.dart';
+import 'package:north_brain_front_app/shared/services/general/TrailService.dart';
 
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
 
   final SearchService _searchService = SearchService();
+  final TrailService _trailService = TrailService();
 
   @override
-  SearchState get initialState => null;
+  SearchState get initialState => SearchState.initial();
 
   void onSearchButtonPressed(String condition) {
     dispatch(
@@ -22,6 +24,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     if (event is SearchButtonPressed) {
       yield SearchState.loading();
 
+      await _saveTrails(event.condition);
       List<Summary> summaries = await _querySummaries(event.condition);
 
       if (summaries != null) {
@@ -41,5 +44,9 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
         .listen((summary) => summaries.add(summary));
 
     return summaries;
+  }
+
+  Future<void> _saveTrails(String trail) async {
+    await _trailService.saveTrails(trail);
   }
 }
