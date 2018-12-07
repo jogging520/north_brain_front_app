@@ -6,11 +6,7 @@ import 'package:north_brain_front_app/shared/services/general/GeneralService.dar
 
 class TrailService {
   Future<List<String>> queryTrails() async {
-    List<String> trails = await CommonService.getFileContent(BusinessConstants.CONSTANT_SEARCH_TRAIL_FILE_NAME);
-    print('++++++++');
-    trails.map((trail) => print(trail));
-
-    return trails;
+    return await CommonService.getFileContent(BusinessConstants.CONSTANT_SEARCH_TRAIL_FILE_NAME);
   }
 
   Future<void> saveTrails(String trail) async {

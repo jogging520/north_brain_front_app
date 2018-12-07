@@ -18,14 +18,10 @@ const _selfHistories = [
 const int maxLength = 10;
 
 class SearchHistoryWidget extends StatelessWidget {
-  final TrailBloc _trailBloc;
-
-  const SearchHistoryWidget({Key key, trailBloc, searchBloc}) :
-        _trailBloc = trailBloc,
-        super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    final TrailBloc _trailBloc = BlocProvider.of<TrailBloc>(context);
+
     _trailBloc.onWidgetInitialized();
 
     return BlocBuilder<TrailEvent, TrailState>(

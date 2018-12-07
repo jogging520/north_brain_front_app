@@ -13,12 +13,29 @@ class TrailBloc extends Bloc<TrailEvent, TrailState> {
     dispatch(WidgetInitialized());
   }
 
+  void onSearchButtonPressed(String condition) {
+    dispatch(
+        SearchButtonPressed(condition: condition)
+    );
+  }
+
   @override
   Stream<TrailState> mapEventToState(TrailState state, TrailEvent event) async* {
     if (event is WidgetInitialized) {
       yield TrailState.loading();
 
       List<String> trails = await _queryTrails();
+
+      yield TrailState.success(trails);
+    }
+
+    if (event is SearchButtonPressed) {
+      yield TrailState.loading();
+
+      List<String> trails = state.trails;
+      if (!trails.contains(event.condition)) {
+        trails.add(event.condition);
+      }
 
       yield TrailState.success(trails);
     }
