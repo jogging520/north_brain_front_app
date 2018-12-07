@@ -34,7 +34,7 @@ class TrailBloc extends Bloc<TrailEvent, TrailState> {
 
       List<String> trails = state.trails;
       if (!trails.contains(event.condition)) {
-        trails.add(event.condition);
+        trails.insert(0, event.condition);
       }
 
       yield TrailState.success(trails);
