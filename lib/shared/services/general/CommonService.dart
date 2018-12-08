@@ -312,7 +312,7 @@ class CommonService {
       File file = File(directory.path + "/" + fileName);
 
       if (file.existsSync()) {
-        return file.readAsLines();
+        return await file.readAsLines();
       } else {
         file.createSync();
       }
@@ -320,15 +320,33 @@ class CommonService {
   }
 
   //写入文件
-  static Future<void> saveContentToFile(String fileName, dynamic content) async {
+  static Future<void> saveContentToFile(String fileName, List<String> content) async {
+
+    return getLocalPath().then((directory) async {
+      File file = File(directory.path + "/" + fileName);
+
+      if (!file.existsSync()) {
+        file.createSync();
+      }
+
+      if (file.existsSync()) {
+        IOSink dataFile = file.openWrite();
+
+        content.forEach((line) => dataFile.write(line + '\n'));
+
+        dataFile.close();
+      }
+    });
+  }
+
+  //删除文件
+  static Future<void> deleteFile(String fileName) async {
+
     return getLocalPath().then((directory) async {
       File file = File(directory.path + "/" + fileName);
 
       if (file.existsSync()) {
-        print(content.toString());
-        return file.writeAsStringSync(content.toString());
-      } else {
-        file.createSync();
+        file.deleteSync();
       }
     });
   }

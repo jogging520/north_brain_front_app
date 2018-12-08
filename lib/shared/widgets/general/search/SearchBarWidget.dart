@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/shared/blocs/general/search/Search.dart';
-import 'package:north_brain_front_app/shared/blocs/general/trail/Trail.dart';
 
 class SearchBarWidget extends StatefulWidget {
   @override
@@ -10,25 +9,24 @@ class SearchBarWidget extends StatefulWidget {
 }
 
 class SearchBarWidgetState extends State<SearchBarWidget> {
-  final SearchBloc _searchBloc = SearchBloc();
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final TrailBloc _trailBloc = BlocProvider.of<TrailBloc>(context);
+    final SearchBloc _searchBloc = BlocProvider.of<SearchBloc>(context);
 
     return BlocBuilder<SearchEvent, SearchState> (
       bloc: _searchBloc,
       builder: (BuildContext context, SearchState searchState) {
-        return _buildSearchBar(context, _searchBloc, searchState, _trailBloc);
+        return _buildSearchBar(context, _searchBloc, searchState);
       },
     );
   }
 
   Widget _buildSearchBar(BuildContext context, SearchBloc searchBloc,
-      SearchState searchState, TrailBloc trailBloc) {
-
+      SearchState searchState) {
 
     return Container(
       margin: EdgeInsets.only(right: 50.0),
@@ -63,7 +61,7 @@ class SearchBarWidgetState extends State<SearchBarWidget> {
                       ),
                       onEditingComplete: searchState.isSearchButtonEnabled ?
                           () {
-                        _onSearchButtonPressed(trailBloc);
+                        _onSearchButtonPressed(searchBloc);
                       } : null,
                     ),
                   ),
@@ -76,7 +74,7 @@ class SearchBarWidgetState extends State<SearchBarWidget> {
               icon: Icon(Icons.search),
               onPressed: searchState.isSearchButtonEnabled ?
                   () {
-                _onSearchButtonPressed(trailBloc);
+                _onSearchButtonPressed(searchBloc);
               } : null,
             ),
           )
@@ -85,8 +83,7 @@ class SearchBarWidgetState extends State<SearchBarWidget> {
     );
   }
 
-  void _onSearchButtonPressed(TrailBloc trailBloc) {
-    _searchBloc.onSearchButtonPressed(_textEditingController.text);
-    trailBloc.onSearchButtonPressed(_textEditingController.text);
+  void _onSearchButtonPressed(SearchBloc searchBloc) {
+    searchBloc.onSearchButtonPressed(_textEditingController.text);
   }
 }

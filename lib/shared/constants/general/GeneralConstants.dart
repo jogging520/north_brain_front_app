@@ -196,4 +196,10 @@ class GeneralConstants {
   static const double CONSTANT_PAGE_APP_BAR_ELEVATION                           = 1.0;
 
 
+  //搜索历史存储文件名称
+  static const String CONSTANT_SEARCH_TRAIL_FILE_NAME                         = 'trail.txt';
+  //搜索历史的展示长度
+  static const int CONSTANT_SEARCH_SELF_LIST_LENGTH                         = 10;
+  //搜索热门的展示长度
+  static const int CONSTANT_SEARCH_HOT_LIST_LENGTH                         = 10;
 }

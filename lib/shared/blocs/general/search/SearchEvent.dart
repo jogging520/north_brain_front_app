@@ -1,6 +1,16 @@
 
 abstract class SearchEvent {}
 
+class WidgetInitialized extends SearchEvent {
+  @override
+  int get hashCode => this.hashCode;
+
+  @override
+  bool operator ==(other) =>
+      identical(this, other) ||
+          other is WidgetInitialized;
+}
+
 class SearchButtonPressed extends SearchEvent {
   final String condition;
 

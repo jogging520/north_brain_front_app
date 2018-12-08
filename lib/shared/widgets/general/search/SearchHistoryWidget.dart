@@ -1,7 +1,7 @@
 ﻿
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:north_brain_front_app/shared/blocs/general/trail/Trail.dart';
+import 'package:north_brain_front_app/shared/blocs/general/search/Search.dart';
 
 const _selfHistories = [
   '兰州', '西站', '中心广场', '兰渝铁路', '移动公司', '码农', '主机故障', '怀特', 'MDB', 'HBA卡坏了',
@@ -20,20 +20,20 @@ const int maxLength = 10;
 class SearchHistoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final TrailBloc _trailBloc = BlocProvider.of<TrailBloc>(context);
+    final SearchBloc _searchBloc = BlocProvider.of<SearchBloc>(context);
 
-    _trailBloc.onWidgetInitialized();
+    _searchBloc.onWidgetInitialized();
 
-    return BlocBuilder<TrailEvent, TrailState>(
-      bloc: _trailBloc,
-      builder: (BuildContext context, TrailState trailState) {
-        return _buildHistoryList(context, _trailBloc, trailState);
+    return BlocBuilder<SearchEvent, SearchState>(
+      bloc: _searchBloc,
+      builder: (BuildContext context, SearchState searchState) {
+        return _buildHistoryList(context, _searchBloc, searchState);
       },
     );
   }
 
   Widget _buildHistoryList(BuildContext context,
-      TrailBloc trailBloc, TrailState trailState) {
+      SearchBloc searchBloc, SearchState searchState) {
     return ListView(
       children: <Widget>[
         Container(
@@ -48,7 +48,7 @@ class SearchHistoryWidget extends StatelessWidget {
         Container(
           margin: new EdgeInsets.only(left: 6.0),
           child: Wrap(
-              children: _buildHotHistory(context, trailState)
+              children: _buildHotHistory(context,)
           ),
         ),
         Container(
@@ -63,14 +63,14 @@ class SearchHistoryWidget extends StatelessWidget {
         Container(
           margin: new EdgeInsets.only(left: 6.0),
           child: Wrap(
-              children: _buildSelfHistory(context)
+              children: _buildSelfHistory(context, searchState)
           ),
         ),
       ],
     );
   }
 
-  List<Widget> _buildSelfHistory(BuildContext context) {
+  List<Widget> _buildHotHistory(BuildContext context) {
     return _selfHistories.map((history) {
       return Container(
         height: 32.0,
@@ -92,10 +92,10 @@ class SearchHistoryWidget extends StatelessWidget {
     }).toList();
   }
 
-  List<Widget> _buildHotHistory(BuildContext context, TrailState trailState) {
-    return trailState.trails == null ?
+  List<Widget> _buildSelfHistory(BuildContext context, SearchState searchState) {
+    return searchState.trails == null ?
     <Widget>[] :
-    trailState.trails.map((history) {
+    searchState.trails.map((history) {
       return Container(
         height: 32.0,
         margin: EdgeInsets.all(5.9),
