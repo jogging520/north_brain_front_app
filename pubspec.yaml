@@ -52,6 +52,8 @@ dependencies:
   photo_view: ^0.1.0
   image_picker: ^0.4.10
   charts_flutter: ^0.5.0
+  #打开apk文件直接安装
+  open_file: ^1.1.1
 
 dev_dependencies:
   flutter_test:

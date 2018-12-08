@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:north_brain_front_app/routes/Application.dart';
-import 'package:north_brain_front_app/shared/blocs/business/menu/Menu.dart';
+import 'package:north_brain_front_app/shared/blocs/general/menu/Menu.dart';
 import 'package:north_brain_front_app/shared/styles/general/Style.dart';
 
 class MenuWidget extends StatelessWidget {

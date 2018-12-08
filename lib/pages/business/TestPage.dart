@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:north_brain_front_app/shared/services/general/GeneralService.dart';
+import 'package:north_brain_front_app/shared/widgets/business/chart/Chart.dart';
 
 const _tiles = [
   '兰州',
@@ -48,6 +49,7 @@ class TestPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
+
     return ListView.builder(
       itemCount: _tiles.length,
       itemBuilder: _buildTiles,
@@ -55,25 +57,14 @@ class TestPage extends StatelessWidget {
   }
 
   Widget _buildTiles(BuildContext context, int index) {
-    return GestureDetector(
-      onTap: () {
-        CommonService.hint(_tiles[index]);
-      },
-      child: Container(
-        margin: EdgeInsets.only(bottom: 2.0),
-        color: index.isEven ? Colors.green : Colors.grey,
-        child: ListTile(
-          title: Text(
-            _tiles[index],
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          leading: Icon(Icons.build),
-          subtitle: Text(index.toString()),
-        ),
+    return ListTile(
+      title: Container(
+        padding: EdgeInsets.all(10),
+        height: MediaQuery.of(context).size.width - 200,
+        width: MediaQuery.of(context).size.width - 100,
+        child: SimpleBarChart.withSampleData(),
       ),
+      subtitle: Text(index.toString()),
     );
   }
 }
