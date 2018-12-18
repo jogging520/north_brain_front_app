@@ -44,7 +44,6 @@ dependencies:
   pull_to_refresh: ^1.1.6
   flutter_sticky_header: ^0.3.4
   flutter_circular_chart: ^0.1.0
-  flutter_amap: ^0.0.1
   intl: ^0.15.7
   flutter_datetime_picker: ^1.0.4
   card_settings: ^1.2.2
@@ -54,6 +53,10 @@ dependencies:
   charts_flutter: ^0.5.0
   #打开apk文件直接安装
   open_file: ^1.1.1
+  amap_base: ^0.2.5
+  amap_base_navi: ^0.2.1+1
+  amap_base_search: ^0.2.0+1
+  amap_base_location: ^0.2.0+1
 
 dev_dependencies:
   flutter_test:
